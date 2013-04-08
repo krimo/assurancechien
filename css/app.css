@@ -12,11 +12,43 @@ h1, h2, h3, h4, h5, h6 {
 	background: #fff;
 	padding: 1em 0;
 	margin-bottom: 1em;
-	box-shadow: 0 1px 3px #bbb;
+	box-shadow: 0 1px 3px #aaa;
+	overflow: hidden;
+}
+@media (max-width: 767px) {	
+	.header-container {text-align: center;}
+	.header-img { 
+		max-width: 500px;
+		margin: 0 auto;
+	}
 }
 
-.header {line-height: .8;}
+.hgroup { padding: 2em 0; }
 
-@media (max-width: 767px) {
-	.header-container {text-align: center;}
+@media (min-width: 768px) { 
+	.hgroup { padding: 2.75em 0; }
+	.header { text-shadow: 0 2px 1px #fff; }
+	.header-container {
+		background: #fff url(../img/header-bg.jpg) no-repeat top center;
+		background-size: 100% auto;
+	}
+	.form-container {
+		background: #fff;
+		border-radius: 5px;
+		box-shadow: 0 3px 11px #777;
+		padding: .5em 1em;
+		position: relative;
+		top: -4em;
+	}
+}
+
+@media (min-width: 980px) { .hgroup {padding: 6em 0;} }
+@media (min-width: 1200px) { .hgroup {padding: 8em 0;} }
+
+.header {
+	line-height: .8;
+}
+
+.img-radio {
+	cursor:pointer;
 }

@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+
 	<title>Assurance chien - Comparez gratuitement les meilleurs tarifs des mutuelles pour votre animal</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<meta name="keywords" content="assurance santé, assurance chien" />
 	<meta name="description" content="Une assurance santé pour votre chien" />
@@ -17,122 +19,228 @@
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	
-	<div class="header-container">
-		<div class="container">
-			<div class="row-fluid">
-				<div class="span8">
-					<h1 class="header">Mon Assurance Chien <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
+	<!--[if lt IE8]>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
 
-					<span class="label label-info">Gratuit, rapide &amp; sans engagement</span>
-				</div>
-				<div class="span4">
-					<p>Protection chiens &amp; chats</p>
-				</div>
-			</div>
+		<style>
+			.chromeFrameInstallDefaultStyle {
+			width: 100%; /* default is 800px */
+			border: 5px solid blue;
+			}
+		</style>
+
+		<div id="prompt">
+			<p class="chromeframe">Vous utilisez un navigateur <strong>obsolète</strong>. Merci <a href="http://www.google.com/chromeframe/?redirect=true">d'activer Google Chrome Frame</a> pour le mettre à jour le plus facilement possible.</p>
 		</div>
-	</div>
 
-	<div class="container">
-		<div class="row-fluid">			
-			<!-- text outer container -->
-			<div class="span6">
-				<p class="lead">Les meilleurs tarifs accessibles en moins d'une minute avec une gamme de formules sur-mesure.
-					<ol class="steps">
-						<li class="step"><p>Je remplis ce formulaire <em>en moins d'une minute</em></p></li>
-						<li class="step"><p>J'affiche les tarifs et je compare les offres</p></li>
-					</ol>
-				</p>
+		<script>
+			// The conditional ensures that this code will only execute in IE,
+			// Therefore we can use the IE-specific attachEvent without worry
+			window.attachEvent("onload", function() {
+				CFInstall.check({
+					mode: "overlay", // the default
+					node: "prompt"
+				});
+			});
+		</script>
+	<![endif]-->
+    <div class="header-container">
+    	<div class="container">
+    		<div class="row-fluid">
+    			<div class="span7">
+    				<div class="hgroup">
+    					<h1 class="header">Mon Assurance Chien <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
 
-				<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie" class="img-polaroid">
+    					<span class="label label-info">Gratuit, rapide &amp; sans engagement</span>
+    				</div>		
+    			</div>
+    			<div class="span5">
+    				<img src="img/dog-cat.png" alt="Chien et chat" class="header-img visible-phone">
+    			</div>
+    		</div>
+    	</div>
+    </div>
 
-				<p><strong>Frais vétérinaires, vaccins, maladies, accidents&hellip;</strong> Quelques euros par mois pour leur mutuelle, ça simplifie la vie !</p>
+    <div class="container">
+    	<div class="row-fluid">			
+    		<!-- text outer container -->
+    		<div class="span6">
+    			<p class="lead">Les meilleurs tarifs accessibles en moins d'une minute avec une gamme de formules sur-mesure.
+    			</p>
 
-				<hr>
+    			<ol class="steps hidden-phone">
+    				<li><p>Je remplis ce formulaire <em>en moins d'une minute</em></p></li>
+    				<li><p>J'affiche les tarifs et je compare les offres</p></li>
+    			</ol>
 
-				<p class="muted"><small>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, praesentium, fugit, laboriosam illum mollitia veritatis culpa sunt alias esse fuga accusamus nostrum iusto neque officia officiis architecto facere aut. Officiis.
-				</small></p>
-			</div>
+    			<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie" class="img-polaroid hidden-phone">
 
-			<!-- form outer container -->
-			<div class="span5 offset1">
-				<h2>Calculez votre tarif gratuitement</h2>
-				<form action="#">
-					<fieldset>
-						<legend>Votre petit compagnon</legend>
-						
-						<label class="radio inline">
-							<input type="radio" name="type_animal" id="type-animal-1" value="chien" checked>
-							Chien
-						</label>
-						<label class="radio inline">
-							<input type="radio" name="type_animal" id="type-animal-2" value="chat">
-							Chat
-						</label>
+    			<hr>
 
-						<label for="dogs-breeds" >Sa race :</label>
-						<select name="dog_breed" id="dogs-breeds" class="input-block-level">
-							<option value="1">lorem ipsum</option>
-							<option value="2">lorem ipsum</option>
-							<option value="3">lorem ipsum</option>
-							<option value="4">lorem ipsum</option>
-							<option value="5">lorem ipsum</option>
-						</select>
+    			<blockquote class="hidden-phone">			  	
+    				<p><strong>Frais vétérinaires, vaccins, maladies, accidents&hellip;</strong> Quelques euros par mois pour leur mutuelle, ça simplifie la vie !</p>
+    			</blockquote>
 
-						<label class="radio inline">
-						  	<input type="radio" id="pet-gender-1" name="pet_gender" value="male"> Mâle
-						</label>
-						<label class="radio inline">
-					  		<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle"> Femelle
-						</label>
-						
-						<label for="pet-name">Son nom :</label>
-						<input type="text" name="pet_name" id="pet-name" placeholder="Le nom de votre animal" class="input-block-level" required>
-						
-						<label for="pet-birthday">Sa date de naissance :</label>
-						<input type="text" name="pet_birthday" class="input-block-level" id="pet-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>
+    			<hr>
 
-						<label class="checkbox" for="pet-tag">
-					    	<input type="checkbox" name="pet_tag" id="pet-tag"> Cochez s'il est tatoué / pucé
-					    </label>
-					</fieldset>
+    			<p class="muted hidden-phone"><small>
+    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, praesentium, fugit, laboriosam illum mollitia veritatis culpa sunt alias esse fuga accusamus nostrum iusto neque officia officiis architecto facere aut. Officiis.
+    			</small></p>
+    		</div>
 
-					<fieldset>
-						<legend>Vous</legend>
-						<label for="owner-gender">Civilité :</label>
-						<select name="owner_gender" id="owner-gender" class="input-block-level">
-							<option value="1">Madame</option>
-							<option value="2">Monsieur</option>
-							<option value="3">Mademoiselle</option>
-						</select>
+    		<!-- form outer container -->
+    		<div class="span5 offset1">
+    			<div class="form-container">
+    				<h2>Calculez votre tarif gratuitement</h2>
+	    			<form action="#" method="post" novalidate>
+	    				<fieldset class="step step1">
+	    					<legend>Votre petit compagnon</legend>
+							
+							Chat ou chien ?
+							<img src="img/chien.png" alt="chien" class="img-radio" data-select="chien">
+							<img src="img/chat.png" alt="chat" class="img-radio" data-select="chat">
 
-						<label for="owner-surname">Votre prénom :</label>
-						<input type="text" name="owner_surname" class="input-block-level" id="owner-surname" required>
+							<div id="breed-selector"></div>
 
-						<label for="owner-name">Votre nom :</label>
-						<input type="text" name="owner_name" class="input-block-level" id="owner-name" required>
+	    					<label class="radio inline">
+	    						<input type="radio" id="pet-gender-1" name="pet_gender" value="male"> Mâle
+	    					</label>
+	    					<label class="radio inline">
+	    						<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle"> Femelle
+	    					</label>
 
-						<label for="owner-address">Votre adresse :</label>
-						<input type="text" name="owner_address" class="input-block-level" id="owner-address" required>
+	    					<div class="control-group">
+	    						<label class="control-label" for="pet-name">Son nom :</label>
+	    						<div class="controls">
+	    							<input type="text" name="pet_name" class="input-block-level" id="pet-name" required>
+	    						</div>
+	    					</div>
 
-						<label for="owner-birthday">Votre date de naissance :</label>
-						<input type="text" name="owner_birthday" class="input-block-level" id="owner-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>
+	    					<div class="control-group">
+	    						<label class="control-label" for="pet-birthday">Sa date de naissance :</label>
+	    						<div class="controls">
+	    							<input type="text" name="pet_birthday" class="input-block-level" id="pet-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>	
+	    						</div>
+	    					</div>
 
-						<label for="owner-phone">Votre n° de téléphone :</label>
-						<input type="tel" name="owner_phone" id="owner-phone" class="input-block-level" required>
+	    					<label class="checkbox" for="pet-tag">
+	    						<input type="checkbox" name="pet_tag" id="pet-tag"> Cochez s'il est tatoué / pucé
+	    					</label>
 
-						<label for="owner-email">Votre e-mail :</label>
-						<input type="email" name="owner_email" id="owner-email" class="input-block-level" required>
+	    					<hr>
+	    					<button type="button" class="btn" id="continue-btn">Continuer &raquo;</button>
+	    				</fieldset>
 
-						<button type="submit" class="btn btn-primary">Envoyer &raquo;</button>
-					</fieldset>
-				</form>
-			</div>
-		</div>	
-	</div>
-	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+	    				<fieldset class="step step2">
+	    					<legend>Vous</legend>
+	    					<label for="owner-gender">Civilité :</label>
+	    					<select name="owner_gender" id="owner-gender" class="input-block-level">
+	    						<option value="1">Madame</option>
+	    						<option value="2">Monsieur</option>
+	    						<option value="3">Mademoiselle</option>
+	    					</select>
+
+	    					<div class="control-group">
+	    						<label for="owner-surname">Votre prénom :</label>
+	    						<div class="controls">
+	    							<input type="text" name="owner_surname" class="input-block-level" id="owner-surname" required>
+	    						</div>
+	    					</div>
+
+
+	    					<div class="control-group">
+	    						<label class="control-label" for="owner-name">Votre nom :</label>
+	    						<div class="controls">			
+	    							<input type="text" name="owner_name" class="input-block-level" id="owner-name" required>
+	    						</div>
+	    					</div>
+
+	    					<div class="control-group">
+	    						<label class="control-label" for="owner-address">Votre adresse :</label>
+	    						<div class="controls">
+	    							<input type="text" name="owner_address" class="input-block-level" id="owner-address" required>
+	    						</div>
+	    					</div>
+
+
+	    					<div class="control-group">
+	    						<label class="control-label" for="owner-birthday">Votre date de naissance :</label>
+	    						<div class="controls">
+	    							<input type="text" name="owner_birthday" class="input-block-level" id="owner-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>
+	    						</div>
+	    					</div>
+
+
+	    					<div class="control-group">
+	    						<label class="control-label" for="owner-phone">Votre n° de téléphone :</label>
+	    						<div class="controls">
+	    							<input type="tel" name="owner_phone" id="owner-phone" class="input-block-level" pattern="[0-9]{10}" required>
+	    						</div>
+	    					</div>
+
+
+	    					<div class="control-group">
+	    						<label class="control-label" for="owner-email">Votre e-mail :</label>
+	    						<div class="controls">
+	    							<input type="email" name="owner_email" id="owner-email" class="input-block-level" placeholder="votre-email@example.fr" required>
+	    						</div>
+	    					</div>	
+
+	    					<div class="form-actions">
+	    						<button type="submit" class="btn btn-large btn-primary">Envoyer &raquo;</button>
+	    						<button type="button" class="btn btn-large" id="back-btn">Retour</button>
+	    					</div>
+
+	    				</fieldset>
+	    			</form>
+    			</div>
+    		</div>
+    	</div>	
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/messages.fr.js"></script>
+    <script src="js/parsley.min.js"></script>
+    <script>
+	    $("form").parsley({
+	    	trigger: 'keyup',
+	    	successClass: 'success',
+	    	errorClass: 'error',
+	    	errors: {
+	    		classHandler: function(elem,isRadioOrCheckbox) {
+	    			return $(elem).parents(".control-group");
+	    		},
+	    		errorsWrapper: '<div></div>',
+	    		errorElem: '<p class="help-block"></p>'
+	    	}
+	    });
+
+		$('.step1').siblings().hide(); // hide all except step 1
+
+		$('#continue-btn').click(function(){
+			$(this).closest('.step').hide(300).next('.step').show(300);
+			return false;
+		});
+
+		$('#back-btn').click(function(){
+			$(this).closest('.step').hide(300).prev('.step').show(300);
+			return false;
+		})
+
+		$(".img-radio").on("click", function() {
+
+			$this = $(this),
+			$breedSelector = $("#breed-selector");
+
+			$this.addClass('img-polaroid').siblings('.img-radio').removeClass('img-polaroid');
+
+			if ($this.attr('data-select') === "chien") {
+				$breedSelector.load("breed-selector.html #chiens");
+			} else {
+				$breedSelector.load("breed-selector.html #chats");
+			}
+		});
+	</script>
+	</body>
+	</html>
