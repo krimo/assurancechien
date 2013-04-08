@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Assurance chien - Comparez gratuitement les meilleurs tarifs des mutuelles pour votre animal</title>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<meta name="keywords" content="assurance santé, assurance chien" />
 	<meta name="description" content="Une assurance santé pour votre chien" />
 	
@@ -11,31 +13,36 @@
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" href="css/app.css">
 
-	<!-- Typekit -->
-	<script type="text/javascript" src="//use.typekit.net/sys3aez.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<!-- Google font -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
+	
+	<div class="header-container">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span8">
+					<h1 class="header">Mon Assurance Chien <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
 
-	<div class="container-fluid">
+					<span class="label label-info">Gratuit, rapide &amp; sans engagement</span>
+				</div>
+				<div class="span4">
+					<p>Protection chiens &amp; chats</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
 		<div class="row-fluid">			
 			<!-- text outer container -->
-			<div class="span8">
-				<div class="page-header">
-					<h1>Mon Assurance Chien <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
-				</div>
-				<p class="lead">Les meilleurs tarifs accessibles en 1 mn; une gamme de formules sur-mesure</p>
-
-				<div class="risk-free">
-					<h3>Gratuit, rapide &amp; sans engagement</h3>
-				</div>
-
-				<h4>Une procédure simple :</h4>
-
-				<ol class="steps">
-					<li class="step"><p>Je remplis ce formulaire <em>en moins d'une minute</em></p></li>
-					<li class="step"><p>J'affiche les tarifs et je compare les offres</p></li>
-				</ol>
+			<div class="span6">
+				<p class="lead">Les meilleurs tarifs accessibles en moins d'une minute avec une gamme de formules sur-mesure.
+					<ol class="steps">
+						<li class="step"><p>Je remplis ce formulaire <em>en moins d'une minute</em></p></li>
+						<li class="step"><p>J'affiche les tarifs et je compare les offres</p></li>
+					</ol>
+				</p>
 
 				<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie" class="img-polaroid">
 
@@ -49,12 +56,83 @@
 			</div>
 
 			<!-- form outer container -->
-			<div class="span4">
-				
+			<div class="span5 offset1">
+				<h2>Calculez votre tarif gratuitement</h2>
+				<form action="#">
+					<fieldset>
+						<legend>Votre petit compagnon</legend>
+						
+						<label class="radio inline">
+							<input type="radio" name="type_animal" id="type-animal-1" value="chien" checked>
+							Chien
+						</label>
+						<label class="radio inline">
+							<input type="radio" name="type_animal" id="type-animal-2" value="chat">
+							Chat
+						</label>
+
+						<label for="dogs-breeds" >Sa race :</label>
+						<select name="dog_breed" id="dogs-breeds" class="input-block-level">
+							<option value="1">lorem ipsum</option>
+							<option value="2">lorem ipsum</option>
+							<option value="3">lorem ipsum</option>
+							<option value="4">lorem ipsum</option>
+							<option value="5">lorem ipsum</option>
+						</select>
+
+						<label class="radio inline">
+						  	<input type="radio" id="pet-gender-1" name="pet_gender" value="male"> Mâle
+						</label>
+						<label class="radio inline">
+					  		<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle"> Femelle
+						</label>
+						
+						<label for="pet-name">Son nom :</label>
+						<input type="text" name="pet_name" id="pet-name" placeholder="Le nom de votre animal" class="input-block-level" required>
+						
+						<label for="pet-birthday">Sa date de naissance :</label>
+						<input type="text" name="pet_birthday" class="input-block-level" id="pet-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>
+
+						<label class="checkbox" for="pet-tag">
+					    	<input type="checkbox" name="pet_tag" id="pet-tag"> Cochez s'il est tatoué / pucé
+					    </label>
+					</fieldset>
+
+					<fieldset>
+						<legend>Vous</legend>
+						<label for="owner-gender">Civilité :</label>
+						<select name="owner_gender" id="owner-gender" class="input-block-level">
+							<option value="1">Madame</option>
+							<option value="2">Monsieur</option>
+							<option value="3">Mademoiselle</option>
+						</select>
+
+						<label for="owner-surname">Votre prénom :</label>
+						<input type="text" name="owner_surname" class="input-block-level" id="owner-surname" required>
+
+						<label for="owner-name">Votre nom :</label>
+						<input type="text" name="owner_name" class="input-block-level" id="owner-name" required>
+
+						<label for="owner-address">Votre adresse :</label>
+						<input type="text" name="owner_address" class="input-block-level" id="owner-address" required>
+
+						<label for="owner-birthday">Votre date de naissance :</label>
+						<input type="text" name="owner_birthday" class="input-block-level" id="owner-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>
+
+						<label for="owner-phone">Votre n° de téléphone :</label>
+						<input type="tel" name="owner_phone" id="owner-phone" class="input-block-level" required>
+
+						<label for="owner-email">Votre e-mail :</label>
+						<input type="email" name="owner_email" id="owner-email" class="input-block-level" required>
+
+						<button type="submit" class="btn btn-primary">Envoyer &raquo;</button>
+					</fieldset>
+				</form>
 			</div>
 		</div>	
 	</div>
-
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

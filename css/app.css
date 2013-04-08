@@ -1,9 +1,22 @@
 body {
-	font-family: "source-sans-pro";
+	font-family: "Source Sans Pro";
 	font-weight: 300;
 	background-color: #fafafa;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 900;
+}
+
+.header-container {
+	background: #fff;
+	padding: 1em 0;
+	margin-bottom: 1em;
+	box-shadow: 0 1px 3px #bbb;
+}
+
+.header {line-height: .8;}
+
+@media (max-width: 767px) {
+	.header-container {text-align: center;}
 }
