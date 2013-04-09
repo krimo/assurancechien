@@ -106,7 +106,7 @@
 			"emailing" => $optin
 			);
 
-		$return = $client->setDatasFromForm("krimo", "krimo", SERVICE, $data);
+		$return = $client->setDatasFromForm("misterassur", "misterassur", SERVICE, $data);
 
 	} catch (SoapFault $exception){
 		print_r($exception);
