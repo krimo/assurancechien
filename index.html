@@ -100,6 +100,8 @@
 							<img src="img/chien.png" alt="chien" class="img-radio" data-select="chien">
 							<img src="img/chat.png" alt="chat" class="img-radio" data-select="chat">
 
+							<img src="img/ajax-loader.gif" alt="En cours de chargement..." id="loading-gif">
+
 							<div id="breed-selector"></div>
 
 	    					<label class="radio inline">
@@ -232,13 +234,21 @@
 
 			$this = $(this),
 			$breedSelector = $("#breed-selector");
+			$gif = $("#loading-gif");
 
 			$this.addClass('img-polaroid').siblings('.img-radio').removeClass('img-polaroid');
 
 			if ($this.attr('data-select') === "chien") {
-				$breedSelector.load("breed-selector.html #chiens");
+				$gif.show(300);
+				$breedSelector.load("breed-selector.html #chiens", function() {
+					$gif.hide(300);
+				});
 			} else {
-				$breedSelector.load("breed-selector.html #chats");
+				$gif.show(300);
+				$breedSelector.load("breed-selector.html #chats", function() {
+					$gif.hide(300);
+				});
+
 			}
 		});
 	</script>
