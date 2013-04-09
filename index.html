@@ -92,7 +92,7 @@
     		<div class="span5 offset1">
     			<div class="form-container">
     				<h2>Calculez votre tarif gratuitement</h2>
-	    			<form action="#" method="post" novalidate>
+	    			<form action="synthese.php" method="post" novalidate>
 	    				<fieldset class="step step1">
 	    					<legend>Votre petit compagnon</legend>
 							
@@ -163,7 +163,13 @@
 	    							<input type="text" name="owner_address" class="input-block-level" id="owner-address" required>
 	    						</div>
 	    					</div>
-
+							
+							<div class="control-group">
+	    						<label class="control-label" for="zip-code">Votre code postal :</label>
+	    						<div class="controls">
+	    							<input type="text" name="zip_code" class="input-block-level" id="zip-code" maxlength="5" required>
+	    						</div>
+	    					</div>
 
 	    					<div class="control-group">
 	    						<label class="control-label" for="owner-birthday">Votre date de naissance :</label>
@@ -186,7 +192,54 @@
 	    						<div class="controls">
 	    							<input type="email" name="owner_email" id="owner-email" class="input-block-level" placeholder="votre-email@example.fr" required>
 	    						</div>
-	    					</div>	
+	    					</div>
+							
+							<div class="control-group">
+		    					<label class="control-label">Votre animal est-il déjà couvert ?</label>
+		    					<div class="controls">
+			    					<label class="radio inline">
+			    						<input type="radio" id="pet-insured-1" name="pet_insured" value="0"> Non
+			    					</label>
+			    					<label class="radio inline">
+			    						<input type="radio" id="pet-insured-2" name="pet_insured" value="1"> Oui
+			    					</label>
+		    					</div>
+	    					</div>
+
+							<div class="control-group">
+		    					<label class="control-label">Au cours des 36 derniers mois, avez-vous fait l'objet de résiliation par un assureur ?</label>
+		    					<div class="controls">		    						
+			    					<label class="radio inline">
+			    						<input type="radio" id="contract-cancelled-1" name="contract_cancelled" value="0"> Non
+			    					</label>
+			    					<label class="radio inline">
+			    						<input type="radio" id="contract-cancelled-2" name="contract_cancelled" value="1"> Oui
+			    					</label>
+		    					</div>
+	    					</div>
+
+	    					<div class="control-group">
+	    						<label class="control-label" for="contract-start-date">Date d'effet du contrat souhaitée :</label>
+	    						<div class="controls">
+	    							<input type="text" name="contract_start_date" class="input-block-level" id="contract-start-date" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>
+	    						</div>
+	    					</div>
+
+	    					<div class="control-group">
+    							<label for="contract-type" class="control-label">Type de formule souhaitée :</label>
+    							<div class="controls">
+    								<select name="contract_type" id="contract-type" class="input-block-level">
+	    								<option value="1">Basique</option>
+	    								<option value="2">Sérénité</option>
+	    								<option value="3">Premium</option>
+    								</select>
+    							</div>
+	    					</div>
+
+
+	    					<label class="checkbox inline">
+	    						<input type="checkbox" id="optin" name="optin"> Je souhaite être informé(e) des propositions commerciales de monassurancechien.com et/ou de ses partenaires.
+	    					</label>	
 
 	    					<div class="form-actions">
 	    						<button type="submit" class="btn btn-large btn-primary">Envoyer &raquo;</button>
