@@ -25,6 +25,18 @@
 			return false;
 		}
 	}
+
+	function get_insee_code($cp) {
+		$cp = trim($_POST['cp']);
+		if(strlen($cp) == 4){
+			$cp = '0'.$cp;
+		}
+		$url = "http://dev.misterassur.com/moteur/moteur_import.php";
+		$client = new SoapClient(null, array("uri" => $url, "location" => $url, "trace" => 1, "exceptions" => 1));
+		$villes = $client->getVillesFromCP($cp);
+		
+		echo $villes;
+	}
 	
 	// Constantes
 	define("WS_URL", "http://dev.misterassur.com/moteur/moteur_import.php");
@@ -94,7 +106,7 @@
 			"emailing" => $optin
 			);
 
-		$return = $client->setDatasFromForm("misterassur", "misterassur", SERVICE, $data);
+		$return = $client->setDatasFromForm("krimo", "krimo", SERVICE, $data);
 
 	} catch (SoapFault $exception){
 		print_r($exception);
