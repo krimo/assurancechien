@@ -39,9 +39,9 @@
 
 	<div class="container">
 		<div class="row-fluid">			
-			<div class="span12">
+			<div class="span6 offset3">
 				<h2>Comparaison :</h2>
-				<?php echo $return->synthese; ?>
+				<iframe src="<?php echo $return->synthese; ?>" frameborder="0" width="630" height="1200" seamless style="overflow:hidden;"></iframe>
 			</div>
 		</div>	
 	</div>

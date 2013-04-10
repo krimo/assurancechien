@@ -1,4 +1,8 @@
 <?php
+
+	// Constantes
+	define("WS_URL", "http://dev.misterassur.com/moteur/moteur_import.php");
+	define("SERVICE", "animaux");
 	
 	/**
 	 * Formatage de la date pour entrée dans la base de donnée
@@ -26,32 +30,38 @@
 		}
 	}
 
-	function get_insee_code($cp) {
-		$cp = trim($_POST['cp']);
-		if(strlen($cp) == 4){
-			$cp = '0'.$cp;
-		}
-		$url = "http://dev.misterassur.com/moteur/moteur_import.php";
-		$client = new SoapClient(null, array("uri" => $url, "location" => $url, "trace" => 1, "exceptions" => 1));
-		$villes = $client->getVillesFromCP($cp);
-		
-		echo $villes;
+	/** Function : dump()
+	 * Arguments : $data - the variable that must be displayed
+	 * Prints a array, an object or a scalar variable in an easy to view format.
+	 */
+	function dump($data) {
+	    if(is_array($data)) { //If the given variable is an array, print using the print_r function.
+	        print "<pre>-----------------------\n";
+	        print_r($data);
+	        print "-----------------------</pre>";
+	    } elseif (is_object($data)) {
+	        print "<pre>==========================\n";
+	        var_dump($data);
+	        print "===========================</pre>";
+	    } else {
+	        print "=========&gt; ";
+	        var_dump($data);
+	        print " &lt;=========";
+	    }
 	}
-	
-	// Constantes
-	define("WS_URL", "http://dev.misterassur.com/moteur/moteur_import.php");
-	define("SERVICE", "animaux");
 
 	// Traitement variables
 	// (sanitanisation && renommage)
 	$animal_type = (isset($_POST['dog_breed'])) ? 1 : 2;
+
 	if (isset($_POST['dog_breed'])) {
-		$dog_breed = filter_var($_POST['dog_breed'], FILTER_SANITIZE_NUMBER_INT);
+		$breed = filter_var($_POST['dog_breed'], FILTER_SANITIZE_NUMBER_INT);
+	} elseif (isset($_POST['cat_breed'])) {
+		$breed = filter_var($_POST['cat_breed'], FILTER_SANITIZE_NUMBER_INT);
+	} else {
+		$breed = 0;
 	}
-	if (isset($_POST['cat_breed'])) {
-		$cat_breed = filter_var($_POST['cat_breed'], FILTER_SANITIZE_NUMBER_INT);
-	}
-	$breed = (isset($dog_breed)) ? $dog_breed : $cat_breed;
+
 	$pet_gender = ($_POST['pet_gender'] == "male") ? 1 : 2;
 	$pet_name = filter_var($_POST['pet_name'], FILTER_SANITIZE_STRING);
 	$pet_birthday = format_date($_POST['pet_birthday']);
@@ -65,7 +75,7 @@
 	$owner_phone = filter_var($_POST['owner_phone'], FILTER_SANITIZE_NUMBER_INT);
 	$mobile_phone = (check_mobile($owner_phone)) ? $owner_phone : '';
 	$landline = (!check_mobile($owner_phone)) ? $owner_phone : '';
-	$owner_email = filter_var($_POST['owner_phone'], FILTER_SANITIZE_EMAIL);
+	$owner_email = filter_var($_POST['owner_email'], FILTER_SANITIZE_EMAIL);
 	$optin = ($_POST['optin'] == "on") ? 1 : 0;
 	$pet_insured = filter_var($_POST['pet_insured'], FILTER_SANITIZE_NUMBER_INT);
 	$contract_cancelled = filter_var($_POST['contract_cancelled'], FILTER_SANITIZE_NUMBER_INT);
@@ -81,7 +91,6 @@
 			"resiliation" => $contract_cancelled, 
 			"date_effet" => $contract_start_date, 
 			"formule_souhaitee" => $contract_type, 
-			"ref_apporteur" => '', 
 			"ani_1_type_espece" => $animal_type,
 			"ani_1_nom" => $pet_name, 
 			"ani_1_date_naissance" => $pet_birthday, 
