@@ -11,9 +11,7 @@
 	<meta name="keywords" content="assurance santé, assurance chien" />
 	<meta name="description" content="Une assurance santé pour votre chien" />
 	
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/app.min.css">
 
 	<!-- Google font -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic' rel='stylesheet' type='text/css'>
@@ -88,7 +86,7 @@
 						<form action="synthese.php" method="post" novalidate>
 							<fieldset class="step step1">
 								<legend>Votre petit compagnon</legend>
-								
+
 								Chat ou chien ?<br>
 								<img src="img/chien.png" alt="chien" class="img-radio" data-select="chien">
 								<img src="img/chat.png" alt="chat" class="img-radio" data-select="chat">
@@ -117,7 +115,7 @@
 										<input type="text" name="pet_birthday" class="input-block-level" id="pet-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>	
 									</div>
 								</div>
-								
+
 								<div class="control-group">
 									<label class="control-label">Votre animal est-il déjà couvert ?</label>
 									<div class="controls">
@@ -180,7 +178,7 @@
 										<input type="text" name="owner_address" class="input-block-level" id="owner-address" required>
 									</div>
 								</div>
-								
+
 								<div class="control-group">
 									<label class="control-label" for="zip-code">Votre code postal :</label>
 									<div class="controls">
@@ -210,7 +208,7 @@
 										<input type="email" name="owner_email" id="owner-email" class="input-block-level" placeholder="votre-email@example.fr" required>
 									</div>
 								</div>
-								
+
 								<div class="control-group">
 									<label class="control-label" for="contract-start-date">Date d'effet du contrat souhaitée :</label>
 									<div class="controls">
@@ -258,9 +256,6 @@
 		</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/messages.fr.js"></script>
-		<script src="js/parsley.min.js"></script>
-		<script src="js/app.js"></script>
+		<script src="js/app.min.js"></script>
 	</body>
 	</html>
