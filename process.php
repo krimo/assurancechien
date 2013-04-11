@@ -1,5 +1,7 @@
 <?php
 
+	error_reporting(0);
+
 	// Constantes
 	define("WS_URL", "http://dev.misterassur.com/moteur/moteur_import.php");
 	define("SERVICE", "animaux");
@@ -65,7 +67,7 @@
 	$pet_gender = ($_POST['pet_gender'] == "male") ? 1 : 2;
 	$pet_name = filter_var($_POST['pet_name'], FILTER_SANITIZE_STRING);
 	$pet_birthday = format_date($_POST['pet_birthday']);
-	$pet_tag = ($_POST['pet_tag'] == "on") ? 1 : 0;
+	$pet_tag = (isset($_POST['pet_tag'])) ? 1 : 0;
 	$owner_gender = filter_var($_POST['owner_gender'], FILTER_SANITIZE_NUMBER_INT);
 	$owner_surname = filter_var($_POST['owner_surname'], FILTER_SANITIZE_STRING);
 	$owner_name = filter_var($_POST['owner_name'], FILTER_SANITIZE_STRING);

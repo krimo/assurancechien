@@ -1,0 +1,11 @@
+{
+  "name": "Monassurancechien.com",
+  "version": "0.4.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-contrib-concat": "~0.2.0",
+    "grunt-contrib-cssmin": "~0.6.0"
+  }
+}
