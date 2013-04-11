@@ -31,7 +31,6 @@
 					</div>		
 				</div>
 				<div class="span5">
-					<img src="img/dog-cat.png" alt="Chien et chat" class="header-img visible-phone">
 				</div>
 			</div>
 		</div>
@@ -44,6 +43,17 @@
 				<iframe src="<?php echo $return->synthese; ?>" frameborder="0" width="630" height="1200" seamless style="overflow:hidden;"></iframe>
 			</div>
 		</div>	
+	</div>
+
+	<div class="footer-container">
+		<div class="container">
+			<footer class="row-fluid">
+				<p>&copy; <?=date("Y");?> Monassurancechien.com, un site MisterAssur.</p>
+				<p class="muted"><small>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, praesentium, fugit, laboriosam illum mollitia veritatis culpa sunt alias esse fuga accusamus nostrum iusto neque officia officiis architecto facere aut. Officiis.
+				</small></p>
+			</footer>
+		</div>
 	</div>
 </body>
 </html>

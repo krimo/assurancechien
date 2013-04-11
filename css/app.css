@@ -9,15 +9,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-container {
-	background: #fff;
+	background: #fff url(../img/az_subtle.png);
+	background-size: auto 100%;
 	padding: 1em 0;
 	margin-bottom: 1em;
 	box-shadow: 0 1px 3px #aaa;
 	overflow: hidden;
+	text-align: center;
 }
 
 .header {
 	line-height: .8;
+	text-shadow: 0 2px 1px #fff; 
 }
 
 .img-radio {
@@ -47,20 +50,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 767px) {	
-	.header-container {text-align: center;}
-	.header-img { 
-		max-width: 500px;
-		margin: 0 auto;
-	}
 }
 
 @media (min-width: 768px) { 
 	.hgroup { padding: 2.75em 0; }
-	.header { text-shadow: 0 2px 1px #fff; }
+
 	.header-container {
 		background: #fff url(../img/header-bg.jpg) no-repeat top center;
-		background-size: 100% auto;
+		text-align: left;
+		background-size: 120% auto;
 	}
+
 	.form-container {
 		background: #fff;
 		border-radius: 5px;
