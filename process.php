@@ -32,9 +32,10 @@
 		}
 	}
 
-	/** Function : dump()
-	 * Arguments : $data - the variable that must be displayed
-	 * Prints a array, an object or a scalar variable in an easy to view format.
+	/**
+	 * dump() : a function to nicely format some not so nicely formatted variables
+	 * @param  [array, object, scalar] $data The data to be formatted
+	 * @return  void      Returns nicely formatted data
 	 */
 	function dump($data) {
 	    if(is_array($data)) { //If the given variable is an array, print using the print_r function.
