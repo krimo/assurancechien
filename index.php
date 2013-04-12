@@ -249,7 +249,7 @@
 		<div class="footer-container">
 			<div class="container">
 				<footer class="row-fluid">
-					<p>&copy; <?=date("Y");?> Monassurancechien.com, un site MisterAssur.</p>
+					<p>&copy; <?=date("Y");?> Monassurancechien.com </p>
 					<p class="muted"><small>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, praesentium, fugit, laboriosam illum mollitia veritatis culpa sunt alias esse fuga accusamus nostrum iusto neque officia officiis architecto facere aut. Officiis.
 					</small></p>
