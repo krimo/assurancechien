@@ -62,7 +62,7 @@
 			<div class="row-fluid">			
 				<!-- text outer container -->
 				<div class="span6">
-					<p class="lead">Les meilleurs tarifs accessibles en moins d'une minute avec une gamme de formules sur-mesure.
+					<p class="lead">Les meilleurs tarifs accessibles en moins de deux minutes avec une gamme de formules sur-mesure.
 					</p>
 
 					<ol class="steps hidden-phone">
@@ -231,6 +231,8 @@
 								<label class="checkbox inline">
 									<input type="checkbox" id="optin" name="optin"> Je souhaite être informé(e) des propositions commerciales de monassurancechien.com et/ou de ses partenaires.
 								</label>	
+
+								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
 
 								<hr>
 
