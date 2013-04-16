@@ -11,7 +11,9 @@
 	<meta name="keywords" content="assurance santé, assurance chien" />
 	<meta name="description" content="Une assurance santé pour votre chien" />
 	
-	<link rel="stylesheet" href="css/app.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="css/app.css">
 
 	<!-- Google font -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic' rel='stylesheet' type='text/css'>
@@ -52,7 +54,7 @@
 						<div class="hgroup">
 							<h1 class="header">Mon Assurance Chien <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
 
-							<span class="label label-info">Gratuit, rapide &amp; sans engagement</span>
+							<span class="label label-warning">Gratuit, rapide &amp; sans engagement</span>
 						</div>		
 					</div>
 					<div class="span5">
@@ -64,9 +66,17 @@
 		<div class="container">
 			<div class="row-fluid">			
 				<!-- text outer container -->
-				<div class="span6">
-					<p class="lead">Les meilleurs tarifs accessibles en moins de deux minutes avec une gamme de formules sur-mesure.
-					</p>
+				<div class="span5">
+					
+					<div class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="img/stopwatch.png">
+						</a>
+						<div class="media-body">
+							<p class="lead">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.
+							</p>
+						</div>
+					</div>
 
 					<ol class="steps hidden-phone">
 						<li><p>Je remplis ce formulaire <em>en moins de deux minutes</em></p></li>
@@ -83,7 +93,7 @@
 				</div>
 
 				<!-- form outer container -->
-				<div class="span5 offset1">
+				<div class="span6 offset1">
 					<div class="form-container">
 						<h2>Calculez votre tarif gratuitement et comparez !</h2>
 						<form action="synthese.php" method="post" novalidate>
@@ -105,17 +115,22 @@
 									<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle" required> Femelle
 								</label>
 
-								<div class="control-group">
-									<label class="control-label" for="pet-name">Son nom :</label>
-									<div class="controls">
-										<input type="text" name="pet_name" class="input-block-level" id="pet-name" required>
+								<div class="row-fluid">
+									<div class="span6">
+										<div class="control-group">
+											<label class="control-label" for="pet-name">Son nom :</label>
+											<div class="controls">
+												<input type="text" name="pet_name" class="input-block-level" id="pet-name" required>
+											</div>
+										</div>
 									</div>
-								</div>
-
-								<div class="control-group">
-									<label class="control-label" for="pet-birthday">Sa date de naissance :</label>
-									<div class="controls">
-										<input type="text" name="pet_birthday" class="input-block-level" id="pet-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>	
+									<div class="span6">
+										<div class="control-group">
+											<label class="control-label" for="pet-birthday">Sa date de naissance :</label>
+											<div class="controls">
+												<input type="text" name="pet_birthday" class="input-block-level" id="pet-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>	
+											</div>
+										</div>
 									</div>
 								</div>
 
@@ -159,19 +174,23 @@
 									<option value="2">Monsieur</option>
 									<option value="3">Mademoiselle</option>
 								</select>
-
-								<div class="control-group">
-									<label for="owner-surname">Votre prénom :</label>
-									<div class="controls">
-										<input type="text" name="owner_surname" class="input-block-level" id="owner-surname" required>
+								
+								<div class="row-fluid">
+									<div class="span6">
+										<div class="control-group">
+											<label for="owner-surname">Votre prénom :</label>
+											<div class="controls">
+												<input type="text" name="owner_surname" class="input-block-level" id="owner-surname" required>
+											</div>
+										</div>
 									</div>
-								</div>
-
-
-								<div class="control-group">
-									<label class="control-label" for="owner-name">Votre nom :</label>
-									<div class="controls">			
-										<input type="text" name="owner_name" class="input-block-level" id="owner-name" required>
+									<div class="span6">
+										<div class="control-group">
+											<label class="control-label" for="owner-name">Votre nom :</label>
+											<div class="controls">			
+												<input type="text" name="owner_name" class="input-block-level" id="owner-name" required>
+											</div>
+										</div>
 									</div>
 								</div>
 
@@ -182,28 +201,32 @@
 									</div>
 								</div>
 
-								<div class="control-group">
-									<label class="control-label" for="zip-code">Votre code postal :</label>
-									<div class="controls">
-										<input type="text" name="zip_code" class="input-block-level" id="zip-code" maxlength="5" required>
+								<div class="row-fluid">
+									<div class="span3">
+										<div class="control-group">
+											<label class="control-label" for="zip-code">Votre code postal :</label>
+											<div class="controls">
+												<input type="text" name="zip_code" class="input-block-level" id="zip-code" maxlength="5" required>
+											</div>
+										</div>
+									</div>
+									<div class="span4">
+										<div class="control-group">
+											<label class="control-label" for="owner-birthday">Votre date de naissance :</label>
+											<div class="controls">
+												<input type="text" name="owner_birthday" class="input-block-level" id="owner-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="JJ/MM/AAAA" required>
+											</div>
+										</div>
+									</div>
+									<div class="span5">
+										<div class="control-group">
+											<label class="control-label" for="owner-phone">Votre numéro de téléphone :</label>
+											<div class="controls">
+												<input type="tel" name="owner_phone" id="owner-phone" class="input-block-level" pattern="[0-9]{10}" required>
+											</div>
+										</div>
 									</div>
 								</div>
-
-								<div class="control-group">
-									<label class="control-label" for="owner-birthday">Votre date de naissance :</label>
-									<div class="controls">
-										<input type="text" name="owner_birthday" class="input-block-level" id="owner-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>
-									</div>
-								</div>
-
-
-								<div class="control-group">
-									<label class="control-label" for="owner-phone">Votre n° de téléphone :</label>
-									<div class="controls">
-										<input type="tel" name="owner_phone" id="owner-phone" class="input-block-level" pattern="[0-9]{10}" required>
-									</div>
-								</div>
-
 
 								<div class="control-group">
 									<label class="control-label" for="owner-email">Votre e-mail :</label>
@@ -240,7 +263,7 @@
 								<hr>
 
 								<button type="button" class="btn btn-large" id="back-btn">Retour</button>
-								<button type="submit" class="btn btn-large btn-primary">Envoyer &raquo;</button>
+								<button type="submit" class="btn btn-large btn-primary pull-right">Envoyer &raquo;</button>
 
 							</fieldset>
 						</form>
@@ -254,7 +277,7 @@
 				<footer class="row-fluid">
 					<p>&copy; <?=date("Y");?> Monassurancechien.com </p>
 					<p class="muted"><small>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, praesentium, fugit, laboriosam illum mollitia veritatis culpa sunt alias esse fuga accusamus nostrum iusto neque officia officiis architecto facere aut. Officiis.
+						Monassurancechien.com est un comparateur indépendant d'assurances pour votre chien ou votre chat. N'hésitez pas à réaliser un devis gratuit et sans engagement sur notre site.
 					</small></p>
 				</footer>
 			</div>

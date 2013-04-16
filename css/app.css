@@ -18,9 +18,30 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+.header-container .label {
+	text-transform: uppercase;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.8);
+	padding: .5em;
+	font-size: 1.5em;
+}
+
 .header {
 	line-height: .8;
-	text-shadow: 0 2px 1px #fff; 
+	color: #fff;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.8); 
+}
+
+.header small {
+	color: #3a87ad;
+	font-family: Georgia, serif;
+	font-size: 0.6em;
+	text-shadow: none;
+}
+
+.lead {
+	color: #3a87ad;
+	font-family: Georgia, serif;
+	line-height: 1.4;
 }
 
 .img-radio {
@@ -56,9 +77,9 @@ h1, h2, h3, h4, h5, h6 {
 	.hgroup { padding: 2.75em 0; }
 
 	.header-container {
-		background: #fff url(../img/header-bg.jpg) no-repeat top center;
+		background: #fff url(../img/header-bg-3.jpg) no-repeat top center fixed;
 		text-align: left;
-		background-size: 120% auto;
+		background-size: 100% auto;
 	}
 
 	.form-container {
@@ -67,9 +88,10 @@ h1, h2, h3, h4, h5, h6 {
 		box-shadow: 0 3px 11px #777;
 		padding: .5em 1em;
 		position: relative;
-		top: -4em;
+		top: -2em;
 	}
+
 }
 
 @media (min-width: 980px) { .hgroup {padding: 6em 0;} }
-@media (min-width: 1200px) { .hgroup {padding: 8em 0;} }
+@media (min-width: 1200px) {  }
