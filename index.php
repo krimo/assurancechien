@@ -100,7 +100,7 @@
 							<fieldset class="step step1">
 								<legend>Votre petit compagnon</legend>
 
-								Chat ou chien ?<br>
+								Cliquez sur l'image correspondant à votre compagnon<br>
 								<img src="img/chien.png" alt="chien" class="img-radio" data-select="chien">
 								<img src="img/chat.png" alt="chat" class="img-radio" data-select="chat">
 
