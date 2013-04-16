@@ -15,6 +15,9 @@
 
 	<!-- Google font -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic' rel='stylesheet' type='text/css'>
+	
+	<!-- Google Analytics -->
+	<script>var _gaq=[['_setAccount','UA-34879513-7'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 </head>
 <body>
 	<!--[if lt IE8]>

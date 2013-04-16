@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 			}
 		},
 
-		min: {
+		uglify: {
 			js: {
 				src: 'js/prod/concat.js',
 				dest: 'js/prod/main.min.js'
@@ -24,18 +24,16 @@ module.exports = function(grunt) {
 
 		cssmin: {
 			minify: {
-				expand: true,
-				src: ['css/prod/concat.css', '!*.min.css'],
-				dest: 'css/prod/',
-				ext: '.min.css'
+				src: ['css/prod/concat.css'],
+				dest: 'css/prod/app.min.css'
 			}
 		}
 		
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-imagemin', 'grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib');
 
 	// Default task.
-	grunt.registerTask('default', ['concat', 'min', 'cssmin']);
+	grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
 
 };
