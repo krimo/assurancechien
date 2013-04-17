@@ -6,26 +6,26 @@ module.exports = function(grunt) {
 
 		concat: {
 			js: {
-				src: ['http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', 'js/bootstrap.min.js', 'js/messages.fr.js', 'js/parsley.min.js'],
-				dest: 'js/prod/concat.js'
+				src: ['js/bootstrap.min.js', 'js/messages.fr.js', 'js/parsley.min.js'],
+				dest: 'js/concat.js'
 			},
 			css: {
 				src: ['css/bootstrap.min.css', 'css/bootstrap-responsive.min.css', 'css/app.css'],
-				dest: 'css/prod/concat.css'
+				dest: 'css/concat.css'
 			}
 		},
 
 		uglify: {
 			js: {
-				src: 'js/prod/concat.js',
-				dest: 'js/prod/main.min.js'
+				src: 'js/concat.js',
+				dest: 'js/app.min.js'
 			}
 		},
 
 		cssmin: {
 			minify: {
-				src: ['css/prod/concat.css'],
-				dest: 'css/prod/app.min.css'
+				src: ['css/concat.css'],
+				dest: 'css/app.min.css'
 			}
 		}
 		

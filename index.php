@@ -99,17 +99,33 @@
 						<form action="synthese.php" method="post" novalidate>
 							<fieldset class="step step1">
 								<legend>Votre petit compagnon</legend>
+								
+								<p class="text-center">Cliquez sur l'image correspondant à votre compagnon</p>
 
-								Cliquez sur l'image correspondant à votre compagnon<br>
-								<img src="img/chien.png" alt="chien" class="img-radio" data-select="chien">
-								<img src="img/chat.png" alt="chat" class="img-radio" data-select="chat">
+								<div class="row-fluid">
+									<div class="span6">
+										<div class="animal-holder chien">										
+											<h4>Chien</h4>
+											<p><em>&ldquo;Woof !&rdquo;</em></p>
+										</div>
+									</div>
+									<div class="span6">
+										<div class="animal-holder chat">					
+											<h4>Chat</h4>
+											<p><em>&ldquo;Miaou !&rdquo;</em></p>
+										</div>
+									</div>
+								</div>
+
+								
+								
 
 								<img src="img/ajax-loader.gif" alt="En cours de chargement..." id="loading-gif">
 
 								<div id="breed-selector"></div>
 
 								<label class="radio inline">
-									<input type="radio" id="pet-gender-1" name="pet_gender" value="male" required> Mâle
+									<input type="radio" id="pet-gender-1" name="pet_gender" value="male" required checked> Mâle
 								</label>
 								<label class="radio inline">
 									<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle" required> Femelle
@@ -284,6 +300,10 @@
 		</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/app.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/messages.fr.js"></script>
+		<script src="js/parsley.min.js"></script>
+		<script src="js/app.js"></script>
+
 	</body>
 	</html>

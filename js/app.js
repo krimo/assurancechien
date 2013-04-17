@@ -24,15 +24,17 @@ $(document).ready(function() {
 		return false;
 	})
 
-	$(".img-radio").on("click", function() {
+	$(".animal-holder").on("click", function() {
 
 		$this = $(this),
 		$breedSelector = $("#breed-selector");
 		$gif = $("#loading-gif");
 
-		$this.addClass('well').siblings('.img-radio').removeClass('well');
 
-		if ($this.attr('data-select') === "chien") {
+		$this.addClass('highlight');
+		$(".animal-holder").not(this).removeClass('highlight');
+
+		if ($this.hasClass("chien")) {
 			$gif.show(300);
 			$breedSelector.load("breed-selector.html #chiens", function() {
 				$gif.hide(300);

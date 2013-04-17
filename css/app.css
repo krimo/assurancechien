@@ -44,8 +44,19 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.4;
 }
 
-.img-radio {
+.animal-holder {
 	cursor:pointer;
+	text-indent: 75px;
+	padding: 1em;
+	border: 1px solid #eee;
+	border-radius: 5px;
+}
+
+.animal-holder.chien { background:url(../img/chien.png) no-repeat top left; }
+.animal-holder.chat { background:url(../img/chat.png) no-repeat top left; }
+
+.animal-holder.highlight {
+	border-color: #3A87AD;
 }
 
 .hgroup { padding: 2em 0; }
