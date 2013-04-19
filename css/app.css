@@ -18,30 +18,36 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+.home-link { display: block; }
+
+.home-link:hover { text-decoration: none; }
+
 .header-container .label {
 	text-transform: uppercase;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.8);
 	padding: .5em;
-	font-size: 1.5em;
+	font-size: 1em;
 }
 
 .header {
 	line-height: .8;
 	color: #fff;
+	font-size: 1.8em;
+	font-weight: 300;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.8); 
 }
 
 .header small {
-	color: #3a87ad;
-	font-family: Georgia, serif;
-	font-size: 0.6em;
-	text-shadow: none;
+	color: #fff;
+	font-size: 1em;
+	font-weight: 700;
 }
 
-.lead {
+.lead-alt {
 	color: #3a87ad;
 	font-family: Georgia, serif;
 	line-height: 1.4;
+	font-size: 1.2em;
 }
 
 .animal-holder {
@@ -79,6 +85,11 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	background: #333;
 	padding: 1em 0 .5em 0;
+	margin-top: 2em;
+}
+
+.insurance-article {
+	text-align: justify;
 }
 
 @media (max-width: 767px) {	
@@ -88,9 +99,9 @@ h1, h2, h3, h4, h5, h6 {
 	.hgroup { padding: 2.75em 0; }
 
 	.header-container {
-		background: #fff url(../img/header-bg-3.jpg) no-repeat top center fixed;
+		background: #c7c376 url(../img/header-bg-3.jpg) no-repeat top center;
 		text-align: left;
-		background-size: 100% auto;
+		background-size: auto 120%;
 	}
 
 	.form-container {
@@ -104,5 +115,5 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-@media (min-width: 980px) { .hgroup {padding: 6em 0;} }
+@media (min-width: 980px) { .hgroup {padding: 3em 0;} }
 @media (min-width: 1200px) {  }

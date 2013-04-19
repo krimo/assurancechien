@@ -51,11 +51,12 @@
 			<div class="container">
 				<div class="row-fluid">
 					<div class="span7">
-						<div class="hgroup">
-							<h1 class="header">Mon Assurance Chien <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
-
-							<span class="label label-warning">Gratuit, rapide &amp; sans engagement</span>
-						</div>		
+						<a href="index.php" class="home-link">
+							<div class="hgroup">
+								<h1 class="header">Mon Assurance Chien <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
+								<span class="label label-info">Gratuit, rapide &amp; sans engagement</span>
+							</div>	
+						</a>
 					</div>
 					<div class="span5">
 					</div>
