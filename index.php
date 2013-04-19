@@ -4,15 +4,9 @@
 				<!-- text outer container -->
 				<div class="span5">
 					
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 64px; height: 64px;" src="img/stopwatch.png">
-						</a>
-						<div class="media-body">
-							<p class="lead-alt">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.
-							</p>
-						</div>
-					</div>
+					<p class="lead-alt">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.</p>
+
+					<img src="img/arrow-big.png" alt="" class="big-arrow">
 
 					<ul class="thumbnails hidden-phone">
 						<li class="span6">
@@ -171,32 +165,37 @@
 									</div>
 								</div>
 
+								<div class="form-horizontal">
+									<div class="control-group">
+										<label class="control-label" for="zip-code">Votre code postal :</label>
+										<div class="controls">
+											<input type="text" name="zip_code" class="span5" id="zip-code" maxlength="5" required>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="owner-birthday">Votre date de naissance :</label>
+										<div class="controls">
+											<input type="text" name="owner_birthday" class="span5" id="owner-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="JJ/MM/AAAA" required>
+										</div>
+									</div>
+									<div class="control-group">
+										<label class="control-label" for="owner-phone">Votre numéro de téléphone :</label>
+										<div class="controls">
+											<input type="tel" name="owner_phone" id="owner-phone" class="span5" pattern="[0-9]{10}" required>
+										</div>
+									</div>	
+								</div>
+								<!--  
 								<div class="row-fluid">
 									<div class="span3">
-										<div class="control-group">
-											<label class="control-label" for="zip-code">Votre code postal :</label>
-											<div class="controls">
-												<input type="text" name="zip_code" class="input-block-level" id="zip-code" maxlength="5" required>
-											</div>
-										</div>
 									</div>
 									<div class="span4">
-										<div class="control-group">
-											<label class="control-label" for="owner-birthday">Votre date de naissance :</label>
-											<div class="controls">
-												<input type="text" name="owner_birthday" class="input-block-level" id="owner-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="JJ/MM/AAAA" required>
-											</div>
-										</div>
 									</div>
 									<div class="span5">
-										<div class="control-group">
-											<label class="control-label" for="owner-phone">Votre numéro de téléphone :</label>
-											<div class="controls">
-												<input type="tel" name="owner_phone" id="owner-phone" class="input-block-level" pattern="[0-9]{10}" required>
-											</div>
-										</div>
 									</div>
 								</div>
+
+								-->
 
 								<div class="row-fluid">
 									<div class="span6">
