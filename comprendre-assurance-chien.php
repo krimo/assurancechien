@@ -1,7 +1,7 @@
 <?php require_once("_top.php"); ?>
 	<div class="container">
 		<div class="row-fluid">
-			<div class="span10">
+			<div class="span6 offset3">
 				<section class="insurance-article">
 					<p class="lead">Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident ou une maladie survient. Pour les maîtres, les soins peuvent devenir un gouffre financier, au bout duquel il faudra choisir entre la santé de son fidèle compagnon et celle de ses finances.</p>
 
