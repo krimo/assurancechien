@@ -1,7 +1,5 @@
 <?php
 
-	error_reporting(0);
-
 	// Constantes
 	define("WS_URL", "http://dev.misterassur.com/moteur/moteur_import.php");
 	define("SERVICE", "animaux");
@@ -32,29 +30,8 @@
 		}
 	}
 
-	/**
-	 * dump() : a function to nicely format some not so nicely formatted variables
-	 * @param  [array, object, scalar] $data The data to be formatted
-	 * @return  void      Returns nicely formatted data
-	 */
-	function dump($data) {
-	    if(is_array($data)) { //If the given variable is an array, print using the print_r function.
-	        print "<pre>-----------------------\n";
-	        print_r($data);
-	        print "-----------------------</pre>";
-	    } elseif (is_object($data)) {
-	        print "<pre>==========================\n";
-	        var_dump($data);
-	        print "===========================</pre>";
-	    } else {
-	        print "=========&gt; ";
-	        var_dump($data);
-	        print " &lt;=========";
-	    }
-	}
-
 	// Traitement variables
-	// (sanitanisation && renommage)
+	// (nettoyage && renommage)
 	$animal_type = (isset($_POST['dog_breed'])) ? 1 : 2;
 
 	if (isset($_POST['dog_breed'])) {

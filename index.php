@@ -232,9 +232,9 @@
 									<input type="checkbox" id="optin" name="optin"> Je souhaite être informé(e) des propositions commerciales de monassurancechien.com et/ou de ses partenaires.
 								</label>	
 
-								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
-
 								<hr>
+
+								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
 
 								<button type="button" class="btn btn-large" id="back-btn">Retour</button>
 								<button type="submit" class="btn btn-large btn-primary pull-right">Envoyer &raquo;</button>

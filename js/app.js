@@ -28,7 +28,7 @@ $(document).ready(function() {
 		});
 
 		if (!animalPicked) {
-			$(".animal-picker").addClass("text-warning").text("Merci de choisir un type d'animal !");
+			$(".animal-picker").addClass("text-error").text("Merci de choisir un type d'animal !");
 		}
 
 		if (petBday.parsley('isValid') && petName.parsley('isValid') && animalPicked) {
