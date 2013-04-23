@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("form").parsley({
-		trigger: 'keyup',
+		trigger: 'blur',
 		successClass: 'success',
 		errorClass: 'error',
 		errors: {

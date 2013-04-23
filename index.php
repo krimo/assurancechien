@@ -8,31 +8,17 @@
 
 					<img src="img/arrow-big.png" alt="" class="big-arrow">
 
-					<ul class="thumbnails hidden-phone">
-						<li class="span6">
-							<div class="thumbnail">
-								<img src="img/step-1.jpg" alt="Je remplis ce formulaire">
-								<h4>Je remplis ce formulaire <span class="text-info">en moins de deux minutes</span></h4>
-							</div>
-						</li>
-						<li class="span6">
-							<div class="thumbnail">
-								<img src="img/step-2.jpg" alt="J'affiche les tarifs et je compare les offres">
-								<h4>J'affiche les tarifs et je compare les offres</h4>
-							</div>
-						</li>
+					<ul class="form-steps">
+						<li class="form-step"><h4>Je remplis ce formulaire <span class="text-info">en moins de deux minutes</span></h4></li>
+						<li class="form-step"><h4>J'affiche les tarifs et je compare les offres</h4></li>
 					</ul>
+					
+					
 
 					<div class="thumbnail">
-						<div class="row-fluid">
-							<div class="span6">
-								<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
-							</div>
-							<div class="span6">
-								<h3>Assurez votre chien</h3>
-								<p>Frais vétérinaires, vaccins, maladies, accidents&hellip; Quelques euros/mois pour leur mutuelle, ça simplifie la vie ! <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>								
-							</div>
-						</div>
+						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
+						<h3>Assurez votre chien</h3>
+						<p><span class="text-info">Frais vétérinaires, vaccins, maladies, accidents&hellip;</span> Quelques euros/mois pour leur mutuelle, ça simplifie la vie ! Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
 					</div>
 
 				</div>
@@ -40,7 +26,7 @@
 				<!-- form outer container -->
 				<div class="span6 offset1">
 					<div class="form-container">
-						<h2>Calculez votre tarif gratuitement et comparez !</h2>
+						<h2>Calculez votre tarif gratuitement <br>et comparez !</h2>
 						<form action="synthese.php" method="post" novalidate>
 							<fieldset class="step step1">
 								<legend>Votre petit compagnon</legend>
