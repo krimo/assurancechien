@@ -6,16 +6,14 @@
 					
 					<p class="lead-alt">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.</p>
 
-					<img src="img/arrow-big.png" alt="" class="big-arrow">
+					<img src="img/arrow-big.png" alt="" class="big-arrow hidden-phone">
 
 					<ul class="form-steps">
-						<li class="form-step"><h4>Je remplis ce formulaire <span class="text-info">en moins de deux minutes</span></h4></li>
-						<li class="form-step"><h4>J'affiche les tarifs et je compare les offres</h4></li>
+						<li class="form-step"><h4>1/ Je remplis ce formulaire <span class="text-info">en moins de deux minutes</span></h4></li>
+						<li class="form-step"><h4>2/ J'affiche les tarifs et je compare les offres</h4></li>
 					</ul>
-					
-					
 
-					<div class="thumbnail">
+					<div class="thumbnail hidden-phone">
 						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
 						<h3>Assurez votre chien</h3>
 						<p><span class="text-info">Frais vétérinaires, vaccins, maladies, accidents&hellip;</span> Quelques euros/mois pour leur mutuelle, ça simplifie la vie ! Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	

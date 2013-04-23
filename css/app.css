@@ -22,15 +22,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .home-link:hover { text-decoration: none; }
 
-
-.big-arrow {
-	position: relative;
-	right: -240px;
-	top: -50px;
-	max-width: 50%;
-}
-
-
 .header-container .label {
 	text-transform: uppercase;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.8);
@@ -57,9 +48,20 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: Georgia, serif;
 	line-height: 1.4;
 	font-size: 1.2em;
-	max-width: 65%;
 	line-height: 1.5;
 	text-shadow: 0 1px 0 #fff;
+	text-align: center;
+}
+
+.big-arrow {
+	position: relative;
+	right: -63%;
+	top: -50px;
+	max-width: 50%;
+}
+
+.form-steps {
+	list-style-type: none;
 }
 
 .thumbnail {background: #fff;}
@@ -136,6 +138,10 @@ h1, h2, h3, h4, h5, h6 {
 		background: #c7c376 url(../img/header-bg-3.jpg) no-repeat top center;
 		text-align: left;
 		background-size: auto 120%;
+	}
+
+	.lead-alt {
+		max-width: 65%;
 	}
 
 	.form-container {
