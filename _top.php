@@ -53,7 +53,7 @@
 					<div class="span7">
 						<a href="index.php" class="home-link">
 							<div class="hgroup">
-								<h1 class="header">Mon Assurance Chien <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
+								<h1 class="header">monassurancechien.com <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
 								<span class="label label-info">Gratuit, rapide &amp; sans engagement</span>
 							</div>	
 						</a>

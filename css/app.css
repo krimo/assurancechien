@@ -66,6 +66,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .thumbnail {background: #fff;}
 
+.form-container {
+	background: #fff;
+	border-radius: 5px;
+	padding: .5em 1em;
+}
+
 .animal-picker {
 	font-size: .9em;
 }
@@ -129,6 +135,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 767px) {	
+	
+	.body {text-align: center;}
+	
+
+	.animal-holder {
+		background-position: top center !important;
+		text-indent: 0;
+	}
+
+	.animal-holder h4 {
+		font-size: 4em;
+		line-height: 2;
+		margin: 0;
+		text-align: center;
+		position: relative;
+		top: 38px;
+	}
+
+	.animal-holder p {display: none;}
+
+	.footer-container {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		padding: 1em;
+	}
 }
 
 @media (min-width: 768px) { 
@@ -145,10 +177,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.form-container {
-		background: #fff;
-		border-radius: 5px;
 		box-shadow: 0 3px 11px #777;
-		padding: .5em 1em;
 		position: relative;
 		top: -2em;
 	}
