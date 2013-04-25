@@ -120,7 +120,7 @@
 								</label>
 
 								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
-								<button type="button" class="btn" id="continue-btn">Continuer &raquo;</button>
+								<button type="button" class="btn pull-right" id="continue-btn">Continuer &raquo;</button>
 							</fieldset>
 
 							<fieldset class="step step2">
@@ -178,7 +178,7 @@
 										</div>
 									</div>
 									<div class="control-group">
-										<label class="control-label" for="owner-phone">Votre numéro de téléphone :</label>
+										<label class="control-label" for="owner-phone">Votre n° de téléphone :</label>
 										<div class="controls">
 											<input type="tel" name="owner_phone" id="owner-phone" class="span5" pattern="[0-9]{10}" required>
 										</div>
