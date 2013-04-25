@@ -38,6 +38,8 @@
 		$breed = filter_var($_POST['dog_breed'], FILTER_SANITIZE_NUMBER_INT);
 	} elseif (isset($_POST['cat_breed'])) {
 		$breed = filter_var($_POST['cat_breed'], FILTER_SANITIZE_NUMBER_INT);
+	} elseif (isset($_POST['parrot_breed'])) {
+		$breed = filter_var($_POST['parrot_breed'], FILTER_SANITIZE_NUMBER_INT);
 	} else {
 		$breed = 0;
 	}

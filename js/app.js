@@ -27,10 +27,6 @@ $(document).ready(function() {
 			}
 		});
 
-		if (!animalPicked) {
-			$(".animal-picker").addClass("text-error").text("Merci de choisir un type d'animal !");
-		}
-
 		if (petBday.parsley('isValid') && petName.parsley('isValid') && animalPicked) {
 			$(this).closest('.step').hide(300).next('.step').show(300);
 		}
@@ -47,8 +43,6 @@ $(document).ready(function() {
 		$this = $(this),
 		$breedSelector = $("#breed-selector");
 		$gif = $("#loading-gif");
-
-		$(".animal-picker").removeClass("text-warning");
 		
 		$this.addClass('highlight');
 		$(".animal-holder").not(this).removeClass('highlight');
@@ -64,6 +58,20 @@ $(document).ready(function() {
 				$gif.hide(300);
 			});
 
+		}
+	});
+
+	$("#nac-selector").on("change", function() {
+
+		var selectedOption = $(this).find("option:selected");
+
+		$(".animal-holder").removeClass('highlight');
+
+		if (selectedOption.val() == 5) {
+			$("#loading-gif").show(300);
+			$("#breed-selector").load("breed-selector.html #perroquets", function() {
+				$("#loading-gif").hide(300);
+			});
 		}
 	});
 });

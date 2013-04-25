@@ -29,7 +29,7 @@
 							<fieldset class="step step1">
 								<legend>Votre petit compagnon</legend>
 								
-								<p class="text-center animal-picker">Cliquez sur l'image correspondant à votre compagnon</p>
+								<p class="text-center animal-picker">Cliquez sur l'image correspondant à votre compagnon ou choisissez dans la liste déroulante</p>
 
 								<div class="row-fluid">
 									<div class="span6">
@@ -42,6 +42,21 @@
 										<div class="animal-holder chat">					
 											<h4>Chat</h4>
 											<p><em>&ldquo;Miaou !&rdquo;</em></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="row-fluid">								
+									<div class="control-group">
+										<div class="controls">
+											<select type="text" name="nac_selector" class="input-block-level" id="nac-selector">
+												<option value="">Autres animaux de compagnie :</option>
+												<option value="1">Lapin</option>
+												<option value="2">Furet</option>
+												<option value="3">Cobaye</option>
+												<option value="4">Chinchilla</option>
+												<option value="5">Perroquet</option>
+											</select>
 										</div>
 									</div>
 								</div>
