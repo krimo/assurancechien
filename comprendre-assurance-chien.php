@@ -1,7 +1,7 @@
 <?php require_once("_top.php"); ?>
 	<div class="container">
 		<div class="row-fluid">
-			<div class="span6 offset3">
+			<div class="span6">
 				<section class="insurance-article">
 					<p class="lead">Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident ou une maladie survient. Pour les maîtres, les soins peuvent devenir un gouffre financier, au bout duquel il faudra choisir entre la santé de son fidèle compagnon et celle de ses finances.</p>
 
@@ -17,8 +17,26 @@
 					<p>L'outil de simulation assurance vous aidera alors à sélectionner <strong>l'offre la plus en phase avec vos attentes</strong>, les caractéristiques de votre animal (âge, race...) et enfin votre budget. Pour cela, il vous suffit de remplir un simple formulaire. Avez-vous besoin d'une couverture à 50 ou à 100 % ? Souhaitez-vous que les vaccinations soient prises en charge ? Quel budget définissez-vous pour votre assurance chien ? En quelques clics et sans engagement, vous obtenez des devis répondant à vos attentes.</p>
 				</section>
 			</div>
-			<div class="span2">
-				
+			<div class="span4 offset1">
+				<div class="well">
+					<a href="/" class="btn btn-large btn-block btn-primary">Retour au formulaire</a>
+					<hr>
+					<h4>Liste des articles</h4>
+					<ul class="article-list">
+						<li>
+							<h5>Titre de l'article</h5>
+							<p>Le début de l'article et un lien&hellip; <a href="#">En savoir plus &raquo;</a></p>
+						</li>
+						<li>
+							<h5>Titre de l'article</h5>
+							<p>Le début de l'article et un lien&hellip; <a href="#">En savoir plus &raquo;</a></p>
+						</li>
+						<li>
+							<h5>Titre de l'article</h5>
+							<p>Le début de l'article et un lien&hellip; <a href="#">En savoir plus &raquo;</a></p>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

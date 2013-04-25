@@ -15,8 +15,10 @@
 
 					<div class="thumbnail hidden-phone">
 						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
-						<h3>Assurez votre chien</h3>
-						<p><span class="text-info">Frais vétérinaires, vaccins, maladies, accidents&hellip;</span> Quelques euros/mois pour leur mutuelle, ça simplifie la vie ! Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
+						<div class="caption">							
+							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents&hellip;</h3>
+							<p>Quelques euros/mois pour leur mutuelle, ça simplifie la vie ! Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
+						</div>
 					</div>
 
 				</div>
@@ -28,20 +30,29 @@
 						<form action="synthese.php" method="post" novalidate>
 							<fieldset class="step step1">
 								<legend>Votre petit compagnon</legend>
-								
-								<p class="text-center animal-picker">Cliquez sur l'image correspondant à votre compagnon ou choisissez dans la liste déroulante</p>
 
-								<div class="row-fluid">
-									<div class="span6">
-										<div class="animal-holder chien">										
-											<h4>Chien</h4>
-											<p><em>&ldquo;Woof !&rdquo;</em></p>
-										</div>
+								<div id="erreur-animal">
+									<div class="alert alert-error">
+										<a class="close" data-dismiss="alert">&times;</a>
+										<strong>Attention !</strong> Merci de choisir un animal pour continuer&hellip;
 									</div>
-									<div class="span6">
-										<div class="animal-holder chat">					
-											<h4>Chat</h4>
-											<p><em>&ldquo;Miaou !&rdquo;</em></p>
+								</div>
+								
+								<div class="control-group">
+									<p class="text-center animal-picker">Cliquez sur l'image correspondant à votre compagnon ou choisissez dans la liste déroulante</p>
+
+									<div class="row-fluid">
+										<div class="span6">
+											<div class="animal-holder chien">										
+												<h4>Chien</h4>
+												<p><em>&ldquo;Woof !&rdquo;</em></p>
+											</div>
+										</div>
+										<div class="span6">
+											<div class="animal-holder chat">					
+												<h4>Chat</h4>
+												<p><em>&ldquo;Miaou !&rdquo;</em></p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -85,7 +96,7 @@
 										<div class="control-group">
 											<label class="control-label" for="pet-birthday">Sa date de naissance :</label>
 											<div class="controls">
-												<input type="text" name="pet_birthday" class="input-block-level" id="pet-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" required>	
+												<input type="text" name="pet_birthday" class="input-block-level date-input" id="pet-birthday" required>	
 											</div>
 										</div>
 									</div>
@@ -174,7 +185,7 @@
 									<div class="control-group">
 										<label class="control-label" for="owner-birthday">Votre date de naissance :</label>
 										<div class="controls">
-											<input type="text" name="owner_birthday" class="span5" id="owner-birthday" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="JJ/MM/AAAA" required>
+											<input type="text" name="owner_birthday" class="span5 date-input" id="owner-birthday" required>
 										</div>
 									</div>
 									<div class="control-group">
@@ -184,17 +195,6 @@
 										</div>
 									</div>	
 								</div>
-								<!--  
-								<div class="row-fluid">
-									<div class="span3">
-									</div>
-									<div class="span4">
-									</div>
-									<div class="span5">
-									</div>
-								</div>
-
-								-->
 
 								<div class="row-fluid">
 									<div class="span6">

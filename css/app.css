@@ -8,6 +8,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 900;
 }
 
+#erreur-animal {display: none;}
+
 .header-container {
 	background: #fff url(../img/az_subtle.png);
 	background-size: auto 100%;
@@ -51,12 +53,13 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.5;
 	text-shadow: 0 1px 0 #fff;
 	text-align: center;
+	padding-top: 1em;
 }
 
 .big-arrow {
 	position: relative;
-	right: -63%;
-	top: -50px;
+	right: -74%;
+	top: -53px;
 	max-width: 50%;
 }
 
@@ -65,6 +68,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .thumbnail {background: #fff;}
+
+.thumbnail h3 {line-height: 1;}
 
 .form-container {
 	background: #fff;
@@ -98,6 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 1em;
 	border: 1px solid #eee;
 	border-radius: 5px;
+	overflow: hidden;
 }
 
 .animal-holder.chien { background:url(../img/chien.png) no-repeat top left; }
@@ -173,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.lead-alt {
-		max-width: 65%;
+		max-width: 71%;
 	}
 
 	.form-container {
