@@ -54,12 +54,17 @@
 					<div class="span7">
 						<a href="index.php" class="home-link">
 							<div class="hgroup">
-								<h1 class="header">monassurancechien.com <br> <small>Le comparateur de mutuelles chien et chat</small></h1>
+								<h1 class="header">monassurancechien.com <br> <small>Le comparateur de mutuelles chien et chat</small><br><span class="other">(et autres animaux de compagnie)</span></h1>
 								<span class="label label-info">Gratuit, rapide &amp; sans engagement</span>
 							</div>	
 						</a>
 					</div>
 					<div class="span5">
+						<ul class="social-links inline pull-right">
+							<li class="social-link fb"><a href="#">Facebook</a></li>
+							<li class="social-link twitter"><a href="#">Twitter</a></li>
+							<li class="social-link gplus"><a href="#">Google+</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>

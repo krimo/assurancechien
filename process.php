@@ -38,8 +38,8 @@
 	} elseif (isset($_POST['cat_breed'])) {
 		$animal_type = 2;
 		$breed = filter_var($_POST['cat_breed'], FILTER_SANITIZE_NUMBER_INT);
-	} elseif (isset($_POST['parrot_breed'])) {
-		$breed = filter_var($_POST['parrot_breed'], FILTER_SANITIZE_NUMBER_INT);
+	} elseif (isset($_POST['nac_breed'])) {
+		$breed = filter_var($_POST['nac_breed'], FILTER_SANITIZE_NUMBER_INT);
 	} else {
 		$animal_type = 3;
 		$breed = 0;
@@ -53,7 +53,8 @@
 	$owner_surname = filter_var($_POST['owner_surname'], FILTER_SANITIZE_STRING);
 	$owner_name = filter_var($_POST['owner_name'], FILTER_SANITIZE_STRING);
 	$owner_address = filter_var($_POST['owner_address'], FILTER_SANITIZE_STRING);
-	$zip_code = filter_var($_POST['zip_code'], FILTER_SANITIZE_NUMBER_INT);
+	$zip_code = filter_var($_POST['zip_code'], FILTER_SANITIZE_NUMBER_INT);	
+	$insee = filter_var($_POST['insee'], FILTER_SANITIZE_NUMBER_INT);
 	$owner_birthday = format_date($_POST['owner_birthday']);
 	$owner_phone = filter_var($_POST['owner_phone'], FILTER_SANITIZE_NUMBER_INT);
 	$mobile_phone = (check_mobile($owner_phone)) ? $owner_phone : '';
@@ -88,7 +89,7 @@
 			"date_naissance" => $owner_birthday, 
 			"adresse" => $owner_address, 
 			"cp" => $zip_code, 
-			"insee" => '', 
+			"insee" => $insee, 
 			"email" => $owner_email, 
 			"tel_mobile" => $mobile_phone, 
 			"tel_bureau" => '', 

@@ -9,60 +9,48 @@ $(document).ready(function() {
 		if (Modernizr.touch && Modernizr.inputtypes.date) {
 	        document.getElementById(theId).type = 'date';
 	    } else {
-	        $("#"+theId).datepicker({ dateFormat: 'dd/mm/yy' });
+	        $("#"+theId).datepicker($.datepicker.regional["fr"]);
 	    }
+	});
+
+	$("#zip-code").on("blur", function() {
+
+		var codePostal = $(this).val();
+
+		$.ajax({
+			url: 'liste-insee.php',
+			type: 'POST',
+			data: "cp="+codePostal,
+			success: function (data) {
+				d = eval(data);
+				$("#insee").append("<option value="+d[0]+">"+d[1]+"</option>");
+			},
+			error: function (d, r, obj) {
+				console.log(r);
+			}
+		});
+		
 	});
 
 	$(".animal-holder").on("click", function() {
 
 		animalChosen = true;
+
 		if($("#erreur-animal").is(":visible")) {
 			$("#erreur-animal").fadeOut(300);
 		}
 
-		var $this = $(this),
-			$breedSelector = $("#breed-selector"),
-			$gif = $("#loading-gif");
+		var $this = $(this), $breedSelector = $("#breed-selector");
 		
 		$this.toggleClass('highlight');
 		$(".animal-holder").not(this).removeClass('highlight');
 
-		if ($(".animal-holder.highlight").length>0) {
-			$("#nac-selector").hide();
-		} else {
-			$("#nac-selector").show();
-		}
-
 		if ($this.hasClass("chien")) {
-			$gif.show(300);
-			$breedSelector.load("breed-selector.html #chiens", function() {
-				$gif.hide(300);
-			});
-		} else {
-			$gif.show(300);
-			$breedSelector.load("breed-selector.html #chats", function() {
-				$gif.hide(300);
-			});
-
-		}
-	});
-
-	$("#nac-selector").on("change", function() {
-
-		animalChosen = true;
-		if($("#erreur-animal").is(":visible")) {
-			$("#erreur-animal").fadeOut(300);
-		}
-
-		var selectedOption = $(this).find("option:selected");
-
-		$(".animal-holder").removeClass('highlight');
-
-		if (selectedOption.val() == 5) {
-			$("#loading-gif").show(300);
-			$("#breed-selector").load("breed-selector.html #perroquets", function() {
-				$("#loading-gif").hide(300);
-			});
+			$breedSelector.load("breed-selector.html #chiens");
+		} else if ($this.hasClass("chat")) {
+			$breedSelector.load("breed-selector.html #chats");
+		} else if ($this.hasClass("nac")) {
+			$breedSelector.load("breed-selector.html #nacs");
 		}
 	});
 

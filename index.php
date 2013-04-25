@@ -8,16 +8,17 @@
 
 					<img src="img/arrow-big.png" alt="" class="big-arrow hidden-phone">
 
-					<ul class="form-steps">
-						<li class="form-step"><h4>1/ Je remplis ce formulaire <span class="text-info">en moins de deux minutes</span></h4></li>
-						<li class="form-step"><h4>2/ J'affiche les tarifs et je compare les offres</h4></li>
+					<ul class="form-steps unstyled">
+						<li class="form-step"><h4><span class="step">1</span>Je remplis ce formulaire <span class="text-info">en moins de deux minutes</span></h4></li>
+						<li class="form-step"><h4><span class="step">2</span>J'affiche les tarifs et je compare les offres</h4></li>
 					</ul>
 
 					<div class="thumbnail hidden-phone">
 						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
 						<div class="caption">							
-							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents&hellip;</h3>
-							<p><strong>Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</strong> <br> Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
+							<h3>Frais vétérinaires, vaccins, maladies, accidents&hellip;</h3>
+							<h3 class="muted">Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</h3>
+							<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
 						</div>
 					</div>
 
@@ -33,48 +34,35 @@
 
 								<div id="erreur-animal">
 									<div class="alert alert-error">
-										<a class="close" data-dismiss="alert">&times;</a>
 										<strong>Attention !</strong> Merci de choisir un animal pour continuer&hellip;
 									</div>
 								</div>
 								
 								<div class="control-group">
 									<p class="text-center animal-picker">Cliquez sur l'image correspondant à votre compagnon ou choisissez dans la liste déroulante</p>
-
 									<div class="row-fluid">
-										<div class="span6">
-											<div class="animal-holder chien">										
+										<div class="span4">
+											<div class="animal-holder chien">		
 												<h4>Chien</h4>
 												<p><em>&ldquo;Woof !&rdquo;</em></p>
 											</div>
 										</div>
-										<div class="span6">
+										<div class="span4">
 											<div class="animal-holder chat">					
 												<h4>Chat</h4>
 												<p><em>&ldquo;Miaou !&rdquo;</em></p>
 											</div>
 										</div>
-									</div>
-								</div>
-
-								<div class="row-fluid">								
-									<div class="control-group">
-										<div class="controls">
-											<select type="text" name="nac_selector" class="input-block-level" id="nac-selector">
-												<option value="">Autres animaux de compagnie :</option>
-												<option value="1">Lapin</option>
-												<option value="2">Furet</option>
-												<option value="3">Cobaye</option>
-												<option value="4">Chinchilla</option>
-												<option value="5">Perroquet</option>
-											</select>
+										<div class="span4">
+											<div class="animal-holder nac">					
+												<h4>Autres</h4>
+												<p><em>&ldquo;?&rdquo;</em></p>
+											</div>
 										</div>
 									</div>
 								</div>
 
-								<img src="img/ajax-loader.gif" alt="En cours de chargement..." id="loading-gif">
-
-								<div id="breed-selector"></div>
+								<div id="breed-selector" class="row-fluid"></div>
 
 								<label class="radio inline">
 									<input type="radio" id="pet-gender-1" name="pet_gender" value="male" required checked> Mâle
@@ -175,13 +163,25 @@
 									</div>
 								</div>
 
-								<div class="form-horizontal">
-									<div class="control-group">
-										<label class="control-label" for="zip-code">Votre code postal :</label>
-										<div class="controls">
-											<input type="text" name="zip_code" class="span5" id="zip-code" maxlength="5" required>
+								<div class="row-fluid">
+									<div class="span6">										
+										<div class="control-group">
+											<label class="control-label" for="zip-code">Votre code postal :</label>
+											<div class="controls">
+												<input type="text" name="zip_code" class="input-block-level" id="zip-code" maxlength="5" required>
+											</div>
 										</div>
 									</div>
+									<div class="span6">										
+										<div class="control-group">
+											<label class="control-label" for="insee">Ville :</label>
+											<div class="controls">
+												<select type="text" name="insee" class="input-block-level" id="insee"></select>
+											</div>
+										</div>										
+									</div>
+								</div>
+								<div class="form-horizontal">
 									<div class="control-group">
 										<label class="control-label" for="owner-birthday">Votre date de naissance :</label>
 										<div class="controls">
