@@ -17,7 +17,7 @@
 						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
 						<div class="caption">							
 							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents&hellip;</h3>
-							<p>Quelques euros/mois pour leur mutuelle, ça simplifie la vie ! Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
+							<p><strong>Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</strong> <br> Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
 						</div>
 					</div>
 
