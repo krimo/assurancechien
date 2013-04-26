@@ -203,9 +203,9 @@
 										<label class="control-label" for="owner-birthday">Date de naissance :</label>
 										<div class="controls">
 											<div class="row-fluid">
-												<input type="text" name="obirthday_day" id="obirthday-day" class="span3 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
-												<input type="text" name="obirthday_month" id="obirthday-month" class="span3 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
-												<input type="text" name="obirthday_year" id="obirthday-year" class="span6 date-input" maxlength="4" data-range="[1915, 1999]" placeholder="Année" required>
+												<input type="text" name="obirthday_day" id="obirthday-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
+												<input type="text" name="obirthday_month" id="obirthday-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
+												<input type="text" name="obirthday_year" id="obirthday-year" class="span3 date-input" maxlength="4" data-range="[1915, 1997]" placeholder="Année" required>
 											</div>	
 										</div>
 									</div>
@@ -231,9 +231,9 @@
 											<label class="control-label" for="contract-start-date">Date d'effet du contrat souhaitée :</label>
 											<div class="controls">
 												<div class="row-fluid">
-													<input type="text" name="csd_day" id="csd-day" class="span3 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
-													<input type="text" name="csd_month" id="csd-month" class="span3 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
-													<input type="text" name="csd_year" id="csd-year" class="span6 date-input" maxlength="4" data-range="[2013, 2020]" placeholder="Année" required>
+													<input type="text" name="csd_day" id="csd-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" value="<?=date("d", strtotime("+1 day"));?>"  required>
+													<input type="text" name="csd_month" id="csd-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" value="<?=date("m");?>" required>
+													<input type="text" name="csd_year" id="csd-year" class="span3 date-input" maxlength="4" data-range="[2013, 2020]" placeholder="Année" value="<?=date("Y");?>" required>
 												</div>	
 											</div>
 										</div>										
@@ -243,11 +243,9 @@
 								<div class="control-group">
 									<label for="contract-type" class="control-label">Type de formule souhaitée :</label>
 									<div class="controls">
-										<select name="contract_type" id="contract-type" class="input-block-level">
-											<option value="1">Basique</option>
-											<option value="2">Sérénité</option>
-											<option value="3">Premium</option>
-										</select>
+										<label class="radio inline"><input type="radio" name="contract_type" checked> Basique</label>
+										<label class="radio inline"><input type="radio" name="contract_type"> Sérénité</label>
+										<label class="radio inline"><input type="radio" name="contract_type"> Premium</label>
 									</div>
 								</div>
 
@@ -261,7 +259,7 @@
 								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
 
 								<button type="button" class="btn btn-info btn-large" id="back-btn">Retour</button>
-								<button type="submit" class="btn btn-large btn-primary pull-right">Envoyer &raquo;</button>
+								<button type="submit" class="btn btn-large btn-primary pull-right">Afficher les tarifs &raquo;</button>
 
 							</fieldset>
 						</form>

@@ -10,6 +10,11 @@ h1, h2, h3, h4, h5, h6 {
 
 label, input, button, select, textarea {font-size: 16px;}
 
+.form-horizontal .control-label {
+	text-align: left;
+	min-width: 30%;
+}
+
 #erreur-animal {display: none;}
 
 .header-container {
