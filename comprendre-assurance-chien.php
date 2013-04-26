@@ -7,7 +7,7 @@
 						<h1>Frais vétérinaires, vaccins, maladies, accidents&hellip;<br><small>Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</small></h1>
 					</header>
 
-					<p class="lead">Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident ou une maladie survient. Pour les maîtres, les soins peuvent devenir un gouffre financier, au bout duquel il faudra choisir entre la santé de son fidèle compagnon et celle de ses finances.</p>
+					<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident ou une maladie survient. Pour les maîtres, les soins peuvent devenir un gouffre financier, au bout duquel il faudra choisir entre la santé de son fidèle compagnon et celle de ses finances.</p>
 
 					<p>Pour éviter d’en arriver à une telle extrémité, le soutien <strong>d’une assurance chien</strong> peut être le bienvenu. Avec des prestations adaptées, un contrat peut prendre en charge tout ou partie des frais vétérinaires. Les risques listés par le contrat sont couverts (accident, maladie, prévention, décès…), les prestations indiquées sont également couvertes (consultation, médicaments, radio…) et il est possible d’être remboursé au taux défini par la formule pour les frais engagés, de 50 à 100 %. Voilà de quoi soulager le maître dans le paiement de la facture du vétérinaire et envisager un bel avenir santé pour son chien. </p>
 

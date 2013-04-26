@@ -16,7 +16,7 @@
 				array_push($date, filter_var($v, FILTER_SANITIZE_STRING));
 			}
 		}
-		return date('Y-m-d',strtotime(implode("/",$date)));	
+		return date('Y-m-d',strtotime(implode("-",$date)));	
 	}
 
 	/**
@@ -103,6 +103,6 @@
 
 		$return = $client->setDatasFromForm("misterassur", "misterassur", SERVICE, $data);
 
-	} catch (SoapFault $exception){
-		print_r($exception);
+	} catch (SoapFault $e){
+		echo "$contract_start_date : ".$e->faultstring;
 	}

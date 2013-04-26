@@ -15,6 +15,8 @@ label, input, button, select, textarea {font-size: 16px;}
 	min-width: 30%;
 }
 
+.step1 .form-horizontal .control-label {min-width: 55%;}
+
 #erreur-animal {display: none;}
 
 .header-container {
@@ -135,6 +137,10 @@ span.step {
 	padding: .5em 1em;
 }
 
+.date-input {
+	text-align: center;
+}
+
 .animal-picker {
 	font-size: .9em;
 }
@@ -163,13 +169,13 @@ span.step {
 	border-radius: 5px;
 	overflow: hidden;
 	background-size: auto 65%;
-	background-position: 10% 50%;
+	background-position: 5px 50%;
 	background-repeat: no-repeat;
 }
 
-.animal-holder.chien { background-image:url(../img/dog.png); }
+.animal-holder.chien { background-image:url(../img/dog.png); text-indent: 65px;}
 .animal-holder.chat { background-image:url(../img/cat.png); }
-.animal-holder.nac { background-image:url(../img/hippopotamus.png); }
+.animal-holder.nac { background-image:url(../img/nac.png); text-indent: 35px;}
 
 .animal-holder.highlight {
 	border-color: #3A87AD;
@@ -243,46 +249,46 @@ span.step {
 @media (min-width: 768px) { 
 	@-webkit-keyframes bounce-background {
 	    from {
-	        background-position: 10% 50%;
+	        background-position: 5px 50%;
 	    }
 	    50% {
-	        background-position: 10% 15%;
+	        background-position: 5px 15%;
 	    }
 	    to {
-	        background-position: 10% 50%;
+	        background-position: 5px 50%;
 	    }
 	}
 	@-moz-keyframes bounce-background {
 	    from {
-	        background-position: 10% 50%;
+	        background-position: 5px 50%;
 	    }
 	    50% {
-	        background-position: 10% 15%;
+	        background-position: 5px 15%;
 	    }
 	    to {
-	        background-position: 10% 50%;
+	        background-position: 5px 50%;
 	    }
 	}
 	@-ms-keyframes bounce-background {
 	    from {
-	        background-position: 10% 50%;
+	        background-position: 5px 50%;
 	    }
 	    50% {
-	        background-position: 10% 15%;
+	        background-position: 5px 15%;
 	    }
 	    to {
-	        background-position: 10% 50%;
+	        background-position: 5px 50%;
 	    }
 	}
 	@keyframes bounce-background {
 	    from {
-	        background-position: 10% 50%;
+	        background-position: 5px 50%;
 	    }
 	    50% {
-	        background-position: 10% 15%;
+	        background-position: 5px 15%;
 	    }
 	    to {
-	        background-position: 10% 50%;
+	        background-position: 5px 50%;
 	    }
 	}
 	.bouncy-castle {

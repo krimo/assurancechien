@@ -19,7 +19,7 @@
 						<div class="caption">							
 							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents &hellip;</h3>
 							<h3 class="muted">Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</h3>
-							<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
+							<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip;<br><a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
 						</div>
 					</div>
 
@@ -64,20 +64,6 @@
 								</div>
 
 								<div id="breed-selector" class="row-fluid"></div>
-								
-								<div class="form-horizontal">
-									<div class="control-group">
-										<label class="control-label">Sexe de votre animal :</label>
-										<div class="controls">
-											<label class="radio inline">
-												<input type="radio" id="pet-gender-1" name="pet_gender" value="male" required checked> Mâle
-											</label>
-											<label class="radio inline">
-												<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle" required> Femelle
-											</label>
-										</div>
-									</div>										
-								</div>
 
 								<div class="row-fluid">
 									<div class="span6">
@@ -93,13 +79,27 @@
 											<label class="control-label">Sa date de naissance :</label>
 											<div class="controls">
 												<div class="row-fluid">
-													<input type="text" name="pbirthday_day" id="pbirthday-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
-													<input type="text" name="pbirthday_month" id="pbirthday-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
-													<input type="text" name="pbirthday_year" id="pbirthday-year" class="span3 date-input" maxlength="4" data-range="[1990, 2013]" placeholder="Année" required>
+													<input type="text" name="pbirthday_day" id="pbirthday-day" class="span4 date-input" maxlength="2" size="2" data-range="[1, 31]" placeholder="Jour" required>
+													<input type="text" name="pbirthday_month" id="pbirthday-month" class="span4 date-input" size="2" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
+													<input type="text" name="pbirthday_year" id="pbirthday-year" class="span4 date-input" size="4" maxlength="4" data-range="[1980, 2013]" placeholder="Année" required>
 												</div>	
 											</div>
 										</div>
 									</div>
+								</div>
+								
+								<div class="form-horizontal">
+									<div class="control-group">
+										<label class="control-label">Sexe de votre animal :</label>
+										<div class="controls">
+											<label class="radio inline">
+												<input type="radio" id="pet-gender-1" name="pet_gender" value="male" required checked> Mâle
+											</label>
+											<label class="radio inline">
+												<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle" required> Femelle
+											</label>
+										</div>
+									</div>										
 								</div>
 
 								<div class="form-horizontal">
@@ -231,7 +231,7 @@
 											<label class="control-label" for="contract-start-date">Date d'effet du contrat souhaitée :</label>
 											<div class="controls">
 												<div class="row-fluid">
-													<input type="text" name="csd_day" id="csd-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" value="<?=date("d", strtotime("+1 day"));?>"  required>
+													<input type="text" name="csd_day" id="csd-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" value="<?=date("d", strtotime("+3 days"));?>"  required>
 													<input type="text" name="csd_month" id="csd-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" value="<?=date("m");?>" required>
 													<input type="text" name="csd_year" id="csd-year" class="span3 date-input" maxlength="4" data-range="[2013, 2020]" placeholder="Année" value="<?=date("Y");?>" required>
 												</div>	
@@ -251,14 +251,14 @@
 
 
 								<label class="checkbox inline">
-									<input type="checkbox" id="optin" name="optin"> Je souhaite être informé(e) des propositions commerciales de monassurancechien.com et/ou de ses partenaires.
+									<input type="checkbox" id="optin" name="optin"> Souhaitez-vous bénéficier des meilleures offres de nos partenaires ?
 								</label>	
 
 								<hr>
 
 								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
 
-								<button type="button" class="btn btn-info btn-large" id="back-btn">Retour</button>
+								<button type="button" class="btn btn-info btn-mini" id="back-btn">Retour</button>
 								<button type="submit" class="btn btn-large btn-primary pull-right">Afficher les tarifs &raquo;</button>
 
 							</fieldset>
