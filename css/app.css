@@ -31,14 +31,25 @@ label, input, button, select, textarea {font-size: 16px;}
 	box-shadow: 0 1px 2px rgba(0,0,0,0.8);
 	padding: .5em;
 	font-size: 1.2em;
+	position: relative;
+	top: 1em;
 }
 
 .header {
-	line-height: .8;
-	color: #fff;
-	font-size: 1.8em;
+	font-size: 1.85em;
 	font-weight: 300;
 	text-shadow: 0 1px 2px rgba(0,0,0,0.8); 
+	line-height: .8;
+}
+
+
+.header h1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 1em;
+	margin-bottom: 0;
+	position: relative;
+	top: -15px;
 }
 
 .header small {
@@ -49,17 +60,20 @@ label, input, button, select, textarea {font-size: 16px;}
 
 .header .other {	
 	text-shadow: none;
-	color: #615E1E;
-	font-size: 0.75em;
+	color: #3a87ad;
+	font-size: 1em;
+	line-height: 2;
+	font-weight: 700;
+}
+
+.social-links {
 }
 
 .social-link {
 	width: 18%;
-	background: #eee;
 	max-height: 24px;
 	float: right;
-	margin-left: .5em;
-	padding:.5em;
+	padding:.5em 0;
 	overflow: hidden;
 	-webkit-transition: all .3s;
 	-moz-transition: all .3s;
@@ -68,14 +82,12 @@ label, input, button, select, textarea {font-size: 16px;}
 	transition: all .3s;	
 }
 
-.social-link.fb {background:#3B5998;}
-.social-link.twitter {background:#00ACED;}
-.social-link.gplus {background:#DD4B39;}
+.social-link.twitter {margin-left: -1em;}
 
 .lead-alt {
 	color: #3a87ad;
 	font-family: Georgia, serif;
-	line-height: 1.4;
+	line-height: 1;
 	font-size: 1.4em;
 	line-height: 1.5;
 	text-shadow: 0 1px 0 #fff;

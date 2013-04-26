@@ -106,7 +106,7 @@ $(document).ready(function() {
 			js = d.createElement(s); js.src = url; js.id = id;
 			fjs.parentNode.insertBefore(js, fjs);
 		};
-		load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk');
+		load('//connect.facebook.net/fr_FR/all.js#xfbml=1', 'fbjssdk');
 		load('https://apis.google.com/js/plusone.js', 'gplus1js');
 		load('//platform.twitter.com/widgets.js', 'tweetjs');
 	}(document, 'script'));

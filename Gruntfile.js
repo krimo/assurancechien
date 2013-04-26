@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
 		concat: {
 			js: {
-				src: ['js/bootstrap.min.js', 'js/messages.fr.js', 'js/parsley.min.js'],
+				src: ['js/bootstrap.min.js', 'js/messages.fr.js', 'js/parsley.min.js', 'js/app.js'],
 				dest: 'js/concat.js'
 			},
 			css: {
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
 		cssmin: {
 			minify: {
-				src: ['css/concat.css'],
+				src: 'css/concat.css',
 				dest: 'css/app.min.css'
 			}
 		}
