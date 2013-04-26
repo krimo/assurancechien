@@ -4,9 +4,10 @@
 				<!-- text outer container -->
 				<div class="span5">
 					
-					<p class="lead-alt">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.</p>
-
-					<img src="img/arrow-big.png" alt="" class="big-arrow hidden-phone">
+					<div class="hook">
+						<p class="lead-alt">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.</p>
+						<img src="img/arrow-big.png" alt="" class="big-arrow hidden-phone">
+					</div>
 
 					<ul class="form-steps unstyled">
 						<li class="form-step"><h4><span class="step">1</span>Je remplis ce formulaire <span class="text-info">en moins de deux minutes</span></h4></li>
@@ -16,7 +17,7 @@
 					<div class="thumbnail hidden-phone">
 						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
 						<div class="caption">							
-							<h3>Frais vétérinaires, vaccins, maladies, accidents&hellip;</h3>
+							<h3>Frais vétérinaires, vaccins, maladies, accidents &hellip;</h3>
 							<h3 class="muted">Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</h3>
 							<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
 						</div>
@@ -25,7 +26,7 @@
 				</div>
 
 				<!-- form outer container -->
-				<div class="span6 offset1">
+				<div class="span7">
 					<div class="form-container">
 						<h2 class="hidden-phone">Calculez votre tarif gratuitement <br>et comparez !</h2>
 						<form action="synthese.php" method="post" novalidate>
@@ -41,19 +42,19 @@
 								<div class="control-group">
 									<p class="text-center animal-picker">Cliquez sur l'image correspondant à votre compagnon</p>
 									<div class="row-fluid">
-										<div class="span4">
+										<div class="span6">
 											<div class="animal-holder chien">		
 												<h4>Chien</h4>
 												<p><em>&ldquo;Woof !&rdquo;</em></p>
 											</div>
 										</div>
-										<div class="span4">
+										<div class="span3">
 											<div class="animal-holder chat">					
 												<h4>Chat</h4>
 												<p><em>&ldquo;Miaou !&rdquo;</em></p>
 											</div>
 										</div>
-										<div class="span4">
+										<div class="span3">
 											<div class="animal-holder nac">					
 												<h4>Autres</h4>
 												<p><em>&ldquo;?&rdquo;</em></p>
@@ -63,18 +64,20 @@
 								</div>
 
 								<div id="breed-selector" class="row-fluid"></div>
-
-								<div class="control-group">
-									<label class="control-label">Sexe de votre animal :</label>
-									<div class="controls">
-										<label class="radio inline">
-											<input type="radio" id="pet-gender-1" name="pet_gender" value="male" required checked> Mâle
-										</label>
-										<label class="radio inline">
-											<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle" required> Femelle
-										</label>
-									</div>
-								</div>	
+								
+								<div class="form-horizontal">
+									<div class="control-group">
+										<label class="control-label">Sexe de votre animal :</label>
+										<div class="controls">
+											<label class="radio inline">
+												<input type="radio" id="pet-gender-1" name="pet_gender" value="male" required checked> Mâle
+											</label>
+											<label class="radio inline">
+												<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle" required> Femelle
+											</label>
+										</div>
+									</div>										
+								</div>
 
 								<div class="row-fluid">
 									<div class="span6">
@@ -99,28 +102,32 @@
 									</div>
 								</div>
 
-								<div class="control-group">
-									<label class="control-label">Votre animal est-il déjà couvert ?</label>
-									<div class="controls">
-										<label class="radio inline">
-											<input type="radio" id="pet-insured-1" name="pet_insured" value="0" checked> Non
-										</label>
-										<label class="radio inline">
-											<input type="radio" id="pet-insured-2" name="pet_insured" value="1"> Oui
-										</label>
-									</div>
+								<div class="form-horizontal">
+									<div class="control-group">
+										<label class="control-label">Votre animal est-il déjà couvert ?</label>
+										<div class="controls">
+											<label class="radio inline">
+												<input type="radio" id="pet-insured-1" name="pet_insured" value="0" checked> Non
+											</label>
+											<label class="radio inline">
+												<input type="radio" id="pet-insured-2" name="pet_insured" value="1"> Oui
+											</label>
+										</div>
+									</div>										
 								</div>
 
-								<div class="control-group">
-									<label class="control-label">Au cours des 36 derniers mois, avez-vous fait l'objet de résiliation par un assureur ?</label>
-									<div class="controls">		    						
-										<label class="radio inline">
-											<input type="radio" id="contract-cancelled-1" name="contract_cancelled" value="0" checked> Non
-										</label>
-										<label class="radio inline">
-											<input type="radio" id="contract-cancelled-2" name="contract_cancelled" value="1"> Oui
-										</label>
-									</div>
+								<div class="form-horizontal">
+									<div class="control-group">
+										<label class="control-label">Au cours des 36 derniers mois, avez-vous fait l'objet de résiliation par un assureur ?</label>
+										<div class="controls">
+											<label class="radio inline">
+												<input type="radio" id="contract-cancelled-1" name="contract_cancelled" value="0" checked> Non
+											</label>
+											<label class="radio inline">
+												<input type="radio" id="contract-cancelled-2" name="contract_cancelled" value="1"> Oui
+											</label>
+										</div>
+									</div>										
 								</div>
 
 								<label class="checkbox" for="pet-tag">
@@ -254,7 +261,7 @@
 
 								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
 
-								<button type="button" class="btn btn-large" id="back-btn">Retour</button>
+								<button type="button" class="btn btn-info btn-large" id="back-btn">Retour</button>
 								<button type="submit" class="btn btn-large btn-primary pull-right">Envoyer &raquo;</button>
 
 							</fieldset>

@@ -84,6 +84,8 @@ label, input, button, select, textarea {font-size: 16px;}
 
 .social-link.twitter {margin-left: -1em;}
 
+.hook { margin-bottom: 3em; }
+
 .lead-alt {
 	color: #3a87ad;
 	font-family: Georgia, serif;
@@ -98,9 +100,11 @@ label, input, button, select, textarea {font-size: 16px;}
 .big-arrow {
 	position: relative;
 	right: -74%;
-	top: -53px;
-	max-width: 50%;
+	top: -26px;
+	max-width: 30%;
 }
+
+.form-steps {margin-bottom: 2em;}
 
 span.step {
   background: #3a87ad;
@@ -148,7 +152,7 @@ span.step {
 
 .animal-holder {
 	cursor:pointer;
-	text-indent: 75px;
+	text-indent: 55px;
 	padding: 1em;
 	border: 1px solid #eee;
 	border-radius: 5px;
