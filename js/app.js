@@ -32,25 +32,32 @@ $(document).ready(function() {
 		
 	});
 
-	$(".animal-holder").on("click", function() {
+	$(".animal-holder").on({
+		click: function() {
+			animalChosen = true;
 
-		animalChosen = true;
+			if($("#erreur-animal").is(":visible")) {
+				$("#erreur-animal").fadeOut(300);
+			}
 
-		if($("#erreur-animal").is(":visible")) {
-			$("#erreur-animal").fadeOut(300);
-		}
+			var $this = $(this), $breedSelector = $("#breed-selector");
+			
+			$this.toggleClass('highlight');
+			$(".animal-holder").not(this).removeClass('highlight');
 
-		var $this = $(this), $breedSelector = $("#breed-selector");
-		
-		$this.toggleClass('highlight');
-		$(".animal-holder").not(this).removeClass('highlight');
-
-		if ($this.hasClass("chien")) {
-			$breedSelector.load("breed-selector.html #chiens");
-		} else if ($this.hasClass("chat")) {
-			$breedSelector.load("breed-selector.html #chats");
-		} else if ($this.hasClass("nac")) {
-			$breedSelector.load("breed-selector.html #nacs");
+			if ($this.hasClass("chien")) {
+				$breedSelector.load("breed-selector.html #chiens");
+			} else if ($this.hasClass("chat")) {
+				$breedSelector.load("breed-selector.html #chats");
+			} else if ($this.hasClass("nac")) {
+				$breedSelector.load("breed-selector.html #nacs");
+			}
+		},
+		mouseenter: function(){
+			$(this).addClass("bouncy-castle");
+		},
+		mouseleave: function() {
+			$(this).removeClass("bouncy-castle");
 		}
 	});
 
@@ -91,5 +98,16 @@ $(document).ready(function() {
 			errorElem: '<p class="help-block"></p>'
 		}
 	});
+
+	(function(d, s) {
+		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.src = url; js.id = id;
+			fjs.parentNode.insertBefore(js, fjs);
+		};
+		load('//connect.facebook.net/en_US/all.js#xfbml=1', 'fbjssdk');
+		load('https://apis.google.com/js/plusone.js', 'gplus1js');
+		load('//platform.twitter.com/widgets.js', 'tweetjs');
+	}(document, 'script'));
 
 });

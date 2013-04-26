@@ -61,9 +61,9 @@
 					</div>
 					<div class="span5">
 						<ul class="social-links inline pull-right">
-							<li class="social-link fb"><a href="#">Facebook</a></li>
-							<li class="social-link twitter"><a href="#">Twitter</a></li>
-							<li class="social-link gplus"><a href="#">Google+</a></li>
+							<li class="social-link fb"><div class="fb-like" data-send="false"></div></li>
+							<li class="social-link twitter"><a class="twitter-share-button" data-count="horizontal">Tweet</a></li>
+							<li class="social-link gplus"><div class="g-plusone" data-size="medium"></div></li>
 						</ul>
 					</div>
 				</div>

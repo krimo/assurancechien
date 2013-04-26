@@ -51,21 +51,24 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 0.75em;
 }
 
-.social-link a {
-	display: block;
+.social-link {
+	width: 18%;
+	background: #eee;
+	max-height: 24px;
+	float: right;
+	margin-left: .5em;
 	padding:.5em;
-	background:#333;
-	color: #fff;
+	overflow: hidden;
 	-webkit-transition: all .3s;
 	-moz-transition: all .3s;
 	-ms-transition: all .3s;
 	-o-transition: all .3s;
-	transition: all .3s;
+	transition: all .3s;	
 }
 
-.social-link.fb a {background:#3B5998;}
-.social-link.twitter a {background:#00ACED;}
-.social-link.gplus a {background:#DD4B39;}
+.social-link.fb {background:#3B5998;}
+.social-link.twitter {background:#00ACED;}
+.social-link.gplus {background:#DD4B39;}
 
 .lead-alt {
 	color: #3a87ad;
@@ -127,6 +130,57 @@ span.step {
 	position: relative;
 	right: -10px;
 	bottom: -5px;
+}
+@-webkit-keyframes bounce-background {
+    from {
+        background-position: 10% 50%;
+    }
+    50% {
+        background-position: 10% 15%;
+    }
+    to {
+        background-position: 10% 50%;
+    }
+}
+@-moz-keyframes bounce-background {
+    from {
+        background-position: 10% 50%;
+    }
+    50% {
+        background-position: 10% 15%;
+    }
+    to {
+        background-position: 10% 50%;
+    }
+}
+@-ms-keyframes bounce-background {
+    from {
+        background-position: 10% 50%;
+    }
+    50% {
+        background-position: 10% 15%;
+    }
+    to {
+        background-position: 10% 50%;
+    }
+}
+@keyframes bounce-background {
+    from {
+        background-position: 10% 50%;
+    }
+    50% {
+        background-position: 10% 15%;
+    }
+    to {
+        background-position: 10% 50%;
+    }
+}
+.bouncy-castle {
+	-webkit-animation: bounce-background .3s 1;
+	-moz-animation: bounce-background .3s 1;
+	-ms-animation: bounce-background .3s 1;
+	-o-animation: bounce-background .3s 1;
+	animation: bounce-background .3s 1;
 }
 
 .animal-holder {
@@ -224,7 +278,7 @@ span.step {
 
 	.social-links {
 		position:relative;
-		top: 150px;
+		top: 11em;
 	}
 
 	.lead-alt {
