@@ -12,9 +12,6 @@
 		<div id="fb-root"></div><!-- fb needs this -->
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/jquery.ui.fr.js"></script>
-		<script src="js/jquery-ui-1.10.2.custom.min.js"></script>
-		<script src="js/modernizr.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/messages.fr.js"></script>
 		<script src="js/parsley.min.js"></script>

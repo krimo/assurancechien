@@ -13,7 +13,6 @@
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-	<link rel="stylesheet" href="css/flick/jquery-ui-1.10.2.custom.min.css">
 	<link rel="stylesheet" href="css/app.css">
 
 	<!-- Google font -->
