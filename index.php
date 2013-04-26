@@ -17,7 +17,7 @@
 					<div class="thumbnail hidden-phone">
 						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
 						<div class="caption">							
-							<h3>Frais vétérinaires, vaccins, maladies, accidents &hellip;</h3>
+							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents &hellip;</h3>
 							<h3 class="muted">Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</h3>
 							<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip; <a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
 						</div>
@@ -93,9 +93,9 @@
 											<label class="control-label">Sa date de naissance :</label>
 											<div class="controls">
 												<div class="row-fluid">
-													<input type="text" name="pbirthday_day" id="pbirthday-day" class="span3 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
-													<input type="text" name="pbirthday_month" id="pbirthday-month" class="span3 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
-													<input type="text" name="pbirthday_year" id="pbirthday-year" class="span6 date-input" maxlength="4" data-range="[1990, 2013]" placeholder="Année" required>
+													<input type="text" name="pbirthday_day" id="pbirthday-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
+													<input type="text" name="pbirthday_month" id="pbirthday-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
+													<input type="text" name="pbirthday_year" id="pbirthday-year" class="span3 date-input" maxlength="4" data-range="[1990, 2013]" placeholder="Année" required>
 												</div>	
 											</div>
 										</div>
@@ -150,8 +150,7 @@
 											<div class="controls">
 												<select name="owner_gender" id="owner-gender" class="input-block-level">
 													<option value="1">M.</option>
-													<option value="2">Mme</option>
-													<option value="3">Mlle</option>
+													<option value="2" selected>Mme</option>
 												</select>
 											</div>
 										</div>

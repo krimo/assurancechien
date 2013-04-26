@@ -24,7 +24,7 @@ $(document).ready(function() {
 			data: "cp="+codePostal,
 			success: function (data) {
 				d = eval(data);
-				$("#insee").append("<option value="+d[0]+">"+d[1]+"</option>");
+				$("#insee").html("<option value="+d[0]+">"+d[1]+"</option>");
 			},
 			error: function (d, r, obj) {
 				console.log(r);
