@@ -4,13 +4,14 @@ $(document).ready(function() {
 	$('.step1').siblings().hide(); // hide all except step 1
 
 	$(".date-input").each(function() {
-		var theId = $(this).attr("id");
-
-		if (Modernizr.touch && Modernizr.inputtypes.date) {
-	        document.getElementById(theId).type = 'date';
-	    } else {
-	        $("#"+theId).datepicker($.datepicker.regional["fr"]);
-	    }
+		var theDateField = $(this), count = 0;
+		theDateField.on('keyup', function() {
+			count++;
+			if (count == 2 && theDateField.parsley('isValid')) {
+				count = 0;
+				theDateField.next('.date-input').focus();
+			}
+		});
 	});
 
 	$("#zip-code").on("blur", function() {

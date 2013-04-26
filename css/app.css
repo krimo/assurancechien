@@ -8,6 +8,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 900;
 }
 
+label, input, button, select, textarea {font-size: 16px;}
+
 #erreur-animal {display: none;}
 
 .header-container {
@@ -131,57 +133,6 @@ span.step {
 	right: -10px;
 	bottom: -5px;
 }
-@-webkit-keyframes bounce-background {
-    from {
-        background-position: 10% 50%;
-    }
-    50% {
-        background-position: 10% 15%;
-    }
-    to {
-        background-position: 10% 50%;
-    }
-}
-@-moz-keyframes bounce-background {
-    from {
-        background-position: 10% 50%;
-    }
-    50% {
-        background-position: 10% 15%;
-    }
-    to {
-        background-position: 10% 50%;
-    }
-}
-@-ms-keyframes bounce-background {
-    from {
-        background-position: 10% 50%;
-    }
-    50% {
-        background-position: 10% 15%;
-    }
-    to {
-        background-position: 10% 50%;
-    }
-}
-@keyframes bounce-background {
-    from {
-        background-position: 10% 50%;
-    }
-    50% {
-        background-position: 10% 15%;
-    }
-    to {
-        background-position: 10% 50%;
-    }
-}
-.bouncy-castle {
-	-webkit-animation: bounce-background .3s 1;
-	-moz-animation: bounce-background .3s 1;
-	-ms-animation: bounce-background .3s 1;
-	-o-animation: bounce-background .3s 1;
-	animation: bounce-background .3s 1;
-}
 
 .animal-holder {
 	cursor:pointer;
@@ -242,6 +193,7 @@ span.step {
 	
 	.body {text-align: center;}
 	
+	.animal-picker:before, .animal-picker:after {content:"";}
 
 	.animal-holder {
 		background-position: top center !important;
@@ -268,6 +220,58 @@ span.step {
 }
 
 @media (min-width: 768px) { 
+	@-webkit-keyframes bounce-background {
+	    from {
+	        background-position: 10% 50%;
+	    }
+	    50% {
+	        background-position: 10% 15%;
+	    }
+	    to {
+	        background-position: 10% 50%;
+	    }
+	}
+	@-moz-keyframes bounce-background {
+	    from {
+	        background-position: 10% 50%;
+	    }
+	    50% {
+	        background-position: 10% 15%;
+	    }
+	    to {
+	        background-position: 10% 50%;
+	    }
+	}
+	@-ms-keyframes bounce-background {
+	    from {
+	        background-position: 10% 50%;
+	    }
+	    50% {
+	        background-position: 10% 15%;
+	    }
+	    to {
+	        background-position: 10% 50%;
+	    }
+	}
+	@keyframes bounce-background {
+	    from {
+	        background-position: 10% 50%;
+	    }
+	    50% {
+	        background-position: 10% 15%;
+	    }
+	    to {
+	        background-position: 10% 50%;
+	    }
+	}
+	.bouncy-castle {
+		-webkit-animation: bounce-background .3s 1;
+		-moz-animation: bounce-background .3s 1;
+		-ms-animation: bounce-background .3s 1;
+		-o-animation: bounce-background .3s 1;
+		animation: bounce-background .3s 1;
+	}
+
 	.hgroup { padding: 2.75em 0; }
 
 	.header-container {

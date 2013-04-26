@@ -6,15 +6,17 @@
 	
 	/**
 	 * Formatage de la date pour entrée dans la base de donnée
-	 * @param  string $date La date sous le format JJ/MM/AAAA
+	 * @param  string $id L'identifiant du champ
 	 * @return string       La date au format AAAA-MM-JJ
 	 */
-	function format_date($date) {
-		$date_arr = explode("/", filter_var($date, FILTER_SANITIZE_STRING));
-		$a = $date_arr[0];
-		$date_arr[0] = $date_arr[1];
-		$date_arr[1] = $a;
-		return date('Y-m-d',strtotime(implode("/",$date_arr)));
+	function get_date($id) {
+		$date = array();
+		foreach ($_POST as $k => $v) {
+			if (preg_match("/^".$id."_/", $k)) {
+				array_push($date, filter_var($v, FILTER_SANITIZE_STRING));
+			}
+		}
+		return date('Y-m-d',strtotime(implode("/",$date)));	
 	}
 
 	/**
@@ -47,7 +49,7 @@
 
 	$pet_gender = ($_POST['pet_gender'] == "male") ? 1 : 2;
 	$pet_name = filter_var($_POST['pet_name'], FILTER_SANITIZE_STRING);
-	$pet_birthday = format_date($_POST['pet_birthday']);
+	$pet_birthday = get_date("pbirthday");
 	$pet_tag = (isset($_POST['pet_tag'])) ? 1 : 0;
 	$owner_gender = filter_var($_POST['owner_gender'], FILTER_SANITIZE_NUMBER_INT);
 	$owner_surname = filter_var($_POST['owner_surname'], FILTER_SANITIZE_STRING);
@@ -55,7 +57,7 @@
 	$owner_address = filter_var($_POST['owner_address'], FILTER_SANITIZE_STRING);
 	$zip_code = filter_var($_POST['zip_code'], FILTER_SANITIZE_NUMBER_INT);	
 	$insee = filter_var($_POST['insee'], FILTER_SANITIZE_NUMBER_INT);
-	$owner_birthday = format_date($_POST['owner_birthday']);
+	$owner_birthday = get_date("obirthday");
 	$owner_phone = filter_var($_POST['owner_phone'], FILTER_SANITIZE_NUMBER_INT);
 	$mobile_phone = (check_mobile($owner_phone)) ? $owner_phone : '';
 	$landline = (!check_mobile($owner_phone)) ? $owner_phone : '';
@@ -63,7 +65,7 @@
 	$optin = ($_POST['optin'] == "on") ? 1 : 0;
 	$pet_insured = filter_var($_POST['pet_insured'], FILTER_SANITIZE_NUMBER_INT);
 	$contract_cancelled = filter_var($_POST['contract_cancelled'], FILTER_SANITIZE_NUMBER_INT);
-	$contract_start_date = format_date($_POST['contract_start_date']);
+	$contract_start_date = get_date("csd");
 	$contract_type = filter_var($_POST['contract_type'], FILTER_SANITIZE_NUMBER_INT);
 
 	try{

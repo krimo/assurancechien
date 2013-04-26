@@ -34,12 +34,12 @@
 
 								<div id="erreur-animal">
 									<div class="alert alert-error">
-										<strong>Attention !</strong> Merci de choisir un animal pour continuer&hellip;
+										<strong>Miaou !</strong> Matou, toutou ou caribou ? Choisissez un animal pour continuer&hellip;
 									</div>
 								</div>
 								
 								<div class="control-group">
-									<p class="text-center animal-picker">Cliquez sur l'image correspondant à votre compagnon ou choisissez dans la liste déroulante</p>
+									<p class="text-center animal-picker">Cliquez sur l'image correspondant à votre compagnon</p>
 									<div class="row-fluid">
 										<div class="span4">
 											<div class="animal-holder chien">		
@@ -64,12 +64,17 @@
 
 								<div id="breed-selector" class="row-fluid"></div>
 
-								<label class="radio inline">
-									<input type="radio" id="pet-gender-1" name="pet_gender" value="male" required checked> Mâle
-								</label>
-								<label class="radio inline">
-									<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle" required> Femelle
-								</label>
+								<div class="control-group">
+									<label class="control-label">Sexe de votre animal :</label>
+									<div class="controls">
+										<label class="radio inline">
+											<input type="radio" id="pet-gender-1" name="pet_gender" value="male" required checked> Mâle
+										</label>
+										<label class="radio inline">
+											<input type="radio" id="pet-gender-2" name="pet_gender" value="femelle" required> Femelle
+										</label>
+									</div>
+								</div>	
 
 								<div class="row-fluid">
 									<div class="span6">
@@ -82,9 +87,13 @@
 									</div>
 									<div class="span6">
 										<div class="control-group">
-											<label class="control-label" for="pet-birthday">Sa date de naissance :</label>
+											<label class="control-label">Sa date de naissance :</label>
 											<div class="controls">
-												<input type="text" name="pet_birthday" class="input-block-level date-input" id="pet-birthday" required>	
+												<div class="row-fluid">
+													<input type="text" name="pbirthday_day" id="pbirthday-day" class="span3 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
+													<input type="text" name="pbirthday_month" id="pbirthday-month" class="span3 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
+													<input type="text" name="pbirthday_year" id="pbirthday-year" class="span6 date-input" maxlength="4" data-range="[1990, 2013]" placeholder="Année" required>
+												</div>	
 											</div>
 										</div>
 									</div>
@@ -117,9 +126,11 @@
 								<label class="checkbox" for="pet-tag">
 									<input type="checkbox" name="pet_tag" id="pet-tag" checked> Cochez s'il est tatoué / pucé
 								</label>
-
+								
+								<hr>
+							
 								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
-								<button type="button" class="btn pull-right" id="continue-btn">Continuer &raquo;</button>
+								<button type="button" class="btn btn-info pull-right" id="continue-btn">Continuer &raquo;</button>
 							</fieldset>
 
 							<fieldset class="step step2">
@@ -131,8 +142,8 @@
 											<label class="control-label" for="owner-gender">Civilité :</label>
 											<div class="controls">
 												<select name="owner_gender" id="owner-gender" class="input-block-level">
-													<option value="1">Mme</option>
-													<option value="2">M.</option>
+													<option value="1">M.</option>
+													<option value="2">Mme</option>
 													<option value="3">Mlle</option>
 												</select>
 											</div>
@@ -164,15 +175,15 @@
 								</div>
 
 								<div class="row-fluid">
-									<div class="span6">										
+									<div class="span3">										
 										<div class="control-group">
-											<label class="control-label" for="zip-code">Votre code postal :</label>
+											<label class="control-label" for="zip-code">Code postal :</label>
 											<div class="controls">
-												<input type="text" name="zip_code" class="input-block-level" id="zip-code" maxlength="5" required>
+												<input type="text" name="zip_code" class="input-block-level span6" id="zip-code" maxlength="5" required>
 											</div>
 										</div>
 									</div>
-									<div class="span6">										
+									<div class="span9">										
 										<div class="control-group">
 											<label class="control-label" for="insee">Ville :</label>
 											<div class="controls">
@@ -183,9 +194,13 @@
 								</div>
 								<div class="form-horizontal">
 									<div class="control-group">
-										<label class="control-label" for="owner-birthday">Votre date de naissance :</label>
+										<label class="control-label" for="owner-birthday">Date de naissance :</label>
 										<div class="controls">
-											<input type="text" name="owner_birthday" class="span5 date-input" id="owner-birthday" required>
+											<div class="row-fluid">
+												<input type="text" name="obirthday_day" id="obirthday-day" class="span3 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
+												<input type="text" name="obirthday_month" id="obirthday-month" class="span3 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
+												<input type="text" name="obirthday_year" id="obirthday-year" class="span6 date-input" maxlength="4" data-range="[1915, 1999]" placeholder="Année" required>
+											</div>	
 										</div>
 									</div>
 									<div class="control-group">
@@ -209,7 +224,11 @@
 										<div class="control-group">
 											<label class="control-label" for="contract-start-date">Date d'effet du contrat souhaitée :</label>
 											<div class="controls">
-												<input type="text" name="contract_start_date" class="input-block-level" id="contract-start-date" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" placeholder="au format JJ/MM/AAAA" value="<?=date('d/m/Y', strtotime('+ 3 days'));?>" required>
+												<div class="row-fluid">
+													<input type="text" name="csd_day" id="csd-day" class="span3 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
+													<input type="text" name="csd_month" id="csd-month" class="span3 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
+													<input type="text" name="csd_year" id="csd-year" class="span6 date-input" maxlength="4" data-range="[2013, 2020]" placeholder="Année" required>
+												</div>	
 											</div>
 										</div>										
 									</div>
