@@ -98,15 +98,49 @@ $(document).ready(function() {
 		}
 	});
 
-	(function(d, s) {
-		var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.src = url; js.id = id;
-			fjs.parentNode.insertBefore(js, fjs);
-		};
-		load('//connect.facebook.net/fr_FR/all.js#xfbml=1', 'fbjssdk');
-		load('https://apis.google.com/js/plusone.js', 'gplus1js');
-		load('//platform.twitter.com/widgets.js', 'tweetjs');
-	}(document, 'script'));
+	// (function(d, s) {
+	// 	var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+	// 		if (d.getElementById(id)) {return;}
+	// 		js = d.createElement(s); js.src = url; js.id = id;
+	// 		fjs.parentNode.insertBefore(js, fjs);
+	// 	};
+	// 	load('//connect.facebook.net/fr_FR/all.js#xfbml=1', 'fbjssdk');
+	// 	load('https://apis.google.com/js/plusone.js', 'gplus1js');
+	// 	load('//platform.twitter.com/widgets.js', 'tweetjs');
+	// }(document, 'script'));
+	$('#twitter').sharrre({
+		share: {
+			twitter: true
+		},
+		enableHover: false,
+		enableTracking: true,
+		buttons: { twitter: {via: '_JulienH'}},
+		click: function(api, options){
+			api.simulateClick();
+			api.openPopup('twitter');
+		}
+	});
+	$('#facebook').sharrre({
+		share: {
+			facebook: true
+		},
+		enableHover: false,
+		enableTracking: true,
+		click: function(api, options){
+			api.simulateClick();
+			api.openPopup('facebook');
+		}
+	});
+	$('#googleplus').sharrre({
+		share: {
+			googlePlus: true
+		},
+		enableHover: false,
+		enableTracking: true,
+		click: function(api, options){
+			api.simulateClick();
+			api.openPopup('googlePlus');
+		}
+	});
 
 });

@@ -5,6 +5,7 @@
 				<div class="span5">
 					
 					<div class="hook">
+						<p class="lead-alt hidden-desktop"><strong>Assurancechien.com</strong></p>
 						<p class="lead-alt">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.</p>
 						<img src="img/arrow-big.png" alt="" class="big-arrow hidden-phone">
 					</div>
@@ -65,7 +66,7 @@
 
 								<div id="breed-selector" class="row-fluid"></div>
 
-								<div class="row-fluid">
+								<div class="row-fluid zebra">
 									<div class="span6">
 										<div class="control-group">
 											<label class="control-label" for="pet-name">Son nom :</label>
@@ -79,16 +80,16 @@
 											<label class="control-label">Sa date de naissance :</label>
 											<div class="controls">
 												<div class="row-fluid">
-													<input type="text" name="pbirthday_day" id="pbirthday-day" class="span4 date-input" maxlength="2" size="2" data-range="[1, 31]" placeholder="Jour" required>
-													<input type="text" name="pbirthday_month" id="pbirthday-month" class="span4 date-input" size="2" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
-													<input type="text" name="pbirthday_year" id="pbirthday-year" class="span4 date-input" size="4" maxlength="4" data-range="[1980, 2013]" placeholder="Année" required>
+													<input type="text" name="pbirthday_day" id="pbirthday-day" class="span4 date-input" maxlength="2" minlength="2" size="2" data-range="[1, 31]" placeholder="Jour" required>
+													<input type="text" name="pbirthday_month" id="pbirthday-month" class="span4 date-input" size="2" minlength="2" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
+													<input type="text" name="pbirthday_year" id="pbirthday-year" class="span4 date-input" size="4" minlength="4" maxlength="4" data-range="[1980, 2013]" placeholder="Année" required>
 												</div>	
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="form-horizontal">
+								<div class="form-horizontal zebra">
 									<div class="control-group">
 										<label class="control-label">Sexe de votre animal :</label>
 										<div class="controls">
@@ -102,7 +103,7 @@
 									</div>										
 								</div>
 
-								<div class="form-horizontal">
+								<div class="form-horizontal zebra">
 									<div class="control-group">
 										<label class="control-label">Votre animal est-il déjà couvert ?</label>
 										<div class="controls">
@@ -116,7 +117,7 @@
 									</div>										
 								</div>
 
-								<div class="form-horizontal">
+								<div class="form-horizontal zebra">
 									<div class="control-group">
 										<label class="control-label">Au cours des 36 derniers mois, avez-vous fait l'objet de résiliation par un assureur ?</label>
 										<div class="controls">
@@ -143,7 +144,7 @@
 							<fieldset class="step step2">
 								<legend>Vous</legend>
 																
-								<div class="row-fluid">
+								<div class="row-fluid zebra">
 									<div class="span2">
 										<div class="control-group">
 											<label class="control-label" for="owner-gender">Civilité :</label>
@@ -173,19 +174,19 @@
 									</div>
 								</div>
 
-								<div class="control-group">
+								<div class="control-group zebra">
 									<label class="control-label" for="owner-address">Votre adresse :</label>
 									<div class="controls">
 										<input type="text" name="owner_address" class="input-block-level" id="owner-address" required>
 									</div>
 								</div>
 
-								<div class="row-fluid">
+								<div class="row-fluid zebra">
 									<div class="span3">										
 										<div class="control-group">
 											<label class="control-label" for="zip-code">Code postal :</label>
 											<div class="controls">
-												<input type="text" name="zip_code" class="input-block-level span6" id="zip-code" maxlength="5" required>
+												<input type="text" name="zip_code" class="input-block-level span6" id="zip-code" minlength="5" maxlength="5" required>
 											</div>
 										</div>
 									</div>
@@ -199,25 +200,25 @@
 									</div>
 								</div>
 								<div class="form-horizontal">
-									<div class="control-group">
+									<div class="control-group zebra">
 										<label class="control-label" for="owner-birthday">Date de naissance :</label>
 										<div class="controls">
 											<div class="row-fluid">
-												<input type="text" name="obirthday_day" id="obirthday-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" required>
-												<input type="text" name="obirthday_month" id="obirthday-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
-												<input type="text" name="obirthday_year" id="obirthday-year" class="span3 date-input" maxlength="4" data-range="[1915, 1997]" placeholder="Année" required>
+												<input type="text" name="obirthday_day" id="obirthday-day" class="span2 date-input" maxlength="2" minlength="2" data-range="[1, 31]" placeholder="Jour" required>
+												<input type="text" name="obirthday_month" id="obirthday-month" class="span2 date-input" maxlength="2" minlength="2" data-range="[1, 12]" placeholder="Mois" required>
+												<input type="text" name="obirthday_year" id="obirthday-year" class="span3 date-input" maxlength="4" minlength="4" data-range="[1915, 1997]" placeholder="Année" required>
 											</div>	
 										</div>
 									</div>
-									<div class="control-group">
+									<div class="control-group zebra">
 										<label class="control-label" for="owner-phone">Votre n° de téléphone :</label>
 										<div class="controls">
-											<input type="tel" name="owner_phone" id="owner-phone" class="span5" pattern="[0-9]{10}" required>
+											<input type="tel" name="owner_phone" id="owner-phone" class="span5" pattern="[0-9]{10}" maxlength="10" required>
 										</div>
 									</div>	
 								</div>
 
-								<div class="row-fluid">
+								<div class="row-fluid zebra">
 									<div class="span6">
 										<div class="control-group">
 											<label class="control-label" for="owner-email">Votre e-mail :</label>
@@ -231,16 +232,16 @@
 											<label class="control-label" for="contract-start-date">Date d'effet du contrat souhaitée :</label>
 											<div class="controls">
 												<div class="row-fluid">
-													<input type="text" name="csd_day" id="csd-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" value="<?=date("d", strtotime("+3 days"));?>"  required>
-													<input type="text" name="csd_month" id="csd-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" value="<?=date("m");?>" required>
-													<input type="text" name="csd_year" id="csd-year" class="span3 date-input" maxlength="4" data-range="[2013, 2020]" placeholder="Année" value="<?=date("Y");?>" required>
+													<input type="text" name="csd_day" id="csd-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" value="<?=date("d", strtotime("+1 days"));?>"  required>
+													<input type="text" name="csd_month" id="csd-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" value="<?=date("m", strtotime("+1 days"));?>" required>
+													<input type="text" name="csd_year" id="csd-year" class="span3 date-input" maxlength="4" data-range="[2013, 2020]" placeholder="Année" value="<?=date("Y", strtotime("+1 days"));?>" required>
 												</div>	
 											</div>
 										</div>										
 									</div>
 								</div>
 
-								<div class="control-group">
+								<div class="control-group zebra">
 									<label for="contract-type" class="control-label">Type de formule souhaitée :</label>
 									<div class="controls">
 										<label class="radio inline"><input type="radio" name="contract_type" checked> Basique</label>

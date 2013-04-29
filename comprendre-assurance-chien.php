@@ -24,7 +24,7 @@
 			<div class="span4 offset1">
 				<div class="well">
 					<a href="/" class="btn btn-large btn-block btn-primary">Comparez gratuitement les assurances Animaux de compagnie</a>
-					<hr>
+<!-- 					<hr>
 					<h4>Liste des articles</h4>
 					<ul class="article-list">
 						<li>
@@ -39,7 +39,7 @@
 							<h5>Titre de l'article</h5>
 							<p>Le début de l'article et un lien&hellip; <a href="#">En savoir plus &raquo;</a></p>
 						</li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 		</div>

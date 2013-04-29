@@ -41,6 +41,7 @@
 		$animal_type = 2;
 		$breed = filter_var($_POST['cat_breed'], FILTER_SANITIZE_NUMBER_INT);
 	} elseif (isset($_POST['nac_breed'])) {
+		$animal_type = 3;
 		$breed = filter_var($_POST['nac_breed'], FILTER_SANITIZE_NUMBER_INT);
 	} else {
 		$animal_type = 3;
