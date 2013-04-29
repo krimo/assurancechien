@@ -3,7 +3,7 @@
 				<footer class="row-fluid">
 					<p>&copy; <?=date("Y");?> Monassurancechien.com </p>
 					<p class="muted"><small>
-						Monassurancechien.com est un comparateur indépendant d'assurances pour votre chien ou votre chat. N'hésitez pas à réaliser un devis gratuit et sans engagement sur notre site.
+						Monassurancechien.com est un comparateur indépendant d'assurances pour votre chien, chat, lapin, furet, cobaye, chinchilla ou perroquet. N'hésitez pas à réaliser un devis gratuit et sans engagement sur notre site.
 					</small></p>
 				</footer>
 			</div>

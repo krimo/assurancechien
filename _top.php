@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 
-	<title>Assurance chien - Comparez gratuitement les meilleurs tarifs des mutuelles pour votre animal</title>
+	<title>Assurance chien, chat, lapin, furet, cobaye, chinchilla, perroquet – Comparez les mutuelles pour votre animal</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
