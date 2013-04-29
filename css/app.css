@@ -175,7 +175,7 @@ span.step {
 
 .animal-holder.chien { background-image:url(../img/dog.png); text-indent: 65px;}
 .animal-holder.chat { background-image:url(../img/cat.png); }
-.animal-holder.nac { background-image:url(../img/nac.png); text-indent: 35px;}
+.animal-holder.nac { background-image:url(../img/bunny.png); text-indent: 60px;}
 
 .animal-holder.highlight {
 	border-color: #3A87AD;
@@ -222,7 +222,7 @@ span.step {
 	
 	.animal-picker:before, .animal-picker:after {content:"";}
 
-	.animal-holder {
+	.animal-holder, .animal-holder.chien, .animal-holder.chat, .animal-holder.nac  {
 		background-position: top center !important;
 		text-indent: 0;
 	}
@@ -323,6 +323,10 @@ span.step {
 		top: -2em;
 	}
 
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	
 }
 
 @media (min-width: 980px) { .hgroup {padding: 3em 0;} }
