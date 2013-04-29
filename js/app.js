@@ -3,6 +3,10 @@ $(document).ready(function() {
 	var validFields, animalChosen = false;
 	$('.step1').siblings().hide(); // hide all except step 1
 
+	if ($.cookie('form')) {
+		$('form').formParams($.cookie('form'));
+	}
+
 	$(".date-input").each(function() {
 		var theDateField = $(this);
 		theDateField.on('keyup', function() {
@@ -92,23 +96,17 @@ $(document).ready(function() {
 		}
 	});
 
-	// (function(d, s) {
-	// 	var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
-	// 		if (d.getElementById(id)) {return;}
-	// 		js = d.createElement(s); js.src = url; js.id = id;
-	// 		fjs.parentNode.insertBefore(js, fjs);
-	// 	};
-	// 	load('//connect.facebook.net/fr_FR/all.js#xfbml=1', 'fbjssdk');
-	// 	load('https://apis.google.com/js/plusone.js', 'gplus1js');
-	// 	load('//platform.twitter.com/widgets.js', 'tweetjs');
-	// }(document, 'script'));
+	$("form").on("submit", function() {
+		$.cookie('form', $(this).formParams());
+	});
+
 	$('#twitter').sharrre({
 		share: {
 			twitter: true
 		},
 		enableHover: false,
 		enableTracking: true,
-		buttons: { twitter: {via: '_JulienH'}},
+		buttons: { twitter: {via: '_misterassur'}},
 		click: function(api, options){
 			api.simulateClick();
 			api.openPopup('twitter');
