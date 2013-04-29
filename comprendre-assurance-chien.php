@@ -4,7 +4,7 @@
 			<div class="span6">
 				<section class="insurance-article">
 					<header>
-						<h1>Frais vétérinaires, vaccins, maladies, accidents&hellip;<br><small>Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</small></h1>
+						<h1 class="text-info">Frais vétérinaires, vaccins, maladies, accidents&hellip;<br><small>Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</small></h1>
 					</header>
 
 					<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident ou une maladie survient. Pour les maîtres, les soins peuvent devenir un gouffre financier, au bout duquel il faudra choisir entre la santé de son fidèle compagnon et celle de ses finances.</p>

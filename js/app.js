@@ -41,8 +41,8 @@ $(document).ready(function() {
 
 			var $this = $(this), $breedSelector = $("#breed-selector");
 			
-			$this.toggleClass('highlight');
-			$(".animal-holder").not(this).removeClass('highlight');
+			$this.toggleClass('highlight bounce');
+			$(".animal-holder").not(this).removeClass('highlight bounce');
 
 			if ($this.hasClass("chien")) {
 				$breedSelector.load("breed-selector.html #chiens");
@@ -51,12 +51,6 @@ $(document).ready(function() {
 			} else if ($this.hasClass("nac")) {
 				$breedSelector.load("breed-selector.html #nacs");
 			}
-		},
-		mouseenter: function(){
-			$(this).addClass("bouncy-castle");
-		},
-		mouseleave: function() {
-			$(this).removeClass("bouncy-castle");
 		}
 	});
 
