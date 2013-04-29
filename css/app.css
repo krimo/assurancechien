@@ -175,6 +175,7 @@ span.step {
 	background-size: auto 65%;
 	background-position: 5px 50%;
 	background-repeat: no-repeat;
+	line-height: .5;
 }
 
 .animal-holder.chien { background-image:url(../img/dog.png); text-indent: 65px;}

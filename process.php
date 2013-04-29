@@ -105,5 +105,5 @@
 		$return = $client->setDatasFromForm("misterassur", "misterassur", SERVICE, $data);
 
 	} catch (SoapFault $e){
-		echo "$contract_start_date : ".$e->faultstring;
+		$error_var = $e->faultstring;
 	}

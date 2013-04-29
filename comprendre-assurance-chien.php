@@ -18,7 +18,7 @@
 					<p>Le site vous accompagne dans la compréhension des contrats d'assurance santé pour chien présents sur le marché. <strong>Décryptez les garanties</strong> et sélectionnez celles dont votre animal de compagnie a besoin : accident, maladie, prévention, décès&hellip; Apprenez à identifier les limitations de garantie : exclusions, délais de carence, franchises, plafonds d'indemnisation&hellip; Ainsi armé, vous pourrez comparer habilement les prestations et les tarifs de différents contrats.</p>
 
 					<h2>Un outil de comparaison d’assurance</h2>
-					<p>L'outil de simulation assurance vous aidera alors à sélectionner <strong>l'offre la plus en phase avec vos attentes</strong>, les caractéristiques de votre animal (âge, race...) et enfin votre budget. Pour cela, il vous suffit de remplir un simple formulaire. Avez-vous besoin d'une couverture à 50 ou à 100 % ? Souhaitez-vous que les vaccinations soient prises en charge ? Quel budget définissez-vous pour votre assurance chien ? En quelques clics et sans engagement, vous obtenez des devis répondant à vos attentes.</p>
+					<p><a href="/">L'outil de simulation assurance</a> vous aidera alors à sélectionner <strong>l'offre la plus en phase avec vos attentes</strong>, les caractéristiques de votre animal (âge, race...) et enfin votre budget. Pour cela, il vous suffit de remplir un simple formulaire. Avez-vous besoin d'une couverture à 50 ou à 100 % ? Souhaitez-vous que les vaccinations soient prises en charge ? Quel budget définissez-vous pour votre assurance chien ? En quelques clics et sans engagement, vous obtenez des devis répondant à vos attentes.</p>
 				</section>
 			</div>
 			<div class="span4 offset1">

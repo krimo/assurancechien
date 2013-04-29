@@ -5,7 +5,7 @@
 				<div class="span5">
 					
 					<div class="hook">
-						<p class="lead-alt hidden-desktop"><strong>Assurancechien.com</strong></p>
+						<h1 class="hidden-desktop">Assurancechien.com</h1>
 						<p class="lead-alt">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.</p>
 						<img src="img/arrow-big.png" alt="" class="big-arrow hidden-phone">
 					</div>
@@ -20,7 +20,7 @@
 						<div class="caption">							
 							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents &hellip;</h3>
 							<h3 class="muted">Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</h3>
-							<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip;<br><a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
+							<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip;<br><br><a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
 						</div>
 					</div>
 
@@ -36,7 +36,7 @@
 
 								<div id="erreur-animal">
 									<div class="alert alert-error">
-										<strong>Miaou !</strong> Matou, toutou ou caribou ? Choisissez un animal pour continuer&hellip;
+										<strong>Matou, toutou ou caribou ?</strong> Choisissez un animal pour continuer&hellip;
 									</div>
 								</div>
 								
@@ -46,19 +46,19 @@
 										<div class="span5">
 											<div class="animal-holder animated chien">		
 												<h4>Chien</h4>
-												<p><em>&ldquo;Woof !&rdquo;</em></p>
+												<p><small><em>&ldquo;Woof !&rdquo;</em></small></p>
 											</div>
 										</div>
 										<div class="span4">
 											<div class="animal-holder animated chat">					
 												<h4>Chat</h4>
-												<p><em>&ldquo;Miaou !&rdquo;</em></p>
+												<p><small><em>&ldquo;Miaou !&rdquo;</em></small></p>
 											</div>
 										</div>
 										<div class="span3">
 											<div class="animal-holder animated nac">					
 												<h4>Autres</h4>
-												<p><em>&ldquo;?&rdquo;</em></p>
+												<p><small><em>&ldquo;coui-coui&rdquo;</em></small></p>
 											</div>
 										</div>
 									</div>
@@ -186,7 +186,7 @@
 										<div class="control-group">
 											<label class="control-label" for="zip-code">Code postal :</label>
 											<div class="controls">
-												<input type="text" name="zip_code" class="input-block-level span6" id="zip-code" minlength="5" maxlength="5" required>
+												<input type="text" name="zip_code" class="input-block-level span6" id="zip-code" data-minlength="5" maxlength="5" required>
 											</div>
 										</div>
 									</div>
@@ -250,11 +250,12 @@
 									</div>
 								</div>
 
-
-								<label class="checkbox inline">
-									<input type="checkbox" id="optin" name="optin"> Souhaitez-vous bénéficier des meilleures offres de nos partenaires ?
-								</label>	
-
+								<div class="control-group">
+									<label class="checkbox inline">
+										<input type="checkbox" id="optin" name="optin"> Souhaitez-vous bénéficier des meilleures offres de nos partenaires ?
+									</label>									
+								</div>
+								
 								<hr>
 
 								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>

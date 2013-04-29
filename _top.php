@@ -47,7 +47,7 @@
 			});
 		</script>
 	<![endif]-->
-		<div class="header-container">
+		<div class="header-container hidden-phone">
 			<div class="container">
 				<div class="row-fluid">
 
@@ -58,7 +58,7 @@
 					</div>
 
 					<div class="span7">
-						<a href="index.php" class="home-link hidden-phone">
+						<a href="index.php" class="home-link">
 							<div class="hgroup">
 								<div class="header">
 									<h1>assurancechien.com</h1>
