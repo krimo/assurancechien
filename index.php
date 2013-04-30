@@ -66,6 +66,9 @@
 
 								<div id="breed-selector" class="row-fluid"></div>
 
+								<input type="hidden" name="animal_refill" id="animal-refill">
+								<input type="hidden" name="animal_option_value" id="animal-option-value">
+
 								<div class="row-fluid zebra zebra-margin">
 									<div class="span6">
 										<div class="control-group">

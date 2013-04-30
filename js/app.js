@@ -19,25 +19,16 @@ function get_insee(zipCode) {
 	});	
 }
 
-
 $(document).ready(function() {
 
-	var validFields, animalChosen = false, theFormCookie = $.cookie('form'), theForm = $("form");
+	var validFields, 
+		animalChosen = false, 
+		theFormCookie = $.cookie('form'), 
+		theForm = $("form"), 
+		animalRefill = $("#animal-refill"),
+		animalOptionValue = $("#animal-option-value");
+
 	$('.step1').siblings().hide(); // hide all except step 1
-
-	if (theFormCookie) {
-		theForm.formParams(theFormCookie);
-
-		console.log(theForm.formParams());
-
-		if (theForm.formParams().dog_breed) {
-			$(".animal-holder.chien").click();
-		} else if (theForm.formParams().cat_breed) {
-			$(".animal-holder.chat").click();
-		} else if (theForm.formParams().nac_breed) {
-			$(".animal-holder.nac").click();
-		}
-	}
 
 	$(".date-input").each(function() {
 		var theDateField = $(this);
@@ -49,9 +40,7 @@ $(document).ready(function() {
 	});
 
 	$("#zip-code").on("blur", function() {
-
 		get_insee($(this).val());
-		
 	});
 
 	$(".animal-holder").on({
@@ -68,12 +57,32 @@ $(document).ready(function() {
 			$(".animal-holder").not(this).removeClass('highlight bounce');
 
 			if ($this.hasClass("chien")) {
-				$breedSelector.load("breed-selector.html #chiens");
+				$breedSelector.load("breed-selector.html #chien", function() {
+					$(".animal-select").val(animalOptionValue.val());
+					$("#breed-selector select").on("change", function() {
+						animalOptionValue.val($(this).val());
+					});
+				});
+				$("#animal-refill").val("chien");
 			} else if ($this.hasClass("chat")) {
-				$breedSelector.load("breed-selector.html #chats");
+				$breedSelector.load("breed-selector.html #chat", function() {
+					$(".animal-select").val(animalOptionValue.val());
+					$("#breed-selector select").on("change", function() {
+						animalOptionValue.val($(this).val());
+					});
+				});
+				$("#animal-refill").val("chat");
 			} else if ($this.hasClass("nac")) {
-				$breedSelector.load("breed-selector.html #nacs");
+				$breedSelector.load("breed-selector.html #nac", function() {
+					$(".animal-select").val(animalOptionValue.val());
+					$("#breed-selector select").on("change", function() {
+						animalOptionValue.val($(this).val());
+					});
+				});
+				$("#animal-refill").val("nac");
 			}
+
+			
 		}
 	});
 
@@ -123,6 +132,14 @@ $(document).ready(function() {
 	theForm.on("submit", function() {
 		$.cookie('form', $(this).formParams());
 	});
+
+	if (theFormCookie) {
+		theForm.formParams(theFormCookie);
+
+		if (animalRefill.val()) {
+			$(".animal-holder."+animalRefill.val()).click();			
+		}
+	}
 
 	$('#twitter').sharrre({
 		share: {
