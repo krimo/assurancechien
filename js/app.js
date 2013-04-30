@@ -1,10 +1,36 @@
+function get_insee(zipCode) {
+	$.ajax({
+		url: 'liste-insee.php',
+		type: 'POST',
+		data: "cp="+zipCode,
+		success: function (data) {
+			d = eval(data);
+			$("#insee").html("<option value="+d[0]+">"+d[1]+"</option>");
+		},
+		error: function (d, r, obj) {
+			console.log(r);
+		}
+	});	
+}
+
+
 $(document).ready(function() {
 
-	var validFields, animalChosen = false;
+	var validFields, animalChosen = false, theFormCookie = $.cookie('form'), theForm = $("form");
 	$('.step1').siblings().hide(); // hide all except step 1
 
-	if ($.cookie('form')) {
-		$('form').formParams($.cookie('form'));
+	if (theFormCookie) {
+		theForm.formParams(theFormCookie);
+
+		console.log(theForm.formParams());
+
+		if (theForm.formParams().dog_breed) {
+			$(".animal-holder.chien").click();
+		} else if (theForm.formParams().cat_breed) {
+			$(".animal-holder.chat").click();
+		} else if (theForm.formParams().nac_breed) {
+			$(".animal-holder.nac").click();
+		}
 	}
 
 	$(".date-input").each(function() {
@@ -18,20 +44,7 @@ $(document).ready(function() {
 
 	$("#zip-code").on("blur", function() {
 
-		var codePostal = $(this).val();
-
-		$.ajax({
-			url: 'liste-insee.php',
-			type: 'POST',
-			data: "cp="+codePostal,
-			success: function (data) {
-				d = eval(data);
-				$("#insee").html("<option value="+d[0]+">"+d[1]+"</option>");
-			},
-			error: function (d, r, obj) {
-				console.log(r);
-			}
-		});
+		get_insee($(this).val());
 		
 	});
 
@@ -76,6 +89,11 @@ $(document).ready(function() {
 		if (validFields && animalChosen) {
 			$(this).closest('.step').hide(300).next('.step').show(300);
 		}
+
+		if ($("#zip-code").val().length == 5) {
+
+			get_insee($("#zip-code").val());
+		}
 	});
 
 	$('#back-btn').click(function(){
@@ -83,7 +101,7 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$("form").parsley({
+	theForm.parsley({
 		trigger: 'blur',
 		successClass: 'success',
 		errorClass: 'error',
@@ -96,7 +114,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$("form").on("submit", function() {
+	theForm.on("submit", function() {
 		$.cookie('form', $(this).formParams());
 	});
 

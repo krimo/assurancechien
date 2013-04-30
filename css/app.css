@@ -188,6 +188,12 @@ span.step {
 
 .hgroup { padding: 2em 0; }
 
+.zebra {
+	background: #f5f5f5;
+}
+
+.zebra-margin {margin-bottom: 1em;}
+
 #loading-gif {
 	display: none;
 }

@@ -66,7 +66,7 @@
 
 								<div id="breed-selector" class="row-fluid"></div>
 
-								<div class="row-fluid zebra">
+								<div class="row-fluid zebra zebra-margin">
 									<div class="span6">
 										<div class="control-group">
 											<label class="control-label" for="pet-name">Son nom :</label>
@@ -89,7 +89,7 @@
 									</div>
 								</div>
 								
-								<div class="form-horizontal zebra">
+								<div class="form-horizontal">
 									<div class="control-group">
 										<label class="control-label">Sexe de votre animal :</label>
 										<div class="controls">
@@ -117,7 +117,7 @@
 									</div>										
 								</div>
 
-								<div class="form-horizontal zebra">
+								<div class="form-horizontal">
 									<div class="control-group">
 										<label class="control-label">Au cours des 36 derniers mois, avez-vous fait l'objet de résiliation par un assureur ?</label>
 										<div class="controls">
@@ -131,7 +131,7 @@
 									</div>										
 								</div>
 
-								<label class="checkbox" for="pet-tag">
+								<label class="checkbox zebra" for="pet-tag">
 									<input type="checkbox" name="pet_tag" id="pet-tag" checked> Cochez s'il est tatoué / pucé
 								</label>
 								
@@ -144,7 +144,7 @@
 							<fieldset class="step step2">
 								<legend>Vous</legend>
 																
-								<div class="row-fluid zebra">
+								<div class="row-fluid zebra zebra-margin">
 									<div class="span2">
 										<div class="control-group">
 											<label class="control-label" for="owner-gender">Civilité :</label>
@@ -174,14 +174,14 @@
 									</div>
 								</div>
 
-								<div class="control-group zebra">
+								<div class="control-group">
 									<label class="control-label" for="owner-address">Votre adresse :</label>
 									<div class="controls">
 										<input type="text" name="owner_address" class="input-block-level" id="owner-address" required>
 									</div>
 								</div>
 
-								<div class="row-fluid zebra">
+								<div class="row-fluid zebra zebra-margin">
 									<div class="span3">										
 										<div class="control-group">
 											<label class="control-label" for="zip-code">Code postal :</label>
@@ -200,7 +200,7 @@
 									</div>
 								</div>
 								<div class="form-horizontal">
-									<div class="control-group zebra">
+									<div class="control-group">
 										<label class="control-label" for="owner-birthday">Date de naissance :</label>
 										<div class="controls">
 											<div class="row-fluid">
@@ -218,7 +218,7 @@
 									</div>	
 								</div>
 
-								<div class="row-fluid zebra">
+								<div class="row-fluid">
 									<div class="span6">
 										<div class="control-group">
 											<label class="control-label" for="owner-email">Votre e-mail :</label>
