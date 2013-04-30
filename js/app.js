@@ -64,6 +64,7 @@ $(document).ready(function() {
 			if ($this.hasClass("chien")) {
 				$breedSelector.load("breed-selector.html #chien", function() {
 					$(".animal-select").val(animalOptionValue.val());
+					animalOptionValue.val("");
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -72,6 +73,7 @@ $(document).ready(function() {
 			} else if ($this.hasClass("chat")) {
 				$breedSelector.load("breed-selector.html #chat", function() {
 					$(".animal-select").val(animalOptionValue.val());
+					animalOptionValue.val("");
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -80,6 +82,7 @@ $(document).ready(function() {
 			} else if ($this.hasClass("nac")) {
 				$breedSelector.load("breed-selector.html #nac", function() {
 					$(".animal-select").val(animalOptionValue.val());
+					animalOptionValue.val("");
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -107,7 +110,7 @@ $(document).ready(function() {
 		}
 
 		if (validFields && animalChosen) {
-			$(this).closest('.step').hide(300).next('.step').show(300);
+			$(this).closest('.step').hide(0).next('.step').show(0);
 		}
 
 		if ($("#zip-code").val().length == 5) {
@@ -117,7 +120,7 @@ $(document).ready(function() {
 	});
 
 	$('#back-btn').click(function(){
-		$(this).closest('.step').hide(300).prev('.step').show(300);
+		$(this).closest('.step').hide(0).prev('.step').show(0);
 		return false;
 	});
 
@@ -152,7 +155,7 @@ $(document).ready(function() {
 		},
 		enableHover: false,
 		enableTracking: true,
-		buttons: { twitter: {via: '_misterassur'}},
+		buttons: { twitter: {via: 'Le comparateur des assurances les moins chères pour votre animal http://monassurancechien.com #chien #chat'}},
 		click: function(api, options){
 			api.simulateClick();
 			api.openPopup('twitter');

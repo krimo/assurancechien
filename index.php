@@ -85,7 +85,7 @@
 												<div class="row-fluid">
 													<input type="text" name="pbirthday_day" id="pbirthday-day" class="span4 date-input" maxlength="2" minlength="2" size="2" data-range="[1, 31]" placeholder="Jour" required>
 													<input type="text" name="pbirthday_month" id="pbirthday-month" class="span4 date-input" size="2" minlength="2" maxlength="2" data-range="[1, 12]" placeholder="Mois" required>
-													<input type="text" name="pbirthday_year" id="pbirthday-year" class="span4 date-input" size="4" minlength="4" maxlength="4" data-range="[1980, 2013]" placeholder="Année" required>
+													<input type="text" name="pbirthday_year" id="pbirthday-year" class="span4 date-input" size="4" minlength="4" maxlength="4" data-max="2013" placeholder="Année" required>
 												</div>	
 											</div>
 										</div>
@@ -209,7 +209,7 @@
 											<div class="row-fluid">
 												<input type="text" name="obirthday_day" id="obirthday-day" class="span2 date-input" maxlength="2" minlength="2" data-range="[1, 31]" placeholder="Jour" required>
 												<input type="text" name="obirthday_month" id="obirthday-month" class="span2 date-input" maxlength="2" minlength="2" data-range="[1, 12]" placeholder="Mois" required>
-												<input type="text" name="obirthday_year" id="obirthday-year" class="span3 date-input" maxlength="4" minlength="4" data-range="[1915, 1997]" placeholder="Année" required>
+												<input type="text" name="obirthday_year" id="obirthday-year" class="span3 date-input" maxlength="4" minlength="4" placeholder="Année" required>
 											</div>	
 										</div>
 									</div>
