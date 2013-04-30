@@ -18,7 +18,7 @@
 					<div class="thumbnail hidden-phone">
 						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
 						<div class="caption">							
-							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents etc.</h3>
+							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents...</h3>
 							<h3 class="muted">Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</h3>
 							<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip;<br><br><a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
 						</div>
