@@ -5,7 +5,13 @@ function get_insee(zipCode) {
 		data: "cp="+zipCode,
 		success: function (data) {
 			d = eval(data);
-			$("#insee").html("<option value="+d[0]+">"+d[1]+"</option>");
+			console.log(d[0]);
+			if (d[0] == null || d[1] == null) {
+				$("#insee").html("<option value=>Code postal érroné</option>");
+				$("#zip-code").parents(".control-group").removeClass("success").addClass("error");
+			} else {
+				$("#insee").html("<option value="+d[0]+">"+d[1]+"</option>");
+			}			
 		},
 		error: function (d, r, obj) {
 			console.log(r);

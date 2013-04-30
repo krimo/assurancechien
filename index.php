@@ -5,7 +5,7 @@
 				<div class="span5">
 					
 					<div class="hook">
-						<h1 class="hidden-desktop">Assurancechien.com</h1>
+						<h1 class="hidden-desktop">www.monssurancechien.com</h1>
 						<p class="lead-alt">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.</p>
 						<img src="img/arrow-big.png" alt="" class="big-arrow hidden-phone">
 					</div>
@@ -18,7 +18,7 @@
 					<div class="thumbnail hidden-phone">
 						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
 						<div class="caption">							
-							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents &hellip;</h3>
+							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents etc.</h3>
 							<h3 class="muted">Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</h3>
 							<p>Les frais vétérinaires ont un coût important, d’une centaine d’euros par an pour un chien en bonne santé à plusieurs milliers d’euros lorsqu’un accident&hellip;<br><br><a href="comprendre-assurance-chien.php">Comprendre l'assurance chien &raquo;</a></p>	
 						</div>
@@ -58,7 +58,7 @@
 										<div class="span3">
 											<div class="animal-holder animated nac">					
 												<h4>Autres</h4>
-												<p><small><em>&ldquo;coui-coui&rdquo;</em></small></p>
+												<p><small><em>&ldquo;Crr-Crr !&rdquo;</em></small></p>
 											</div>
 										</div>
 									</div>
@@ -194,7 +194,7 @@
 										<div class="control-group">
 											<label class="control-label" for="insee">Ville :</label>
 											<div class="controls">
-												<select type="text" name="insee" class="input-block-level" id="insee"></select>
+												<select type="text" name="insee" class="input-block-level" id="insee" required></select>
 											</div>
 										</div>										
 									</div>
@@ -250,15 +250,15 @@
 									</div>
 								</div>
 
-								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
-								
-								<hr>
-
-								<div class="control-group">
+								<div class="control-group margin-cindy">
 									<label class="checkbox inline">
 										<input type="checkbox" id="optin" name="optin"> Souhaitez-vous bénéficier des meilleures offres de nos partenaires ?
 									</label>									
 								</div>
+								
+								<hr>
+
+								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
 
 								<button type="button" class="btn btn-info btn-mini" id="back-btn">Retour</button>
 								<button type="submit" class="btn btn-large btn-primary pull-right">Afficher les tarifs &raquo;</button>
