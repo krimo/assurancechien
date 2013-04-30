@@ -250,15 +250,15 @@
 									</div>
 								</div>
 
+								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
+								
+								<hr>
+
 								<div class="control-group">
 									<label class="checkbox inline">
 										<input type="checkbox" id="optin" name="optin"> Souhaitez-vous bénéficier des meilleures offres de nos partenaires ?
 									</label>									
 								</div>
-								
-								<hr>
-
-								<p class="muted"><small>Ces informations sont nécessaires pour vous proposer un devis personnalisé.</small></p>
 
 								<button type="button" class="btn btn-info btn-mini" id="back-btn">Retour</button>
 								<button type="submit" class="btn btn-large btn-primary pull-right">Afficher les tarifs &raquo;</button>

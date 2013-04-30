@@ -178,7 +178,12 @@ span.step {
 	line-height: .5;
 }
 
-.animal-holder.chien { background-image:url(../img/dog.png); text-indent: 65px;}
+.animal-holder.chien { 
+	background-image:url(../img/dog.png); 
+	text-indent: 0; 
+	text-align: center;
+	background-position: 15% 50%;
+}
 .animal-holder.chat { background-image:url(../img/cat.png); text-indent: 65px;}
 .animal-holder.nac { background-image:url(../img/bunny.png); text-indent: 40px;}
 

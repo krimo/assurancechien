@@ -10,6 +10,11 @@
 
 	<meta name="keywords" content="assurance santé, assurance chien" />
 	<meta name="description" content="Une assurance santé pour votre chien" />
+
+	<meta property="og:image" content="http://monassurancechien.com/dev/img/animaux.jpg"/>
+	<meta property="og:title" content="Mon Assurance Chien"/>
+	<meta property="og:url" content="http://monassurancechien.com/dev"/>
+	<meta property="og:site_name" content="Mon Assurance Chien"/>
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
@@ -22,31 +27,6 @@
 	<script>var _gaq=[['_setAccount','UA-34879513-7'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 </head>
 <body>
-	<!--[if lte IE8]>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-
-		<style>
-			.chromeFrameInstallDefaultStyle {
-			width: 100%; /* default is 800px */
-			border: 5px solid blue;
-			}
-		</style>
-
-		<div id="prompt">
-			<p class="chromeframe">Vous utilisez un navigateur <strong>obsolète</strong>. Merci <a href="http://www.google.com/chromeframe/?redirect=true">d'activer Google Chrome Frame</a> pour le mettre à jour le plus facilement possible.</p>
-		</div>
-
-		<script>
-			// The conditional ensures that this code will only execute in IE,
-			// Therefore we can use the IE-specific attachEvent without worry
-			window.attachEvent("onload", function() {
-				CFInstall.check({
-					mode: "overlay", // the default
-					node: "prompt"
-				});
-			});
-		</script>
-	<![endif]-->
 		<div class="header-container hidden-phone">
 			<div class="container">
 				<div class="row-fluid">
