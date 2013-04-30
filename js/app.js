@@ -33,8 +33,13 @@ $(document).ready(function() {
 	$(".date-input").each(function() {
 		var theDateField = $(this);
 		theDateField.on('keyup', function() {
-			if (theDateField.val().length == theDateField[0].maxLength && theDateField.parsley('isValid')) {
-				theDateField.next('.date-input').focus();
+			console.log("Clavier pressé");
+			if (theDateField.val().length == theDateField[0].maxLength) {
+				if (theDateField.val().length == 4) {
+					theDateField.blur();
+				} else {
+					theDateField.next('.date-input').focus();
+				}
 			}
 		});
 	});
