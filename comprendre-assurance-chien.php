@@ -4,8 +4,6 @@
 			<div class="span6">
 				<section class="insurance-article">
 
-					<?php echo getenv("VCAP_SERVICES"); ?>
-
 					<header>
 						<h1 class="text-info">Frais vétérinaires, vaccins, maladies, accidents&hellip;<br><small>Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</small></h1>
 					</header>

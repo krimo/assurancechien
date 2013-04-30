@@ -4,7 +4,7 @@ try {
 	if ($_SERVER['HTTP_HOST'] == "monassurancechien.com") {
 		$dbh = new PDO("mysql:host=localhost;dbname=assuranczkcomp", "assuranczkcomp", "Pen4kaPr");
 	} else if ($_SERVER['HTTP_HOST'] == "assurancechien.eu01.aws.af.cm") {
-		$dbh = new PDO("mysql:host=assurancechien.mysql.eu1.frbit.com;dbname=assurancechien", "assurancechien", "VPJ3v0_Mf5kO9cez");
+		$dbh = new PDO("mysql:host=eu01-user01.cbxizyg0fwcn.eu-west-1.rds.amazonaws.com;dbname=d3d80d206724943d5aa4310a9215528b1", "uFczgcgkqr0EG", "poWP9k9Z55xJF");
 	} else {
 		$dbh = new PDO("mysql:host=localhost;dbname=misterassur_dev", "misterassur", "Mah;vGh!s");
 	}
