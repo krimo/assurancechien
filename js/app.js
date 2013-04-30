@@ -155,7 +155,6 @@ $(document).ready(function() {
 		},
 		enableHover: false,
 		enableTracking: true,
-		buttons: { twitter: {via: 'Le comparateur des assurances les moins chères pour votre animal http://monassurancechien.com #chien #chat'}},
 		click: function(api, options){
 			api.simulateClick();
 			api.openPopup('twitter');

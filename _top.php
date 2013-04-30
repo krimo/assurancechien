@@ -32,7 +32,7 @@
 				<div class="row-fluid">
 
 					<div id="share">
-						<div id="twitter" data-url="http://monassurancechien.com/" data-text="Trouvez l'assurance la moins chere pour votre animal" data-title="Tweet"></div>
+						<div id="twitter" data-url="http://monassurancechien.com/" data-text="Le comparateur des assurances les moins chères pour votre animal http://monassurancechien.com #chien #chat" data-title="Tweet"></div>
 						<div id="facebook" data-url="http://monassurancechien.com/" data-text="Trouvez l'assurance la moins chere pour votre animal" data-title="J'aime"></div>
 						<div id="googleplus" data-url="http://monassurancechien.com/" data-text="Trouvez l'assurance la moins chere pour votre animal" data-title="+1"></div>
 					</div>
