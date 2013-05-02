@@ -96,7 +96,7 @@ $(document).ready(function() {
 
 	$('#continue-btn').click(function(){
 
-		$(".step1").find("input[type=text]").each(function() {		
+		$(".step1").find("input[type=text], select").each(function() {		
 			$(this).parsley('validate');
 			if (!$(this).parsley('isValid')) {
 				validFields = false;
