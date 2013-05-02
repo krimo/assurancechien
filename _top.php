@@ -11,7 +11,7 @@
 	<meta name="keywords" content="assurance santé, assurance chien" />
 	<meta name="description" content="Une assurance santé pour votre chien" />
 
-	<meta property="og:image" content="http://monassurancechien.com/dev/img/animaux.jpg"/>
+	<meta property="og:image" content="http://monassurancechien.com/img/animaux.jpg"/>
 	<meta property="og:title" content="Mon Assurance Chien"/>
 	<meta property="og:url" content="http://monassurancechien.com/dev"/>
 	<meta property="og:site_name" content="Mon Assurance Chien"/>
@@ -22,6 +22,10 @@
 
 	<!-- Google font -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900,400italic' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
 	
 	<!-- Google Analytics -->
 	<script>var _gaq=[['_setAccount','UA-34879513-7'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
