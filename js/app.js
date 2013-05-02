@@ -33,7 +33,6 @@ $(document).ready(function() {
 	$(".date-input").each(function() {
 		var theDateField = $(this);
 		theDateField.on('keyup', function() {
-			console.log("Clavier pressé");
 			if (theDateField.val().length == theDateField[0].maxLength) {
 				if (theDateField.val().length == 4) {
 					theDateField.blur();
@@ -64,7 +63,7 @@ $(document).ready(function() {
 			if ($this.hasClass("chien")) {
 				$breedSelector.load("breed-selector.html #chien", function() {
 					$(".animal-select").val(animalOptionValue.val());
-					animalOptionValue.val("");
+					animalOptionValue.val() = null;
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -73,7 +72,7 @@ $(document).ready(function() {
 			} else if ($this.hasClass("chat")) {
 				$breedSelector.load("breed-selector.html #chat", function() {
 					$(".animal-select").val(animalOptionValue.val());
-					animalOptionValue.val("");
+					animalOptionValue.val() = null;
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -82,7 +81,7 @@ $(document).ready(function() {
 			} else if ($this.hasClass("nac")) {
 				$breedSelector.load("breed-selector.html #nac", function() {
 					$(".animal-select").val(animalOptionValue.val());
-					animalOptionValue.val("");
+					animalOptionValue.val() = null;
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -96,7 +95,7 @@ $(document).ready(function() {
 
 	$('#continue-btn').click(function(){
 
-		$(".step1").find("input[type=text], select").each(function() {		
+		$(".step1").find("input, select, .date-input").each(function() {		
 			$(this).parsley('validate');
 			if (!$(this).parsley('isValid')) {
 				validFields = false;
