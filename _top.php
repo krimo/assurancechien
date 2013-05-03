@@ -11,7 +11,7 @@
 	<meta name="keywords" content="assurance santé, assurance chien" />
 	<meta name="description" content="Une assurance santé pour votre chien" />
 
-	<meta property="og:image" content="http://monassurancechien.com/img/animaux.jpg"/>
+	<meta property="og:image" content="http://monassurancechien.com/img/animaux_alt.jpg"/>
 	<meta property="og:title" content="Mon Assurance Chien"/>
 	<meta property="og:url" content="http://monassurancechien.com"/>
 	<meta property="og:site_name" content="Mon Assurance Chien"/>

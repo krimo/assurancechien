@@ -1,7 +1,7 @@
 <?php
 
 	// Constantes
-	define("WS_URL", "http://dev.misterassur.com/moteur/moteur_import.php");
+	define("WS_URL", "http://www.misterassur.com/moteur/moteur_import.php");
 	define("SERVICE", "animaux");
 	
 	/**

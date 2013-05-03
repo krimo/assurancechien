@@ -21,4 +21,6 @@ require_once("_top.php");
 		</div>	
 	</div>
 
+	<img src="http://clic.reussissonsensemble.fr/registersale.asp?site=11993&mode=ppl&ltype=1&order=<?=$owner_email?>" width="1" height="1">
+
 <?php require_once("_bottom.php"); ?>

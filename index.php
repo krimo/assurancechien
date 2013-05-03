@@ -16,7 +16,7 @@
 					</ul>
 
 					<div class="thumbnail hidden-phone">
-						<img src="img/animaux.jpg" alt="Une femme et ses animaux de companie">
+						<img src="img/animaux_alt.jpg" alt="Une femme et ses animaux de companie">
 						<div class="caption">							
 							<h3 class="text-info">Frais vétérinaires, vaccins, maladies, accidents...</h3>
 							<h3 class="muted">Quelques euros/mois pour leur mutuelle, ça simplifie la vie !</h3>

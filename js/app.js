@@ -5,13 +5,14 @@ function get_insee(zipCode) {
 		cache: false,
 		data: "cp="+zipCode,
 		success: function (data) {
-			d = eval(data);
-			if (d[0] == null || d[1] == null) {
-				$("#insee").html("<option value=>Code postal érroné</option>");
-				$("#zip-code").parents(".control-group").removeClass("success").addClass("error");
-			} else {
-				$("#insee").html("<option value="+d[0]+">"+d[1]+"</option>");
-			}			
+			$.each($.parseJSON(data), function(k,v) {
+				if (k == null || v == null) {
+					$("#insee").html("<option value=>Code postal érroné</option>");
+					$("#zip-code").parents(".control-group").removeClass("success").addClass("error");
+				} else {
+					$("#insee").append("<option value="+k+">"+v+"</option>");
+				}
+			});			
 		},
 		error: function (d, r, obj) {
 			console.log(r);
@@ -63,7 +64,6 @@ $(document).ready(function() {
 			if ($this.hasClass("chien")) {
 				$breedSelector.load("breed-selector.html #chien", function() {
 					$(".animal-select").val(animalOptionValue.val());
-					animalOptionValue.attr("value", "0");
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -72,7 +72,6 @@ $(document).ready(function() {
 			} else if ($this.hasClass("chat")) {
 				$breedSelector.load("breed-selector.html #chat", function() {
 					$(".animal-select").val(animalOptionValue.val());
-					animalOptionValue.val("0");
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -81,7 +80,6 @@ $(document).ready(function() {
 			} else if ($this.hasClass("nac")) {
 				$breedSelector.load("breed-selector.html #nac", function() {
 					$(".animal-select").val(animalOptionValue.val());
-					animalOptionValue.val("0");
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
