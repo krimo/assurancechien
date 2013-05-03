@@ -13,7 +13,7 @@
 
 	<meta property="og:image" content="http://monassurancechien.com/img/animaux.jpg"/>
 	<meta property="og:title" content="Mon Assurance Chien"/>
-	<meta property="og:url" content="http://monassurancechien.com/dev"/>
+	<meta property="og:url" content="http://monassurancechien.com"/>
 	<meta property="og:site_name" content="Mon Assurance Chien"/>
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">

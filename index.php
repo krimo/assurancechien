@@ -5,7 +5,7 @@
 				<div class="span5">
 					
 					<div class="hook">
-						<h1 class="hidden-desktop">www.monssurancechien.com</h1>
+						<h1 class="hidden-desktop text-center">www.monssurancechien.com</h1>
 						<p class="lead-alt">Les <strong>meilleurs tarifs</strong> accessibles en moins de <strong>deux minutes</strong> avec une gamme de formules sur-mesure.</p>
 						<img src="img/arrow-big.png" alt="" class="big-arrow hidden-phone">
 					</div>
