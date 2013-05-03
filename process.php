@@ -48,6 +48,7 @@
 		$breed = 0;
 	}
 
+	$code_apporteur = filter_var($_POST["code_apporteur"], FILTER_SANITIZE_STRING);
 	$pet_gender = ($_POST['pet_gender'] == "male") ? 1 : 2;
 	$pet_name = filter_var($_POST['pet_name'], FILTER_SANITIZE_STRING);
 	$pet_birthday = get_date("pbirthday");
@@ -73,7 +74,7 @@
 		$client = new SoapClient(null, array("uri" => WS_URL, "location" => WS_URL, "trace" => 1, "exceptions" => 1));
 
 		$data = array(
-			"code" => "IG9DGC", 
+			"code" => $code_apporteur, 
 			"animal_couvert" => $pet_insured,
 			"resiliation" => $contract_cancelled, 
 			"date_effet" => $contract_start_date, 

@@ -49,12 +49,13 @@ $(document).ready(function() {
 	$(".animal-holder").on({
 		click: function() {
 			animalChosen = true;
+			var $this = $(this), $breedSelector = $("#breed-selector");
 
 			if($("#erreur-animal").is(":visible")) {
 				$("#erreur-animal").fadeOut(300);
 			}
 
-			var $this = $(this), $breedSelector = $("#breed-selector");
+			
 			
 			$this.toggleClass('highlight bounce');
 			$(".animal-holder").not(this).removeClass('highlight bounce');

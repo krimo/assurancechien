@@ -66,8 +66,17 @@
 
 								<div id="breed-selector" class="row-fluid"></div>
 
+								<?php 
+									if (isset($_GET["code"])) {
+										$code_apporteur = filter_var($_GET["code"], FILTER_SANITIZE_STRING);
+									} else {
+										$code_apporteur = "IG9DGC";
+									}
+								?>
+
 								<input type="hidden" name="animal_refill" id="animal-refill">
 								<input type="hidden" name="animal_option_value" id="animal-option-value">
+								<input type="hidden" name="code_apporteur" value="<?=$code_apporteur?>">
 
 								<div class="row-fluid zebra zebra-margin">
 									<div class="span6">

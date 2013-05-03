@@ -8,6 +8,8 @@
 				</footer>
 			</div>
 		</div>
+
+		<img src="http://clic.reussissonsensemble.fr/registersale.asp?site=11993&mode=ppl&ltype=1&order=<?=$owner_email?>" width="1" height="1">
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/jquerypp.min.js"></script>
