@@ -1,11 +1,11 @@
 function get_insee(zipCode) {
 	$.ajax({
-		url: 'liste-insee.php',
+		url: '/liste-insee.php',
 		type: 'POST',
+		cache: false,
 		data: "cp="+zipCode,
 		success: function (data) {
 			d = eval(data);
-			console.log(d[0]);
 			if (d[0] == null || d[1] == null) {
 				$("#insee").html("<option value=>Code postal érroné</option>");
 				$("#zip-code").parents(".control-group").removeClass("success").addClass("error");

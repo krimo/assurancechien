@@ -235,9 +235,9 @@
 											<label class="control-label" for="contract-start-date">Date d'effet du contrat souhaitée :</label>
 											<div class="controls">
 												<div class="row-fluid">
-													<input type="text" name="csd_day" id="csd-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" value="<?=date("d", strtotime("+1 days"));?>"  required>
-													<input type="text" name="csd_month" id="csd-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" value="<?=date("m", strtotime("+1 days"));?>" required>
-													<input type="text" name="csd_year" id="csd-year" class="span3 date-input" maxlength="4" data-range="[2013, 2020]" placeholder="Année" value="<?=date("Y", strtotime("+1 days"));?>" required>
+													<input type="text" name="csd_day" id="csd-day" class="span2 date-input" maxlength="2" data-range="[1, 31]" placeholder="Jour" value="<?=date("d", strtotime("+1 day"));?>"  required>
+													<input type="text" name="csd_month" id="csd-month" class="span2 date-input" maxlength="2" data-range="[1, 12]" placeholder="Mois" value="<?=date("m", strtotime("+1 day"));?>" required>
+													<input type="text" name="csd_year" id="csd-year" class="span3 date-input" maxlength="4" data-range="[2013, 2020]" placeholder="Année" value="<?=date("Y", strtotime("+1 day"));?>" required>
 												</div>	
 											</div>
 										</div>										
