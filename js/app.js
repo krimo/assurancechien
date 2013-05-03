@@ -21,8 +21,7 @@ function get_insee(zipCode) {
 
 $(document).ready(function() {
 
-	var validFields, 
-		animalChosen = false, 
+	var animalChosen = false, 
 		theFormCookie = $.cookie('form'), 
 		theForm = $("form"), 
 		animalRefill = $("#animal-refill"),
@@ -63,7 +62,7 @@ $(document).ready(function() {
 			if ($this.hasClass("chien")) {
 				$breedSelector.load("breed-selector.html #chien", function() {
 					$(".animal-select").val(animalOptionValue.val());
-					animalOptionValue.val() = null;
+					animalOptionValue.attr("value", "0");
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -72,7 +71,7 @@ $(document).ready(function() {
 			} else if ($this.hasClass("chat")) {
 				$breedSelector.load("breed-selector.html #chat", function() {
 					$(".animal-select").val(animalOptionValue.val());
-					animalOptionValue.val() = null;
+					animalOptionValue.val("0");
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -81,7 +80,7 @@ $(document).ready(function() {
 			} else if ($this.hasClass("nac")) {
 				$breedSelector.load("breed-selector.html #nac", function() {
 					$(".animal-select").val(animalOptionValue.val());
-					animalOptionValue.val() = null;
+					animalOptionValue.val("0");
 					$("#breed-selector select").on("change", function() {
 						animalOptionValue.val($(this).val());
 					});
@@ -95,21 +94,25 @@ $(document).ready(function() {
 
 	$('#continue-btn').click(function(){
 
-		$(".step1").find("input, select, .date-input").each(function() {		
+		var validFields = [];
+
+		$(".step1").find("input, select").not("[type=hidden]").each(function() {		
 			$(this).parsley('validate');
 			if (!$(this).parsley('isValid')) {
-				validFields = false;
+				validFields.push(false);
 			} else {
-				validFields = true;
+				validFields.push(true);
 			}
+
 		});
 
 		if (!animalChosen) {
 			$("#erreur-animal").fadeIn(300);
 		}
 
-		if (validFields && animalChosen) {
+		if (validFields.indexOf(false) == -1 && animalChosen) {
 			$(this).closest('.step').hide(0).next('.step').show(0);
+			validFields = [];
 		}
 
 		if ($("#zip-code").val().length == 5) {

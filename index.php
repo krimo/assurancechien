@@ -111,10 +111,10 @@
 										<label class="control-label">Votre animal est-il déjà couvert ?</label>
 										<div class="controls">
 											<label class="radio inline">
-												<input type="radio" id="pet-insured-1" name="pet_insured" value="0" checked> Non
+												<input type="radio" id="pet-insured-1" name="pet_insured" value="0" required checked> Non
 											</label>
 											<label class="radio inline">
-												<input type="radio" id="pet-insured-2" name="pet_insured" value="1"> Oui
+												<input type="radio" id="pet-insured-2" name="pet_insured" value="1" required> Oui
 											</label>
 										</div>
 									</div>										
@@ -125,17 +125,17 @@
 										<label class="control-label">Au cours des 36 derniers mois, avez-vous fait l'objet de résiliation par un assureur ?</label>
 										<div class="controls">
 											<label class="radio inline">
-												<input type="radio" id="contract-cancelled-1" name="contract_cancelled" value="0" checked> Non
+												<input type="radio" id="contract-cancelled-1" name="contract_cancelled" value="0" checked required> Non
 											</label>
 											<label class="radio inline">
-												<input type="radio" id="contract-cancelled-2" name="contract_cancelled" value="1"> Oui
+												<input type="radio" id="contract-cancelled-2" name="contract_cancelled" value="1" required> Oui
 											</label>
 										</div>
 									</div>										
 								</div>
 
 								<label class="checkbox zebra" for="pet-tag">
-									<input type="checkbox" name="pet_tag" id="pet-tag" checked> Cochez s'il est tatoué / pucé
+									<input type="checkbox" name="pet_tag" id="pet-tag" checked required> Cochez s'il est tatoué / pucé
 								</label>
 								
 								<hr>
