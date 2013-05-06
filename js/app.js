@@ -58,6 +58,7 @@ $(document).ready(function() {
 				loadUrl = "breed-selector.html "+$this.attr("data-selector-id"),
 				otherAnimals = $(".animal-holder").not(this);
 
+			animalRefill.val($this.attr("data-selector-id").replace("#",""));
 			animalChosen = true;
 			if (animalHolderArray.indexOf(loadUrl) == -1) {
 				animalHolderArray.push(loadUrl);
