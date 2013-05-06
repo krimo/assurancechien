@@ -5,14 +5,16 @@ function get_insee(zipCode) {
 		cache: false,
 		data: "cp="+zipCode,
 		success: function (data) {
+			optionArray = [];
 			$.each($.parseJSON(data), function(k,v) {
-				if (k == null || v == null) {
+				if (k == null) {
 					$("#insee").html("<option value=>Code postal érroné</option>");
 					$("#zip-code").parents(".control-group").removeClass("success").addClass("error");
 				} else {
-					$("#insee").append("<option value="+k+">"+v+"</option>");
+					optionArray.push("<option value="+k+">"+v+"</option>");
 				}
-			});			
+			});
+			$("#insee").html(optionArray.join(" "));		
 		},
 		error: function (d, r, obj) {
 			console.log(r);
@@ -26,7 +28,8 @@ $(document).ready(function() {
 		theFormCookie = $.cookie('form'), 
 		theForm = $("form"), 
 		animalRefill = $("#animal-refill"),
-		animalOptionValue = $("#animal-option-value");
+		animalOptionValue = $("#animal-option-value"),
+		animalHolderArray = [];
 
 	$('.step1').siblings().hide(); // hide all except step 1
 
@@ -49,45 +52,38 @@ $(document).ready(function() {
 
 	$(".animal-holder").on({
 		click: function() {
+
+			var $this = $(this),
+				$breedSelector = $("#breed-selector"),
+				loadUrl = "breed-selector.html "+$this.attr("data-selector-id"),
+				otherAnimals = $(".animal-holder").not(this);
+
 			animalChosen = true;
-			var $this = $(this), $breedSelector = $("#breed-selector");
+			if (animalHolderArray.indexOf(loadUrl) == -1) {
+				animalHolderArray.push(loadUrl);
+			}
 
 			if($("#erreur-animal").is(":visible")) {
 				$("#erreur-animal").fadeOut(300);
 			}
 
-			
-			
 			$this.toggleClass('highlight bounce');
-			$(".animal-holder").not(this).removeClass('highlight bounce');
+			otherAnimals.removeClass('highlight bounce');
 
-			if ($this.hasClass("chien")) {
-				$breedSelector.load("breed-selector.html #chien", function() {
-					$(".animal-select").val(animalOptionValue.val());
-					$("#breed-selector select").on("change", function() {
-						animalOptionValue.val($(this).val());
-					});
-				});
-				$("#animal-refill").val("chien");
-			} else if ($this.hasClass("chat")) {
-				$breedSelector.load("breed-selector.html #chat", function() {
-					$(".animal-select").val(animalOptionValue.val());
-					$("#breed-selector select").on("change", function() {
-						animalOptionValue.val($(this).val());
-					});
-				});
-				$("#animal-refill").val("chat");
-			} else if ($this.hasClass("nac")) {
-				$breedSelector.load("breed-selector.html #nac", function() {
-					$(".animal-select").val(animalOptionValue.val());
-					$("#breed-selector select").on("change", function() {
-						animalOptionValue.val($(this).val());
-					});
-				});
-				$("#animal-refill").val("nac");
-			}
+			$breedSelector.load(loadUrl, function() {
 
-			
+				var animalSelect = $(".animal-select");
+
+				if (animalHolderArray.length > 1) {
+					animalSelect.val(null);
+				} else {
+					animalSelect.val(animalOptionValue.val())
+				}
+
+				animalSelect.on("change", function() {
+					animalOptionValue.val($(this).val());
+				});
+			});			
 		}
 	});
 
@@ -146,7 +142,9 @@ $(document).ready(function() {
 		theForm.formParams(theFormCookie);
 
 		if (animalRefill.val()) {
-			$(".animal-holder."+animalRefill.val()).click();			
+			$(".animal-holder."+animalRefill.val()).click(function() {
+				$(".animal-select").val(animalOptionValue.val());
+			});			
 		}
 	}
 

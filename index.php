@@ -44,19 +44,19 @@
 									<p class="text-center animal-picker">Cliquez sur l'image correspondant à votre compagnon</p>
 									<div class="row-fluid">
 										<div class="span5">
-											<div class="animal-holder animated chien">		
+											<div class="animal-holder animated chien" data-selector-id="#chien">		
 												<h4>Chien</h4>
 												<p><small><em>&ldquo;Woof !&rdquo;</em></small></p>
 											</div>
 										</div>
 										<div class="span4">
-											<div class="animal-holder animated chat">					
+											<div class="animal-holder animated chat" data-selector-id="#chat">					
 												<h4>Chat</h4>
 												<p><small><em>&ldquo;Miaou !&rdquo;</em></small></p>
 											</div>
 										</div>
 										<div class="span3">
-											<div class="animal-holder animated nac">					
+											<div class="animal-holder animated nac" data-selector-id="#nac">					
 												<h4>Autres</h4>
 												<p><small><em>&ldquo;Crr-Crr !&rdquo;</em></small></p>
 											</div>
