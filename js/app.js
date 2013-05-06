@@ -76,6 +76,7 @@ $(document).ready(function() {
 				var animalSelect = $(".animal-select");
 
 				if (animalHolderArray.length > 1) {
+					console.log("Valeur retirée");
 					animalSelect.val(null);
 				} else {
 					animalSelect.val(animalOptionValue.val())
