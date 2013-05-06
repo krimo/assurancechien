@@ -34,13 +34,6 @@
 		<div class="header-container hidden-phone">
 			<div class="container">
 				<div class="row-fluid">
-
-					<div id="share">
-						<div id="twitter" data-url="http://monassurancechien.com/" data-text="Le comparateur des assurances les moins chères pour votre animal #chien #chat" data-title="Tweet"></div>
-						<div id="facebook" data-url="http://monassurancechien.com/" data-text="Trouvez l'assurance la moins chere pour votre animal" data-title="J'aime"></div>
-						<div id="googleplus" data-url="http://monassurancechien.com/" data-text="Trouvez l'assurance la moins chere pour votre animal" data-title="+1"></div>
-					</div>
-
 					<div class="span7">
 						<a href="index.php" class="home-link">
 							<div class="hgroup">
@@ -51,6 +44,13 @@
 								<span class="label label-info">Gratuit, rapide &amp; sans engagement</span>
 							</div>	
 						</a>
+					</div>
+					<div class="span5">
+						<div id="share">
+							<div id="twitter" data-url="http://monassurancechien.com/" data-text="Le comparateur des assurances les moins chères pour votre animal #chien #chat" data-title="Tweet"></div>
+							<div id="facebook" data-url="http://monassurancechien.com/" data-text="Trouvez l'assurance la moins chere pour votre animal" data-title="J'aime"></div>
+							<div id="googleplus" data-url="http://monassurancechien.com/" data-text="Trouvez l'assurance la moins chere pour votre animal" data-title="+1"></div>
+						</div>
 					</div>
 				</div>
 			</div>
