@@ -108,6 +108,7 @@ $(document).ready(function() {
 
 		if (validFields.indexOf(false) == -1 && animalChosen) {
 			$(this).closest('.step').hide(0).next('.step').show(0);
+			$("html, body").animate({ scrollTop: 0 }, "fast");
 			validFields = [];
 		}
 
@@ -119,6 +120,7 @@ $(document).ready(function() {
 
 	$('#back-btn').click(function(){
 		$(this).closest('.step').hide(0).prev('.step').show(0);
+		$("html, body").animate({ scrollTop: 0 }, "fast");
 		return false;
 	});
 
@@ -143,9 +145,7 @@ $(document).ready(function() {
 		theForm.formParams(theFormCookie);
 
 		if (animalRefill.val()) {
-			$(".animal-holder."+animalRefill.val()).click(function() {
-				$(".animal-select").val(animalOptionValue.val());
-			});			
+			$(".animal-holder."+animalRefill.val()).click();
 		}
 	}
 

@@ -18,6 +18,8 @@ label, input, button, select, textarea {
 	min-width: 30%;
 }
 
+.form-horizontal .optin-label { min-width: 74%; }
+
 .form-horizontal label.radio.inline {
 	margin-left: 5px;
 }

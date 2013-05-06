@@ -143,9 +143,19 @@
 									</div>										
 								</div>
 
-								<label class="checkbox zebra" for="pet-tag">
-									<input type="checkbox" name="pet_tag" id="pet-tag" checked required> Cochez s'il est tatoué / pucé
-								</label>
+								<div class="form-horizontal zebra">
+									<div class="control-group">
+										<label class="control-label">Est-il tatoué ou pucé ?</label>
+										<div class="controls">
+											<label class="radio inline">
+												<input type="radio" id="pet-tag-1" name="pet_tag" value="0" required> Non
+											</label>
+											<label class="radio inline">
+												<input type="radio" id="pet-tag-2" name="pet_tag" value="1" checked required> Oui
+											</label>
+										</div>
+									</div>										
+								</div>
 								
 								<hr>
 							
@@ -260,12 +270,20 @@
 										<label class="radio inline"><input type="radio" name="contract_type"> Sérénité</label>
 										<label class="radio inline"><input type="radio" name="contract_type"> Premium</label>
 									</div>
-								</div>
+								</div>					
 
-								<div class="control-group margin-cindy">
-									<label class="checkbox inline">
-										<input type="checkbox" id="optin" name="optin"> Souhaitez-vous bénéficier des meilleures offres de nos partenaires ?
-									</label>									
+								<div class="form-horizontal">
+									<div class="control-group margin-cindy">
+										<label class="control-label optin-label">Souhaitez-vous bénéficier des meilleures offres de nos partenaires ?</label>
+										<div class="controls">
+											<label class="radio inline">
+												<input type="radio" id="optin-1" name="optin" value="0" checked required> Non
+											</label>
+											<label class="radio inline">
+												<input type="radio" id="optin-2" name="optin" value="1" required> Oui
+											</label>
+										</div>
+									</div>										
 								</div>
 								
 								<hr>

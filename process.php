@@ -52,7 +52,7 @@
 	$pet_gender = ($_POST['pet_gender'] == "male") ? 1 : 2;
 	$pet_name = filter_var($_POST['pet_name'], FILTER_SANITIZE_STRING);
 	$pet_birthday = get_date("pbirthday");
-	$pet_tag = (isset($_POST['pet_tag'])) ? 1 : 0;
+	$pet_tag = filter_var($_POST['pet_tag'], FILTER_SANITIZE_NUMBER_INT);
 	$owner_gender = filter_var($_POST['owner_gender'], FILTER_SANITIZE_NUMBER_INT);
 	$owner_surname = filter_var($_POST['owner_surname'], FILTER_SANITIZE_STRING);
 	$owner_name = filter_var($_POST['owner_name'], FILTER_SANITIZE_STRING);
@@ -64,7 +64,7 @@
 	$mobile_phone = (check_mobile($owner_phone)) ? $owner_phone : '';
 	$landline = (!check_mobile($owner_phone)) ? $owner_phone : '';
 	$owner_email = filter_var($_POST['owner_email'], FILTER_SANITIZE_EMAIL);
-	$optin = ($_POST['optin'] == "on") ? 1 : 0;
+	$optin = filter_var($_POST['optin'], FILTER_SANITIZE_NUMBER_INT);
 	$pet_insured = filter_var($_POST['pet_insured'], FILTER_SANITIZE_NUMBER_INT);
 	$contract_cancelled = filter_var($_POST['contract_cancelled'], FILTER_SANITIZE_NUMBER_INT);
 	$contract_start_date = get_date("csd");
