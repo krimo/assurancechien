@@ -29,7 +29,7 @@
 				<!-- form outer container -->
 				<div class="span7">
 					<div class="form-container">
-						<h2 class="hidden-phone">Calculez votre tarif gratuitement <br>et comparez !</h2>
+						<h2 class="hidden-phone">Calculez votre tarif FRANCHEMENT <br>et comparez !</h2>
 						<form action="synthese.php" method="post" novalidate>
 							<fieldset class="step step1">
 								<legend>Votre petit compagnon</legend>
