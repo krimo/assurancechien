@@ -1,6 +1,6 @@
 <?php 
 require_once("process.php");
-require_once("_top.php");
+require_once("req/_top.php");
 ?>
 
 	<div class="container">
@@ -13,14 +13,12 @@ require_once("_top.php");
 							  </div>';
 					}
 				?>
-				<a href="/" class="btn btn-large btn-inverse">&laquo; Revenir au formulaire</a>
+				<a href="/?code=<?=$code_apporteur;?>" class="btn btn-large btn-inverse">&laquo; Revenir au formulaire</a>
 				<hr>
 				<h2>Comparaison :</h2>
-				<iframe src="<?php echo $return->synthese; ?>" frameborder="0" width="630" height="1200" seamless style="overflow:scroll;"></iframe>
+				<iframe src="<?=$return->synthese?>" frameborder="0" width="630" height="1200" seamless style="overflow:scroll;"></iframe>
 			</div>
 		</div>	
 	</div>
 
-	<img src="http://clic.reussissonsensemble.fr/registersale.asp?site=11993&mode=ppl&ltype=1&order=<?=$owner_email?>" width="1" height="1">
-
-<?php require_once("_bottom.php"); ?>
+<?php require_once("req/_bottom.php"); ?>
