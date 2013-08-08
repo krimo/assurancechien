@@ -21,24 +21,12 @@ footer a:hover {color: lightblue;}
 
 #erreur-animal {display: none;}
 
-.animal-picker {
-	font-size: .9em;
-}
-
-.animal-picker:before {
+.animal-picker:before, .animal-picker:after {
 	content: "\25BC";
 	color: #386E99;
 	position: relative;
-	left: -10px;
-	bottom: -5px;
-}
-
-.animal-picker:after {
-	content: "\25BC";
-	color: #386E99;
-	position: relative;
-	right: -10px;
-	bottom: -5px;
+	bottom: -.5em;
+    padding:0 .5em;
 }
 
 .animal-holder {

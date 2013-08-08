@@ -1,4 +1,4 @@
-function get_insee(zipCode, zipCodeId, inseeId) {
+function getInsee(zipCode, zipCodeId, inseeId) {
     $.ajax({
         url: 'curl_misterassur.php',
         type: 'POST',
@@ -40,7 +40,7 @@ function get_insee(zipCode, zipCodeId, inseeId) {
     });
 }
 
-function scroll_to_top() {
+function scrollToTop() {
 	$("html, body").animate({ scrollTop: 0 }, "fast");
 }
 
@@ -72,7 +72,7 @@ $(document).ready(function() {
 	$('.form-step1').siblings().hide(); // hide all except step 1
 
 	$("#zip-code").on('blur', function() {
-        get_insee($(this).val(), $(this).attr("id"), "insee");
+        getInsee($(this).val(), $(this).attr("id"), "insee");
 	});
 
 	$(".date-input").each(function() {
@@ -101,7 +101,7 @@ $(document).ready(function() {
 			clickedButton = $(this);
 
 		if ($("#zip-code").val().length == 5 && $("#insee").val()) {
-			get_insee($("#zip-code").val());
+			getInsee($("#zip-code").val());
 		}
 
 		if (clickedButton.is($(".continue-btn"))) {
@@ -124,12 +124,12 @@ $(document).ready(function() {
 			}
 
 			if (validFields.indexOf(false) == -1) {
-				clickedButton.closest('.form-step').hide(0).next('.form-step').show(0, scroll_to_top());
+				clickedButton.closest('.form-step').hide(0).next('.form-step').show(0, scrollToTop());
 				validFields = [];
 			}
 
 		} else {
-			clickedButton.closest('.form-step').hide(0).prev('.form-step').show(0, scroll_to_top());
+			clickedButton.closest('.form-step').hide(0).prev('.form-step').show(0, scrollToTop());
 		}
 	});
 
@@ -189,7 +189,7 @@ $(document).ready(function() {
 	if (theFormCookie) {
 		theForm.formParams(theFormCookie);
         if (theFormCookie.zip_code.length === 5) {
-            get_insee(theFormCookie.zip_code, "zip-code", "insee");
+            getInsee(theFormCookie.zip_code, "zip-code", "insee");
         }
 	}
 
