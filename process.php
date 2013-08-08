@@ -1,11 +1,11 @@
 <?php
 
-	date_default_timezone_set("Europe/Paris"); 
+	date_default_timezone_set("Europe/Paris");
 
 	// Constantes
 	define("WS_URL", "http://www.misterassur.com/moteur/moteur_import.php");
 	define("SERVICE", "animaux");
-	
+
 	/**
 	 * Formatage de la date pour entrée dans la base de donnée
 	 * @param  string $inputName Le nom du champ contenant la date
@@ -13,11 +13,11 @@
 	 */
 	function get_date($inputName) {
 		if (array_key_exists($inputName, $_POST)) {
-			$dateArray = explode("/", filter_var($_POST[$inputName], FILTER_SANITIZE_STRING));		
+			$dateArray = explode("/", filter_var($_POST[$inputName], FILTER_SANITIZE_STRING));
 			return date('Y-m-d', strtotime(implode("-",$dateArray)));
 		} else {
 			return "0000-00-00";
-		}			
+		}
 	}
 
 	/**
@@ -85,7 +85,7 @@
 	$owner_surname = filter_var($_POST['owner_surname'], FILTER_SANITIZE_STRING);
 	$owner_name = filter_var($_POST['owner_name'], FILTER_SANITIZE_STRING);
 	$owner_address = filter_var($_POST['owner_address'], FILTER_SANITIZE_STRING);
-	$zip_code = filter_var($_POST['zip_code'], FILTER_SANITIZE_NUMBER_INT);	
+	$zip_code = filter_var($_POST['zip_code'], FILTER_SANITIZE_NUMBER_INT);
 	$insee = filter_var($_POST['insee'], FILTER_SANITIZE_NUMBER_INT);
 	$owner_birthday = get_date("bday");
 	$owner_phone = filter_var($_POST['owner_phone'], FILTER_SANITIZE_NUMBER_INT);
@@ -102,36 +102,38 @@
 		$client = new SoapClient(null, array("uri" => WS_URL, "location" => WS_URL, "trace" => 1, "exceptions" => 1, "wsdl_cache" => 0));
 
 		$data = array(
-			"code" => $code_apporteur, 
+			"code" => $code_apporteur,
 			"animal_couvert" => $pet_insured,
-			"resiliation" => $contract_cancelled, 
-			"date_effet" => $contract_start_date, 
-			"formule_souhaitee" => $contract_type, 
+			"resiliation" => $contract_cancelled,
+			"date_effet" => $contract_start_date,
+			"formule_souhaitee" => $contract_type,
 			"ani_1_type_espece" => $animal_type,
-			"ani_1_nom" => $pet_name, 
-			"ani_1_date_naissance" => $pet_birthday, 
-			"ani_1_sexe_animal" => $pet_gender, 
+			"ani_1_nom" => $pet_name,
+			"ani_1_date_naissance" => $pet_birthday,
+			"ani_1_sexe_animal" => $pet_gender,
 			"ani_1_race" => $breed,
 			"ani_1_couleur_animal" => '',
 			"ani_1_animal_tatoue" => $pet_tag,
 			"ani_1_numero_tatouage" => '',
-			"civilite" => $owner_gender, 
-			"nom" => $owner_name, 
-			"prenom" => $owner_surname, 
-			"date_naissance" => $owner_birthday, 
-			"adresse" => $owner_address, 
-			"cp" => $zip_code, 
-			"insee" => $insee, 
-			"email" => $owner_email, 
-			"tel_mobile" => $mobile_phone, 
-			"tel_bureau" => '', 
-			"tel_domicile" => $landline, 
-			"situation_familiale" => '', 
-			"profession" => '', 
+			"civilite" => $owner_gender,
+			"nom" => $owner_name,
+			"prenom" => $owner_surname,
+			"date_naissance" => $owner_birthday,
+			"adresse" => $owner_address,
+			"cp" => $zip_code,
+			"insee" => $insee,
+			"email" => $owner_email,
+			"tel_mobile" => $mobile_phone,
+			"tel_bureau" => '',
+			"tel_domicile" => $landline,
+			"situation_familiale" => '',
+			"profession" => '',
 			"emailing" => $optin
 			);
 
-		$return = $client->setDatasFromForm("misterassur", "misterassur", SERVICE, $data);
+		// $return = $client->setDatasFromForm("misterassur", "misterassur", SERVICE, $data);
+
+        echo "Formulaire envoyé (DEV).";
 
 	} catch (SoapFault $e){
 		$error_var = $e->faultstring;

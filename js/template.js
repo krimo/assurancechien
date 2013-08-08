@@ -1,27 +1,43 @@
-function get_insee(zipCode) {
-	$.ajax({
-		url: 'liste-insee.php',
-		type: 'POST',
-		cache: false,
-		data: "cp="+zipCode,
-		success: function (data) {
-			var optionArray = [],
-				theJsonData = $.parseJSON(data);
+function get_insee(zipCode, zipCodeId, inseeId) {
+    $.ajax({
+        url: 'curl_misterassur.php',
+        type: 'POST',
+        cache: false,
+        data: "service=insee&zip_code="+zipCode,
+        success: function (data) {
 
-			if (theJsonData.length === 0) {
-				$("#zip-code, #insee").parents(".control-group").removeClass("success").addClass("error");
-				optionArray.push('<option value="">Code postal erroné</option>');
-			} else {
-				$.each(theJsonData, function(k,v) {
-					optionArray.push("<option value="+k+">"+v+"</option>");
-				});
-			}
-			$("#insee").html(optionArray.join(" ")).parents(".insee-holder").css("opacity", 1);
-		},
-		error: function (d, r, obj) {
-			console.log("error : "+r+", "+d+", "+obj);
-		}
-	});
+            var optionArray = [],
+                theJsonData = $.parseJSON(data).item,
+                key,
+                count = 0;
+
+            for (key in theJsonData) {
+                if(theJsonData.hasOwnProperty(key)) {
+                    count++;
+                }
+            }
+
+            if ($.isEmptyObject(theJsonData)) {
+                $("#"+zipCodeId+", #"+inseeId).parents(".control-group").removeClass("success").addClass("error");
+                optionArray.push('<option value="">Code postal erroné</option>');
+            } else {
+
+                if (count > 2) {
+                    $.each(theJsonData, function(k,v) {
+                        optionArray.push("<option value="+v.insee+">"+v.ville+"</option>");
+                    });
+                } else {
+                    optionArray.push("<option value="+theJsonData.insee+">"+theJsonData.ville+"</option>");
+                }
+
+            }
+            $("#"+inseeId).html(optionArray.join(" "));
+            $(".insee-holder").css("opacity", 1);
+        },
+        error: function (d, r, obj) {
+            console.log(d);
+        }
+    });
 }
 
 function scroll_to_top() {
@@ -56,7 +72,7 @@ $(document).ready(function() {
 	$('.form-step1').siblings().hide(); // hide all except step 1
 
 	$("#zip-code").on('blur', function() {
-		get_insee($(this).val());
+        get_insee($(this).val(), $(this).attr("id"), "insee");
 	});
 
 	$(".date-input").each(function() {
@@ -133,7 +149,6 @@ $(document).ready(function() {
 				return val.length === exactly;
 			},
 			threemonths: function(val, threemonths) {
-				console.log(daysDiff(formatDateString(val),formatDateString(threemonths)));
 				return daysDiff(formatDateString(val),formatDateString(threemonths)) > 93;
 			},
 			upperdate: function(val, upperdate) {
@@ -173,9 +188,9 @@ $(document).ready(function() {
 
 	if (theFormCookie) {
 		theForm.formParams(theFormCookie);
-		if(theFormCookie.zip_code.length === 5) {
-			get_insee(theFormCookie.zip_code);
-		}
+        if (theFormCookie.zip_code.length === 5) {
+            get_insee(theFormCookie.zip_code, "zip-code", "insee");
+        }
 	}
 
 	$('#twitter').sharrre({
