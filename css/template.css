@@ -334,6 +334,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 .animal-breed-well {
     position: absolute;
+    display:none\9;
     opacity: 0;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
@@ -344,6 +345,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 
 .animal-breed-well.shown {
     position: relative;
+    display:block\9;
     opacity: 1;
 }
 

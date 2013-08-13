@@ -1,43 +1,52 @@
+// Fix index of array in <=IE8
+if(!Array.prototype.indexOf) {
+	Array.prototype.indexOf = function(needle) {
+		for(var i = 0; i < this.length; i++) {
+			if(this[i] === needle) {
+				return i;
+			}
+		}
+		return -1;
+	};
+}
+
 function getInsee(zipCode, zipCodeId, inseeId) {
-    $.ajax({
-        url: 'curl_misterassur.php',
-        type: 'POST',
-        cache: false,
-        data: "service=insee&zip_code="+zipCode,
-        success: function (data) {
+	$.ajax({
+		url: 'curl_misterassur.php',
+		type: 'POST',
+		cache: false,
+		data: "service=insee&zip_code="+zipCode,
+		success: function (data) {
 
-            var optionArray = [],
-                theJsonData = $.parseJSON(data).item,
-                key,
-                count = 0;
+			var optionArray = [],
+				theJsonData = $.parseJSON(data).item,
+				key,
+				count = 0;
 
-            for (key in theJsonData) {
-                if(theJsonData.hasOwnProperty(key)) {
-                    count++;
-                }
-            }
+			for (key in theJsonData) {
+				if(theJsonData.hasOwnProperty(key)) {
+					count++;
+				}
+			}
 
-            if ($.isEmptyObject(theJsonData)) {
-                $("#"+zipCodeId+", #"+inseeId).parents(".control-group").removeClass("success").addClass("error");
-                optionArray.push('<option value="">Code postal erroné</option>');
-            } else {
+			if ($.isEmptyObject(theJsonData)) {
+				$("#"+zipCodeId+", #"+inseeId).parents(".control-group").removeClass("success").addClass("error");
+				optionArray.push('<option value="">Code postal erroné</option>');
+			} else {
 
-                if (count > 2) {
-                    $.each(theJsonData, function(k,v) {
-                        optionArray.push("<option value="+v.insee+">"+v.ville+"</option>");
-                    });
-                } else {
-                    optionArray.push("<option value="+theJsonData.insee+">"+theJsonData.ville+"</option>");
-                }
+				if (count > 2) {
+					$.each(theJsonData, function(k,v) {
+						optionArray.push("<option value="+v.insee+">"+v.ville+"</option>");
+					});
+				} else {
+					optionArray.push("<option value="+theJsonData.insee+">"+theJsonData.ville+"</option>");
+				}
 
-            }
-            $("#"+inseeId).html(optionArray.join(" "));
-            $(".insee-holder").css("opacity", 1);
-        },
-        error: function (d, r, obj) {
-            console.log(d);
-        }
-    });
+			}
+			$("#"+inseeId).html(optionArray.join(" "));
+			$(".insee-holder").css("opacity", 1);
+		}
+	});
 }
 
 function scrollToTop() {
@@ -61,18 +70,24 @@ function daysDiff(d1,d2) {
 	}
 }
 
+function strip(html) {
+   var tmp = document.createElement("DIV");
+   tmp.innerHTML = html;
+   return tmp.textContent || tmp.innerText || "";
+}
+
 var theFormCookie = $.cookie('form'),
 	theForm = $("form"),
 	inseeHolder = $(".insee-holder");
 
 $(document).ready(function() {
 
-    $(".header-container").backstretch('img/header-1.jpg');
+	$(".header-container").backstretch('img/header-1.jpg');
 
 	$('.form-step1').siblings().hide(); // hide all except step 1
 
 	$("#zip-code").on('blur', function() {
-        getInsee($(this).val(), $(this).attr("id"), "insee");
+		getInsee($(this).val(), $(this).attr("id"), "insee");
 	});
 
 	$(".date-input").each(function() {
@@ -173,11 +188,27 @@ $(document).ready(function() {
 		listeners: {
 			onFormSubmit: function ( isFormValid, event, ParsleyForm ) {
 				if (isFormValid) {
+                    // event.preventDefault();
+
 					$("button[type=submit]").prop("disabled", true);
+
+                    // $.post('process.php', theForm.formParams(), function(data) {
+                    //     console.log(data);
+                    //     $($.parseHTML(data)).find("#misterassur_synthese .misterassur_synthese_produits_row").each(function() {
+                    //         var formule = $(this).find(".misterassur_synthese_produits_col3").text(),
+                    //             tarif = $(this).find(".misterassur_synthese_produits_prime1").text(),
+                    //             resume = $(this).find(".misterassur_synthese_produits_col5").text(),
+                    //             imgStyle = $(this).find(".misterassur_synthese_produits_logo").attr("style"),
+                    //             imgUrl = imgStyle.match(/url\(([^\)]+)\)/)[1].replace('../', 'http://www.misterassur.com/');
+
+                    //         $("#response-table tbody").append("<tr><td><img src="+imgUrl+"></td><td>"+formule+"</td><td>"+tarif+"</td><td>"+resume+"</td></tr>");
+                    //     });
+
+                    //     scrollToTop();
+                    //     $("#response-table").addClass('shown');
+                    // });
+
 				}
-			},
-			onFieldError: function (elem, constraints, ParsleyField) {
-				console.log(elem);
 			}
 		}
 	});
@@ -188,43 +219,9 @@ $(document).ready(function() {
 
 	if (theFormCookie) {
 		theForm.formParams(theFormCookie);
-        if (theFormCookie.zip_code.length === 5) {
-            getInsee(theFormCookie.zip_code, "zip-code", "insee");
-        }
+		if (theFormCookie.zip_code.length === 5) {
+			getInsee(theFormCookie.zip_code, "zip-code", "insee");
+		}
 	}
-
-	$('#twitter').sharrre({
-		share: {
-			twitter: true
-		},
-		enableHover: false,
-		enableTracking: true,
-		click: function(api, options){
-			api.simulateClick();
-			api.openPopup('twitter');
-		}
-	});
-	$('#facebook').sharrre({
-		share: {
-			facebook: true
-		},
-		enableHover: false,
-		enableTracking: true,
-		click: function(api, options){
-			api.simulateClick();
-			api.openPopup('facebook');
-		}
-	});
-	$('#googleplus').sharrre({
-		share: {
-			googlePlus: true
-		},
-		enableHover: false,
-		enableTracking: true,
-		click: function(api, options){
-			api.simulateClick();
-			api.openPopup('googlePlus');
-		}
-	});
 
 });

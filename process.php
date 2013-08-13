@@ -131,12 +131,8 @@
 			"emailing" => $optin
 			);
 
-		// $return = $client->setDatasFromForm("misterassur", "misterassur", SERVICE, $data);
-
-        echo "Formulaire envoyé (DEV).";
+		$return = $client->setDatasFromForm("misterassur", "misterassur", SERVICE, $data);
 
 	} catch (SoapFault $e){
 		$error_var = $e->faultstring;
-		$the_match = $client->__getLastResponse();
-		preg_match_all('#\b(([\w-]+://?|www[.])[^\s()<>]+(?:\([\w\d]+\)|([^[:punct:]\s]|/)))#', $the_match, $matches);
 	}

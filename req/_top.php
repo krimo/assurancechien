@@ -1,4 +1,7 @@
-<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -21,28 +24,26 @@
 	<link rel="stylesheet" href="css/app.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300|Roboto:300,300italic,700' rel='stylesheet' type='text/css'>
 
-    <!--[if lt IE 9]>
-    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-    <script src="js/selectivizr-min.js"></script>
-    <![endif]-->
+	<!--[if lt IE 9]>
+	<script src="js/ie9.min.js"></script>
+	<script src="js/selectivizr-min.js"></script>
+	<![endif]-->
 
-	<!-- Google Analytics -->
-	<script>var _gaq=[['_setAccount','UA-34879513-14'],['_setAllowAnchor', true],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 </head>
 <body>
-		<div class="header-container hidden-phone">
-			<div class="container">
-				<div class="row-fluid">
-					<div class="span12">
-						<a href="index.php" class="home-link">
-							<div class="hgroup">
-								<h1>Le comparateur spécialisé dans les<br>Assurances pour animaux de compagnie</h1>
-								<span class="label label-warning">Gratuit, rapide &amp; sans engagement</span>
-							</div>
-						</a>
-					</div>
+	<div class="header-container hidden-phone">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span12">
+					<a href="index.php" class="home-link">
+						<div class="hgroup">
+							<h1>Le comparateur spécialisé dans les<br>Assurances pour animaux de compagnie</h1>
+							<span class="label label-warning">Gratuit, rapide &amp; sans engagement</span>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<div class="container">
+	<div class="container">
